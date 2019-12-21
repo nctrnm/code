@@ -1,0 +1,63 @@
+#!/bin/bash
+tmux new-session -s ntrm -t ntrm
+echo starting ntrm;
+cd ~/nmbl;
+alias and='&&';
+alias send='termux-open --send';
+alias search='apt search';
+alias npngb='ping -b -c 8 127.0.0.1 > ~/nmbl/nsudo/npngb.txt; nt ~/nmbl/nsudo/npngb.txt';
+alias nbin='cd ~/nmbl/nbin';
+alias shcp='cd ; cp .bashrc ~/nmbl/nsh/nbashrc.sh';
+alias bincp='cd /data/data/com.termux/files/usr/bin/ && cp -r * ~/nmbl/nbin';
+alias nmbl='~/nmbl';
+alias gits='git status';
+alias send='termux-open --send';
+alias open='termux-open';
+alias list='ls -lth';
+alias apps='pkg list-installed';
+alias hm='sdcard/nmbl';
+alias xtmux='tmux kill-session -t ntrm && exit';
+alias bashed='cd && micro .bashrc && cp .bashrc ~/nmbl/nsh/nbashrc.sh';
+alias gbrn='cd ~/nmbl && git branch -l;'
+alias bcon='cd ~ && pwd && micro .bashrc';
+alias ddir='rmdir --ignore-fail-on-non-empty';
+alias ngit='bash ~/nmbl/nsh/n_git.sh';
+alias nctrnm='cd ~/nmbl && pwd';
+alias home='cd ~/nmbl && pwd';
+alias gthb='lynx https://github.com/lssradm/nmbl';
+alias google='lynx https://www.google.com/search?q='; 
+alias sh101='man sh';
+alias bash101='man bash';
+alias png='echo ping && date && arp && httping -c 8 1.1.1.1 && arp -v -a -i wlan0';
+alias png2='ping -c 8 google.com > ~/nmbl/nsudo/npng.txt'
+alias pkgi='pkg install';
+alias ndcc='ccrypt -d';
+alias ncc='ccrypt -e';
+alias end='kill -9';
+alias rt='cd . && pwd';
+alias note='micro';
+alias nt='micro';
+alias gitl='git log > ~/nmbl/nsudo/ngitl.txt';
+alias google='lynx https://google.com/search';
+alias fm='ranger ~/nmbl';
+alias rngr='ranger ~/nmbl';
+alias hm='mc ~/nmbl';
+alias gitp='git push nmbl';
+alias gitl='git log';
+alias tab='tmux new -c ntm';
+alias gitc='git commit -m "updating mobile nmbl repository"';
+apt upgrade;
+pkg upgrade;
+echo termial initalized;
+echo network data;
+echo user;
+whoami > ~/nmbl/nsudo/nwhoami.txt;
+echo wlan data;
+ifconfig wlan0 > ~/nmbl/nsudo/nifconfig.txt;
+echo host information;
+arp > ~/nmbl/nsudo/narp.txt;
+echo copying system apps to git
+cd ~/nmbl/nbin && rm -r *;
+cd /data/data/com.termux/files/usr/bin && cp -r * ~/nmbl/nbin >  ~/nmbl/nsudo/nbin.txt;
+echo syncronising nmbl git;
+bash ~/nmbl/nsh/n_git.sh;

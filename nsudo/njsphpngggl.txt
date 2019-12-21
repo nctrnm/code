@@ -1,0 +1,32 @@
+PING google.com (172.217.2.14) 56(84) bytes of data.
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=1 ttl=52 time=119 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=2 ttl=52 time=484 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=3 ttl=52 time=624 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=4 ttl=52 time=459 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=5 ttl=52 time=292 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=6 ttl=52 time=334 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=7 ttl=52 time=645 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=8 ttl=52 time=432 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=9 ttl=52 time=175 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=9 ttl=52 time=177 ms (DUP!)
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=11 ttl=52 time=506 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=12 ttl=52 time=801 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=13 ttl=52 time=506 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=14 ttl=52 time=240 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=15 ttl=52 time=521 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=15 ttl=52 time=528 ms (DUP!)
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=15 ttl=52 time=536 ms (DUP!)
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=15 ttl=52 time=543 ms (DUP!)
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=16 ttl=52 time=356 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=16 ttl=52 time=368 ms (DUP!)
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=17 ttl=52 time=208 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=18 ttl=52 time=269 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=19 ttl=52 time=700 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=20 ttl=52 time=1254 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=20 ttl=52 time=1257 ms (DUP!)
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=21 ttl=52 time=580 ms
+64 bytes from lga15s45-in-f14.1e100.net (172.217.2.14): icmp_seq=22 ttl=52 time=671 ms
+
+--- google.com ping statistics ---
+22 packets transmitted, 21 received, +6 duplicates, 4% packet loss, time 21004ms
+rtt min/avg/max/mdev = 119.012/503.684/1257.904/273.983 ms, pipe 2

@@ -1,0 +1,2 @@
+tar -cfv dir
+gzip dir.tar

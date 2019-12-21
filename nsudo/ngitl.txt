@@ -1,0 +1,1361 @@
+commit 7e9175470df01371008fe5f7f99454ba2bc5da19
+Author: lssradm <lssradm@github.com>
+Date:   Sun Sep 1 10:30:35 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 045e9f225d1ba8eb6620f343dd7251710436e3c9
+Author: lssradm <lssradm@github.com>
+Date:   Sun Sep 1 10:26:37 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 611721f693f3ba1547888b7c00358d2d9947bc53
+Author: lssradm <lssradm@github.com>
+Date:   Mon Jul 15 04:26:48 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 747cd38fc81d86499791e3be8816cd6b77b4d796
+Author: lssradm <lssradm@github.com>
+Date:   Wed Jul 3 21:48:49 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e1d4d16f8e220f72cfe8fcd27789a5efeff66b07
+Author: lssradm <lssradm@github.com>
+Date:   Thu Jun 27 06:05:07 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit da0bb6607a29ba400868abd431cef76bcbe62d78
+Author: lssradm <lssradm@github.com>
+Date:   Thu Jun 27 05:52:52 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e8b6826a1b1ce793d73db876fd1f11e411edad2f
+Author: mwmcgilvery <48932877+mwmcgilvery@users.noreply.github.com>
+Date:   Wed Jun 26 15:37:37 2019 -0700
+
+    Update LICENSE
+
+commit 3353b49fe3b460dbf025ba5e23556f366d900a10
+Author: mwmcgilvery <48932877+mwmcgilvery@users.noreply.github.com>
+Date:   Wed Jun 26 15:35:09 2019 -0700
+
+    Update README.md
+    
+    updating mwmcgilvery repository readme
+
+commit b5aff45d9870cfe36d94791b79f7693e29f5810e
+Author: lssradm <lssradm@github.com>
+Date:   Wed Jun 26 14:03:01 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a6240e82d233b7c230b13480f5cb823449e0a7d0
+Author: lssradm <lssradm@github.com>
+Date:   Wed Jun 26 13:59:39 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 28c5198669fd244990bb76eb0b240d5861c26f29
+Author: lssradm <lssradm@github.com>
+Date:   Wed Jun 26 13:56:33 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 2308a6d21ecb11ee67ca2194488f12fc215bfdbf
+Author: lssradm <lssradm@github.com>
+Date:   Wed Jun 26 13:54:35 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit df1b66e13675979ac3ec84def6962c6b9500dc3e
+Author: mwmcgilvery <48932877+mwmcgilvery@users.noreply.github.com>
+Date:   Wed Jun 26 13:53:45 2019 -0700
+
+    Delete cloudconvert
+
+commit 39a6ab0004dc4789e6bd24aa863d5077b2a85642
+Author: mwmcgilvery <48932877+mwmcgilvery@users.noreply.github.com>
+Date:   Wed Jun 26 12:43:47 2019 -0700
+
+    Create SECURITY.md
+    
+    Creating a security policy.
+
+commit 03105c52a0e3b9c39399f7eadc87a0d581f3acc8
+Author: lssradm <lssradm@github.com>
+Date:   Tue Jun 25 10:42:47 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 5be0e082dc6011b69619ad5ae7514f78c170aadb
+Author: lssradm <lssradm@github.com>
+Date:   Tue Jun 25 10:42:17 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit ae8883a30846f1c4b11bd22613120624643ed625
+Author: lssradm <lssradm@github.com>
+Date:   Sun Jun 23 16:08:02 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 00c6fe82e1d484c1bd2bded77cb6e3b1d6940351
+Author: lssradm <lssradm@github.com>
+Date:   Sun Jun 23 15:54:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 7145534d629b2c43113bde0022395e7c0a05b876
+Author: lssradm <lssradm@github.com>
+Date:   Sun Jun 23 15:52:57 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 52eeb875f9d079a1fa9aa969975e049bd031936c
+Author: lssradm <lssradm@github.com>
+Date:   Fri Jun 21 23:06:02 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 53ec0decad1801c544e207decdb19dac57e98193
+Author: lssradm <lssradm@github.com>
+Date:   Thu Jun 20 00:08:16 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 2acc1652cf2bb7f7218d847dca7f847adbf529de
+Author: lssradm <lssradm@github.com>
+Date:   Wed Jun 19 23:58:11 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 21d75aa95718eb763326aad46cb17498723af110
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 19 22:08:13 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 072707f04b9229da77a22f11d0caaad306971795
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 19 14:08:16 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 7e9f9b150c66d81c82817a7ca8babdc9673b2907
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 19 10:31:49 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit cda975667d36e211711f8f00b9bcf850488cf113
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 18 22:12:41 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 7bd08bffada8525e174f28df103ec8baae12790f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 18 22:11:37 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e77d3bbd9b20d85bd7ca8e06cbb594da42cff630
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 18 22:06:59 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 357e0c0df3d00242b607a1f503d3aca2b459d773
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 18 22:06:30 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit dbc69e032c1143362d3b41cbaf643e054469fa60
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 18 18:57:55 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit bd5a148f8d5ec96e9f7922afc942f93117c5159c
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 18 11:19:30 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f92e2069d7d2b27607757a82713922230817d652
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 18 11:14:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit eea8d4bb53a60f6105ad07cfbb470bf71a64a059
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 17 08:33:16 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit bf085f6946699dbc609dd0d0ac1e59389fda9329
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun Jun 16 20:40:04 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f83794846f66816e8dc41f13b03c60a9efaa1211
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun Jun 16 20:09:28 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 2666181274426858a6cf8218c19437b1952ade1d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun Jun 16 19:22:43 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit d2b72629f010b54448d47372e6700233b14103e4
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun Jun 16 19:17:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 58ae9c8c6a401c94f38cb82d8c282d1b100e65d1
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun Jun 16 19:08:47 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 3dc1589b2ad370b8aa4496ee5a102a6f385fe88a
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 8 17:43:34 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 6e8305b97fc4c59561ecc3b84d56b93e9a5d235f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 8 17:39:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 31b7a4913cef08af16ec976cf785edc16c406205
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 8 17:36:11 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 607aec38c4541e3421429209efff13116f6ea187
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 8 17:32:19 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 380071713b9ed77e9a7ae1eaea9556e6301ce9c5
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 8 11:51:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 4d1ec52de28d008908b48b2b155d0fde6942d786
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 8 11:43:53 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit b16eb045913dda112bc414b3e7c0b0199c1cea4b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 8 11:41:22 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 8f74796c80892d72fea90f3b84bce587484ba25b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu Jun 6 11:35:55 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 623b60d096575fd7b95dcaada1d5d902d3cc2464
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu Jun 6 00:46:51 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a93c889c49246a825fa4e583b03f6213100a24e9
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 5 20:19:35 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 75460beea8656661ce500bf63ed5ca83442aaa8a
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 5 15:11:06 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 96b320027fd459bcf9bf1f93728fed9105e53b09
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 5 15:10:15 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 45d125f538e3c2971fc09a7c35be937be62bcd14
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 5 14:05:11 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit c6d247b7320e6e108b7fff4b49dda16edcc0dca8
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed Jun 5 13:55:50 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 4c7754a3940c9bbc420a72291144c6cafde6bb07
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 4 13:15:56 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 76f8c8969fe2c5d3e1fad912787b4f1cf1763d5d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 4 13:06:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e8f1d25234ac869b2b3ac398434b9fca4d91adb3
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 4 10:19:34 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 45e4816d1edaee394c4be3bb3098be6977c6039f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 4 10:03:44 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 08cb98327574df393e226c70171489fac541a688
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 4 10:03:02 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 2cacfabea4995f0b49d978daf5f8c353e9ff1000
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue Jun 4 10:01:56 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 3ec98c9f38572b00f6495b4a19821bed3cc45f61
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 20:42:19 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 165258697ea555677f607f7b9944f4640f70a85d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:25:23 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 3c056fae129df291755e2825ddd11bc82285a27b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:19:58 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f97f75dd49b42ee1629e2b1c329cc293b1c0cc5d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:18:50 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 804d33fcb8e34ba1de9a75f9abfea034db4c3901
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:17:35 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f4be09e5189e2a21297c98a7d2c53e1536a71147
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:16:20 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 4f35b71b4879eba1458a8ccbe97550084c699d4e
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:14:02 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit aa5161abf04e105db4a05e71e96817cd2bd5ce59
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:11:27 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a5a7a3a69cabf02a11050a96e410a1e113751148
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 11:08:38 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 9eb39318060c2892c4e08d21062c6d15d13a9deb
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon Jun 3 10:36:10 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 06082bd0da7a25eb78195ed3f74a20136c857c23
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun Jun 2 06:35:47 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit caca6b145e618aa168a7c9fba2911594d09e8089
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun Jun 2 05:55:43 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 9eb73204ac9cff00e7d03c1c757b7888878452d5
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 18:50:57 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit ae4f29f596ea5120f80d4774371eb6ce2c486c77
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 18:47:39 2019 -0700
+
+    Editing .git description
+
+commit c698bc4e07be0fc80e317f23f24df57c2926f52c
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 18:34:44 2019 -0700
+
+    ..
+
+commit 779b0ffdbe817ab5ffd869fe9ef278a17a3e0190
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 18:33:00 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 2d2af1ce4c631589b3171b0c1b3a67b6903ea263
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 17:30:49 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 16372ab57c53a5274e26d7fda1c404fd72f70192
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 17:06:40 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 9ed71ca836bec72f5d29768ed051e20a6b98c0dd
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 12:58:56 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 81160546c2798ff14bf4546dafd48d6f1589d7fb
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 12:57:39 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 4f4990d7d4a0e9654d3d75712d99bcb69a9b4673
+Author: lssradm <48932877+lssradm@users.noreply.github.com>
+Date:   Sat Jun 1 12:03:44 2019 -0700
+
+    Update poladdy.txt
+
+commit e54d68855a573f1fbf2ea371d7b1cc1c45e065ae
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat Jun 1 10:51:23 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 07060d89b82595010298cd814b0fc28ee2475c06
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 31 19:26:40 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 68e30d15f58a9603cc46fececffe747552d31cd9
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 31 18:58:52 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit eb62f55076b58b612405c8025e46960f0fe52c51
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 31 18:48:17 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit d219ecf803d7b909674b12e48d7230b6eaef3518
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 21:55:08 2019 -0700
+
+    changig git default text editor to micro.
+
+commit cb0903d85c063fab2090afbfd8c30b7f0d9d291d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 21:51:17 2019 -0700
+
+    changing git text editor to joe
+
+commit dfe7642c9d0c436077a4e44543d18b0f80e1302c
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 21:46:11 2019 -0700
+
+    Test sync with GCC alpha
+
+commit d8daa44864c56adb8c74bcdcf06c05e39ca1b23b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 21:43:13 2019 -0700
+
+    .
+
+commit 520755f7bca81fd6bc923ce0f2685652a3a2d6ed
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 21:42:45 2019 -0700
+
+commit 3fb35b084fea85e025c21976d9d238ea9639d754
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 21:41:40 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 03f0e2c396adce42a2e42f177ef27175ce608362
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 21:41:22 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit b2aeb963f09aff26d282d901c71add03b6c47908
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 18:38:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 18e6fefc382cf626a8af0721dcb0eed9e1333ae5
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 17:31:50 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 0bedfe75e6932ebd37f377330d62f9b414d3f1a2
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 17:29:40 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 3cdce6f016c9e2d7b0f7d8db000ad965dee868fd
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 16:59:53 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 475125d8e346fe9dbc1e4b20f761e8e90a90a1f4
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 16:58:03 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 7ab33e2d283362d2bea9d116408802f6aa6fe380
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 16:56:55 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a6b777c738a0dad359f8e27e3ae821772ae4f0f1
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 16:48:53 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 5dcab98e7a6097f7076bdeda6e69ddff30ae60ef
+Merge: 52982aa 2f77427
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 16:48:05 2019 -0700
+
+    Merge branch 'master' of https://github.com/lssradm/nmbl
+    
+    next
+
+commit 52982aade2e7d16ff76a4782c674f5c5dd4e4b33
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 16:39:10 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 2f77427b925fbbeb59c2bcf8a1581df6d1b7ada0
+Author: lssradm <48932877+lssradm@users.noreply.github.com>
+Date:   Thu May 30 13:04:09 2019 -0700
+
+    Update ntshltr.txt
+
+commit 1c2b94344e8473c6889ccf54cc230f038689f1a6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 12:10:08 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a8e36f74f378047f39327483ce67abb4231d423f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 12:07:42 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit c47d9348cc9b194c2d98489ab8b2daa27175b674
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 11:05:57 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 50a941e52eabc9b564a6aacc92fcb7d31da95422
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 30 11:05:29 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 6773655edcab7392f26d9d3edf4410161da9ed12
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 20:09:30 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e0449bb910acb5d45110628a2e4a515ee0695a4d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 20:06:45 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 8bc5b775f7c004b49717992a7ca8cbefee6c2d5d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 20:05:26 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 41583dd5cc319096a694e5be6c392f4553be8ff1
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 20:04:47 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 570100aa0c8b44a0810d8324bb6689c6e99e23c6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 20:00:08 2019 -0700
+
+    update
+
+commit c87682fe80afe557c0dbb0e0d44a87f91d3d6c51
+Merge: 27b4a5e 5325c9f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 19:58:00 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 27b4a5ebcd423b9906875c2c54dbb545601a0cfe
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 18:25:45 2019 -0700
+
+    .
+
+commit 288d9a25640d91137583b5399bc6bcb6ba461477
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 18:23:34 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f3617631b869f3f339ec387a1b288d854a80ba49
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 18:19:58 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit d3f23c49c722cd83c2ebc86648c35068abbae239
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 18:18:16 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 9392891e6d9ff2093323702131dc0297430c4289
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 29 17:05:32 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 5325c9f9e7afb3c0f3775d18c81facf389d1bd3e
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 26 14:53:01 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f2c8fbf30100a1cf73eab70a1208963f1a1468ef
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 26 14:51:17 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 8eb05d726017eacace0424818937d22e4c427694
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 26 14:40:15 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e797eade4c15a723d5c5f57a7bf7be64f89a8095
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 26 14:37:02 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 5d627a2382f9eaed938cd7be4b6c5d74d6fa1848
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 26 14:35:24 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit b95fea31694944f9358333dba16b245ddfaa7feb
+Author: lssradm <48932877+lssradm@users.noreply.github.com>
+Date:   Sun May 26 14:34:55 2019 -0700
+
+    Create nshltr52619.txt
+
+commit 8a9dc3ab8c7144f705a1c1598d527f225a8dffa6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 25 18:48:21 2019 -0700
+
+    sync
+
+commit f093983f466a1b3d986996577354812337cae322
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 25 18:45:16 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit fe18f3e0491f1f66f80d8a9e5ae91b47aa1f2b86
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 25 14:42:01 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 9b6ef8f5f49842da69a8c48512f2ea820d29d730
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 25 14:10:59 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 42b0519b8ec0ca50b7f04f51729c2c4f7d81a501
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 25 14:10:33 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 41601c626a283ac05c0906deaa1c508e010b834b
+Merge: 05a4642 e91fdfe
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 25 14:09:06 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 05a4642344a898c67eaef17f4b3fac9f0fda8744
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 25 14:01:54 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 00cdaf4eb42d1a43ff526780b815985514366dd8
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 20:56:40 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e84a79fb0613a020e732b46eab80dcfb290c8d2e
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 20:47:11 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 7e0702d7a01c516587941c92eb85b6052681803b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 20:13:08 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 6c95386694c860a9cead953c74c677e26df3552f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 19:49:11 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit d937b5654e11358ba47353944180dd42b8faebf6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 19:42:58 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e91fdfe4a3e3d54913d1851efdb3c14ef870da5f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 13:23:58 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a9cd7934460220b13c0d636fa4120d7633ef131d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 13:19:39 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit c4a30d8bba164a8a15e0ad52f0b71d06f61583fa
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 13:04:33 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit ca409e546bf26a21a1c5cf324438f0affc443703
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 13:04:01 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit d12832bef65d2714a115df145b95bdfb7dcfaee5
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 07:22:02 2019 -0700
+
+    ,
+
+commit ce35c1dc01341d20058071c6fee14fd983cf629b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 24 07:20:39 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 411ee253c407a0dd4e8140f09ecd04e633e2fffc
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 16:38:19 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 07e44ed4deebea1a0e68e44fdd1ad902039c118b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 16:37:22 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f9a35ad3398addb4bc0a4cc997ad48b12a32365d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 16:13:46 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 21a84f4299d9f58bdc4b86c04c62b4ee823b0c28
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 13:23:38 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 572ca250cd6853361c599e593567bffc02c914aa
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 13:20:43 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit c2bf5b23ed68e07059c8faf8ac7872878b3f18ad
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 13:16:37 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 1e7ae21672e03fcdc60c7c5138c7109a640de91a
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 13:09:05 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 255d6e70427d65b1d3a7f45653db284c8b5c81cc
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:59:31 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit f48877b1c287923d646042093529bc81964fff16
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:57:44 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 4f4c832574fbf6c6c40dccc2eeedb7802c5cf2e9
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:55:21 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 5100cdab88e3cae19f55443f0d0b0ee45c7764f3
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:54:25 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit ad962a67216ab0efbd02f0b534e20b0db26a5644
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:53:08 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit b3df94b75567d35e103c0fe459e796853f27520e
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:49:08 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a9e0c2a52f62909091875b073b0a3deabaa2377b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:47:58 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 6f337c68f345365f71c88b627422ddc4447618e3
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:40:09 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 7c40eeac3a8a1585d0245418bb4767383e61654d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:38:51 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit a3a44749ae9b3b99cd8a6debf393cf72f6f67f0d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:37:37 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 1113d2cf2125235d01c412ed021750feaac1e9d3
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:32:32 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit ab191cb47b1d78dbdcb6eee29bdc8fcf48746efb
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:24:36 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e1c4dd6ccab376be17e88fcc3200aa8f9543ca95
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 12:20:34 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit b921313485e486836ec1398aaf1a7963b46a6647
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 11:45:10 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 196d5e546ce41d5486fb47a65f0349339a580a2a
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 09:56:41 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e8e82d75ec2f40b9910b9a4c827d12ebaff497d5
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 09:54:09 2019 -0700
+
+    .
+
+commit d7a7468b60f3f625d5dfc61f8f93059830b65b76
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 08:54:11 2019 -0700
+
+    copying binaries to github
+
+commit 28c4716f0bc012ce094673bbcf85ae3685a008a2
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 22 07:29:32 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 4662f2078bb824cb71aad66d2fe08621d70f9675
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue May 21 16:46:23 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 72dfdedb661e466c5ece2cf1cfa3e2485fe4fa0b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue May 21 11:31:10 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 9696720ba3c5e4fadf77773a37bada1463d01dd8
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue May 21 10:07:46 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 6d43f2302a771708628a717c2dafd418865f284b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue May 21 07:29:45 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 1ff0fde5c4302d068ead2074ea6bc336d6d9fb29
+Merge: debb94f e0916e6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue May 21 07:28:47 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit debb94f42ab21dfebc781473d8da9a5bf1128261
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue May 21 07:27:59 2019 -0700
+
+    necessaries
+
+commit f4705cf3c0255b1c946513d69e68b4e12c51f8fa
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Tue May 21 07:23:35 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e0916e63311a54da71f42688db7735f04a65004e
+Merge: 77d5e7a 377117a
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 23:30:32 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 77d5e7acda0447f712bf0dc016eb8362ae4978e3
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 23:29:58 2019 -0700
+
+    .
+    
+    d
+
+commit 56ebbbdcdfe4245e084a08060d3d11043fd3ce64
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 23:23:17 2019 -0700
+
+    syncing local git changes
+
+commit 377117ab98ab4f8f87f6ddeb71d5b5a833a1f965
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 23:05:57 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit e5b22e8ffb9229f1cc7c0c172e4a70d37ec9fc87
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 22:59:05 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 1245c880d960a752d07d540fc90ac89722fbc1fa
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 22:17:09 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 63ce3be03dfcefaf55407acec23bdf3ad3bdf326
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:56:20 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 064d471bd239febd424d6f205827f6c35901fc9f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:55:00 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit b8fe059704134f06cc53c4fdb7f3598ccbd04f85
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:53:33 2019 -0700
+
+    Updates to the mobile nmbl repository
+
+commit 0b144120484e0c1b044257a237a87eebaa41bde4
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:50:58 2019 -0700
+
+    initalizing mobile terminal and syncing git changes
+
+commit d835a2e96ce04e0e4c9aa8d56f6f59f933c69d4e
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:49:12 2019 -0700
+
+    initalizing mobile terminal and syncing git changes
+
+commit f01d2868b35b025afa7c95b727dfd66c044212c2
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:43:15 2019 -0700
+
+    first push
+
+commit 5db072b5bd19958fa0e492fba396c1376d6988b7
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:39:51 2019 -0700
+
+    initalizing mobile terminal and syncing git changes
+
+commit eece96895b4bd9613e2cb6dd9da7b04b3dd13e4c
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:38:34 2019 -0700
+
+    initalizing mobile terminal and syncing git changes
+
+commit 6c1c2f95d7de0129dff3e347796feaba1362f760
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 20 21:35:41 2019 -0700
+
+    initalizing mobile terminal and syncing git changes
+
+commit fac8e9f0c9362220668fcd9f70ba12e2304e85f9
+Author: lssradm <48932877+lssradm@users.noreply.github.com>
+Date:   Mon May 20 14:44:08 2019 -0700
+
+    Copying files from ncd repository subdirectory
+    
+    Copying files from ncd repository subdirectory nsudo
+
+commit 969d4977a92279392a72e176782fa497eac882f1
+Author: lssradm <48932877+lssradm@users.noreply.github.com>
+Date:   Mon May 20 13:15:50 2019 -0700
+
+    Copying files from ncd repository shell
+    
+    Copying files from ncd repository shell directory nsh.
+
+commit 6eec859b39cfff2eb0495c7a421f79fb341b926f
+Author: lssradm <48932877+lssradm@users.noreply.github.com>
+Date:   Mon May 20 13:12:38 2019 -0700
+
+    Update README.md
+
+commit 69ca06a2a7d67c389cfcefa776583c02421c5f0a
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 17 07:15:20 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit d57085f11deaa8979c5787614ac3fbcb9bf4f55d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 16 21:17:11 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit b4f1cd2670abec0f766a87d3accc19cf07571d8b
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 16 21:06:03 2019 -0700
+
+    syncing local git changes
+
+commit 433bd234e1570491cca56100b44cc43548acbf2f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Mon May 13 06:02:36 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 8beabb7e60e9cdb0b2b35df3f83c150b2e82bf39
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 20:47:10 2019 -0700
+
+    syncing local git changes
+
+commit 419097d01dc85d90c9811a9f6cfcbf63a96c45fc
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 18:58:19 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 51793f1c77d28416c21010d1a29dcd11bcbba1d6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 16:07:49 2019 -0700
+
+    syncing local git changes
+
+commit 84e015a012b875bbfc846a6f9e26e5d51a6561ca
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 16:07:19 2019 -0700
+
+    syncing local git changes
+
+commit 793b6bb9e52983990d71a506acd66d18a8a41a36
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 15:51:25 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit d8647699f9696c7c9531895a2c298692cec4402c
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 15:37:42 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 3e0cc515dca9436ff69dfb49f2c559fe2909ec65
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 10:50:17 2019 -0700
+
+    syncing local git changes
+
+commit 38c8147479c1306e99da122bb0ca1b90175efcc3
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 08:16:34 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 5afff5f6c4b5e204f059379e9672a7302a6cb2cc
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 08:15:19 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 90e863227f4c9d9e2d9d6ea5493488e78fdac88f
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 08:14:57 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 7839148ba4c43552c6ade206d02855a4dc3311a0
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sun May 12 07:14:41 2019 -0700
+
+    syncing local git changes
+
+commit e7723a8d8285deb1c8c56159a6df9920fb9a4d94
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 11 11:59:56 2019 -0700
+
+    syncing local git changes
+
+commit 952ad3356652f260f650029fd81f147815d92ed9
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Sat May 11 11:42:12 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 56eb3395c36728023406c5bd9672b9d974fb5892
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 10 15:57:30 2019 -0700
+
+    syncing local git changes
+
+commit 7e4dc1f42961e2a92d736a982d2697f025468ee6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 10 11:29:13 2019 -0700
+
+    syncing local git changes
+
+commit 09cd99a84ce723547b1499c4ca29057f17dded06
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Fri May 10 05:43:09 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 343c247c487d9e416625eddbd16fb263661cc2c6
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 22:36:35 2019 -0700
+
+    .
+
+commit 6806250bd7b6252ecad70cfc7f179df482a432c9
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 22:34:37 2019 -0700
+
+    .
+
+commit a4e004de88d5a93b519ce1edb32c7c8af220acda
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 22:32:26 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit f8e0e6c8f0f24d258e77f74ad1b12fa09653dd64
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 22:31:45 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 275eb07c2fd9d599146643a44b6390bd5ef0353a
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 22:30:32 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 231e01837628a2be05acaae160a77c40c0cab608
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 22:29:57 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 30e23cf98071241f34ff3003d5b081a592a44ecf
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 12:20:58 2019 -0700
+
+    syncing local git changes
+
+commit 82ef4d569e0b0f44eb46aba55c945545beb88d1d
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 12:16:15 2019 -0700
+
+    syncing local git changes
+
+commit b51e19a053bb2861a467ae631babbf5e885e5905
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 11:52:15 2019 -0700
+
+    syncing local git changes
+
+commit fe730a35a97c5429c0899e0fda5173f7822a3997
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Thu May 9 00:53:10 2019 -0700
+
+    Updating to my local mobile nmbl repository
+
+commit 7bb8315516dd3aaffcfbac27d810e6fb2412c862
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 8 23:32:30 2019 -0700
+
+    syncing local git changes
+
+commit 8a33d06fce51b0c7839bb363b2068b53f8d32978
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 8 22:26:05 2019 -0700
+
+    syncing local git changes
+
+commit e44aa6453f80c150b20933b571aa53f265ea88f7
+Merge: bac3ea5 2b97290
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 8 21:26:09 2019 -0700
+
+    Merge branch 'master' of https://github.com/lssradm/nmbl
+    
+    initial commit
+
+commit bac3ea52d1ce4c398723dc82d748ba8f93ef6250
+Author: lssradm <mwmcgilvery@gmail.com>
+Date:   Wed May 8 21:21:38 2019 -0700
+
+    Initial commit
+
+commit 2b972902f3bfa6e37c203c354bb3d18a3680afb2
+Author: lssradm <48932877+lssradm@users.noreply.github.com>
+Date:   Tue May 7 14:48:21 2019 -0700
+
+    Initial commit

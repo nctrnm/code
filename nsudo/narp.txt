@@ -1,0 +1,2 @@
+Address                  HWtype  HWaddress           Flags Mask            Iface
+homeportal               ether   f8:18:97:0f:4e:31   C                     wlan0

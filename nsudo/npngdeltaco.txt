@@ -1,0 +1,12 @@
+PING google.com:80 (/):
+connected to 74.125.21.102:80 (313 bytes), seq=0 time=10328.32 ms 
+connected to 74.125.21.102:80 (313 bytes), seq=1 time=227.38 ms 
+connected to 74.125.21.102:80 (313 bytes), seq=2 time=360.34 ms 
+connected to 74.125.21.102:80 (313 bytes), seq=3 time=464.87 ms 
+connected to 74.125.21.102:80 (313 bytes), seq=4 time=594.77 ms 
+connected to 74.125.21.102:80 (313 bytes), seq=5 time=516.69 ms 
+connected to 74.125.21.102:80 (313 bytes), seq=6 time=386.88 ms 
+connected to 74.125.21.102:80 (313 bytes), seq=7 time=448.39 ms 
+--- http://google.com/ ping statistics ---
+8 connects, 8 ok, 0.00% failed, time 21334ms
+round-trip min/avg/max = 227.4/1666.0/10328.3 ms

@@ -1,0 +1,1 @@
+TesseractData version is invalid : 0, should be 4001

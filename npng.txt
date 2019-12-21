@@ -1,0 +1,13 @@
+PING google.com (172.217.4.174) 56(84) bytes of data.
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=1 ttl=52 time=59.8 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=2 ttl=52 time=107 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=3 ttl=52 time=108 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=4 ttl=52 time=93.1 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=5 ttl=52 time=84.4 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=6 ttl=52 time=84.4 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=7 ttl=52 time=85.2 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=8 ttl=52 time=85.3 ms
+
+--- google.com ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7005ms
+rtt min/avg/max/mdev = 59.891/88.544/108.659/14.354 ms

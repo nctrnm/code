@@ -1,0 +1,12 @@
+PING github.com:80 (/):
+connected to 192.30.255.113:80 (107 bytes), seq=0 time=428.72 ms 
+connected to 192.30.255.113:80 (107 bytes), seq=1 time=206.83 ms 
+connected to 192.30.255.113:80 (107 bytes), seq=2 time=241.25 ms 
+connected to 192.30.255.113:80 (107 bytes), seq=3 time=164.74 ms 
+connected to 192.30.255.113:80 (107 bytes), seq=4 time=153.03 ms 
+connected to 192.30.255.113:80 (107 bytes), seq=5 time=178.42 ms 
+connected to 192.30.255.113:80 (107 bytes), seq=6 time=129.08 ms 
+connected to 192.30.255.113:80 (107 bytes), seq=7 time=190.05 ms 
+--- http://github.com/ ping statistics ---
+8 connects, 8 ok, 0.00% failed, time 9701ms
+round-trip min/avg/max = 129.1/211.5/428.7 ms
