@@ -1,11 +1,7 @@
-wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.1.89  netmask 255.255.255.0  broadcast 192.168.1.255
-        inet6 fe80::aa51:5bff:fe42:b0db  prefixlen 64  scopeid 0x20<link>
-        inet6 2600:1700:83a0:cfa0:aa51:5bff:fe42:b0db  prefixlen 64  scopeid 0x0<global>
-        inet6 2600:1700:83a0:cfa0:c10d:6382:fbe8:2cc4  prefixlen 64  scopeid 0x0<global>
+wlan0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 1000  (UNSPEC)
-        RX packets 2350112  bytes 2819214592 (2.6 GiB)
-        RX errors 0  dropped 26026  overruns 0  frame 0
-        TX packets 837366  bytes 102457994 (97.7 MiB)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
