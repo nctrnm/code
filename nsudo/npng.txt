@@ -1,13 +1,13 @@
-PING google.com (172.217.4.174) 56(84) bytes of data.
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=1 ttl=52 time=58.5 ms
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=2 ttl=52 time=88.2 ms
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=3 ttl=52 time=226 ms
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=4 ttl=52 time=257 ms
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=5 ttl=52 time=95.8 ms
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=6 ttl=52 time=105 ms
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=7 ttl=52 time=94.9 ms
-64 bytes from lax28s01-in-f14.1e100.net (172.217.4.174): icmp_seq=8 ttl=52 time=93.2 ms
+PING google.com (172.217.5.206) 56(84) bytes of data.
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=1 ttl=52 time=112 ms
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=2 ttl=52 time=73.7 ms
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=3 ttl=52 time=93.4 ms
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=4 ttl=52 time=99.7 ms
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=5 ttl=52 time=105 ms
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=6 ttl=52 time=121 ms
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=7 ttl=52 time=72.1 ms
+64 bytes from lax28s10-in-f206.1e100.net (172.217.5.206): icmp_seq=8 ttl=52 time=93.2 ms
 
 --- google.com ping statistics ---
-8 packets transmitted, 8 received, 0% packet loss, time 7009ms
-rtt min/avg/max/mdev = 58.558/127.557/257.393/67.803 ms
+8 packets transmitted, 8 received, 0% packet loss, time 7010ms
+rtt min/avg/max/mdev = 72.121/96.548/121.806/16.276 ms
