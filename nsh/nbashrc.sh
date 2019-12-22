@@ -6,6 +6,8 @@ ping -b -c 8 google.com > /storage/emulated/0/ngt/nsudo/npng.txt;
 echo 'Logging Global Aliases';
 alias bashed='cd ; micro .bashrc';
 alias o='termux-open';
+alias fl=''FLM User Files'';
+alias ms=''My Samples'/NctrnmSounds';
 alias and='&&';
 alias send='termux-open --send';
 alias nbin='/data/data/com.termux/files/usr/bin';
