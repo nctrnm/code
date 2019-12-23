@@ -7,6 +7,7 @@ echo logging global aliases;
 alias bashed='cd ; micro .bashrc';
 alias o='termux-open';
 alias and='&&';
+alias cwav='ffmpeg -i';
 alias send='termux-open --send';
 alias nbin='/data/data/com.termux/files/usr/bin';
 alias search='apt search';

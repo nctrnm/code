@@ -1,3 +1,27 @@
+commit 5eda07f1dff0df3eea8fc64518b11b614c2c9d31
+Author: mwmcgilvery <mwmcgilvery@github.com>
+Date:   Sun Dec 22 22:41:09 2019 -0800
+
+    Updates to the mobile nm repository
+
+commit ce7872a96cc2059fd2a5d41c52a9ab653ac61647
+Author: mwmcgilvery <mwmcgilvery@github.com>
+Date:   Sun Dec 22 15:03:13 2019 -0800
+
+    Updates to the mobile nm repository
+
+commit e1fb6f0a4cfcb62dd7952b69b43e8fa50ba52788
+Author: mwmcgilvery <mwmcgilvery@github.com>
+Date:   Sun Dec 22 14:58:40 2019 -0800
+
+    Updates to the mobile nm repository
+
+commit df14a40a38a7032e4c895de79dcea30025f56e46
+Author: mwmcgilvery <mwmcgilvery@github.com>
+Date:   Sun Dec 22 14:54:42 2019 -0800
+
+    Update
+
 commit 97f80b0cd1db0d047cc847bc2da6f29e380a473f
 Author: mwmcgilvery <mwmcgilvery@github.com>
 Date:   Sun Dec 22 14:53:41 2019 -0800
