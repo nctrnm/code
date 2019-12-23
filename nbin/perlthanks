@@ -2,9 +2,9 @@
     eval 'exec /data/data/com.termux/files/usr/bin/perl -S $0 ${1+"$@"}'
 	if $running_under_some_shell;
 
-my $config_tag1 = '5.30.0 - undisclosed-time';
+my $config_tag1 = '5.30.1 - undisclosed-time';
 
-my $patchlevel_date = 1558125963;
+my $patchlevel_date = 1572193832;
 my @patches = Config::local_patches();
 my $patch_tags = join "", map /(\S+)/ ? "+$1 " : (), @patches;
 

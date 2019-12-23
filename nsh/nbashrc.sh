@@ -29,7 +29,7 @@ alias bcon='cd ~ && pwd && micro .bashrc';
 alias ddir='rmdir --ignore-fail-on-non-empty';
 alias ngit='bash /storage/emulated/0/ngt/nsh/n_git.sh';
 alias nctrnm='cd /storage/emulated/0/ngt && pwd';
-alias home='cd /storage/emulated/0/ngt && pwd';
+alias home='/storage/emulated/0/ngt';
 alias gthb='lynx https://github.com/mwmcgilvery';
 alias google='lynx https://www.google.com/search?q='; 
 alias sh101='man sh';
