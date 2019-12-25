@@ -5,4 +5,4 @@ Changes not staged for commit:
 	modified:   nsudo/ngits.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
-
+    
