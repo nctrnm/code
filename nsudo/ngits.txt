@@ -1,7 +1,8 @@
 On branch master
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
+  (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   nsudo/ngits.txt
+	deleted:    out.mp4
 
 no changes added to commit (use "git add" and/or "git commit -a")
