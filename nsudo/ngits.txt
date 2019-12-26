@@ -1,7 +1,28 @@
 On branch master
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
+  (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
+	deleted:    nbin/arm-linux-androideabi-clang
+	deleted:    nbin/arm-linux-androideabi-clang++
+	deleted:    nbin/arm-linux-androideabi-cpp
+	deleted:    nbin/arm-linux-androideabi-g++
+	deleted:    nbin/arm-linux-androideabi-gcc
+	deleted:    nbin/arm-linux-androideabi-ld
+	deleted:    nbin/arm-linux-androideabi-readelf
+	deleted:    nbin/c++
+	deleted:    nbin/cc
+	deleted:    nbin/clang
+	deleted:    nbin/clang++
+	deleted:    nbin/clang-8
+	deleted:    nbin/clang-cl
+	deleted:    nbin/clang-cpp
+	deleted:    nbin/cpp
+	deleted:    nbin/g++
+	deleted:    nbin/postgres
+	deleted:    nmus/NNoiseA.wav
+	deleted:    nmus/NNoiseB.wav
+	deleted:    nsh/bashmanual.txt
 	modified:   nsudo/ngits.txt
+	modified:   nsudo/npng.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
