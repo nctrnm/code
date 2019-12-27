@@ -1,0 +1,32 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+VERSION="1.7.1"
+LDFLAGS="-L/data/data/com.termux/files/usr/lib -Wl,-rpath=/data/data/com.termux/files/usr/lib -Wl,--enable-new-dtags -march=armv7-a  -L/data/data/com.termux/files/usr/lib "
+LIBS=" -lssl  -lcrypto"
+LIBDIR="/data/data/com.termux/files/usr/lib"
+INCLUDEDIR="${prefix}/include"
+LIBVERSION="3:0:0"
+
+for arg in $@
+do
+    if [ $arg = "--cflags" ]
+    then
+        echo "-I${INCLUDEDIR}"
+    fi
+    if [ $arg = "--libs" ]
+    then
+        echo "${LDFLAGS} -L${LIBDIR} ${LIBS} -lldns"
+    fi
+    if [ $arg = "-h" ] || [ $arg = "--help" ]
+    then
+        echo "Usage: $0 [--cflags] [--libs] [--version]"
+    fi
+    if [ $arg = "--version" ]
+    then
+        echo "${VERSION}"
+    fi
+    if [ $arg = "--libversion" ]
+    then
+        echo "${LIBVERSION}"
+    fi
+done

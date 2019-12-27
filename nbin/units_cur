@@ -1,0 +1,551 @@
+#!/data/data/com.termux/files/usr/bin/python
+#
+# units_cur for units, a program for updated currency exchange rates
+#
+# Copyright (C) 2017-2018
+# Free Software Foundation, Inc
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+#    
+#
+# This program was written by Adrian Mariano (adrianm@gnu.org)
+#
+
+# For Python 2 & 3 compatibility
+from __future__ import absolute_import, division, print_function
+#
+#
+
+version = '5.0'
+
+# Version 5.0:
+#
+# Rewrite to support multiple different data sources due to disappearance
+# of the Yahoo feed.  Includes support for base currency selection. 
+#
+# Version 4.3: 20 July 2018
+#
+# Validate rate data from server
+#
+# Version 4.2: 18 April 2018
+#
+# Handle case of empty/malformed entry returned from the server
+#
+# Version 4.1: 30 October 2017
+#
+# Fixed to include USD in the list of currency codes.  
+#
+# Version 4: 2 October 2017 
+#
+# Complete rewrite to use Yahoo YQL API due to removal of TimeGenie RSS feed.
+# Switched to requests library using JSON.  One program now runs under
+# Python 2 or Python 3.  Thanks to Ray Hamel for some help with this update.  
+
+# Normal imports
+import requests
+import codecs
+from argparse import ArgumentParser
+from collections import OrderedDict
+from datetime import date
+from os import linesep
+from sys import exit, stderr, stdout
+
+outfile_name='/data/data/com.termux/files/usr/com/units/currency.units'
+
+# valid metals 
+
+validmetals = ['silver','gold','platinum']
+
+PRIMITIVE = '!           # Base unit, the primitive unit of currency'
+
+# This exchange rate table lists the currency ISO 4217 codes, their
+# long text names, and any fixed definitions.  If the definition is
+# empty then units_cur will query the server for a value.
+
+rate_index = 1
+currency = OrderedDict([
+    ('ATS', ['austriaschilling',  '1|13.7603 euro']),
+    ('BEF', ['belgiumfranc',      '1|40.3399 euro']),
+    ('CYP', ['cypruspound',       '1|0.585274 euro']),
+    ('EEK', ['estoniakroon',      '1|15.6466 euro # Equal to 1|8 germanymark']),
+    ('FIM', ['finlandmarkka',     '1|5.94573 euro']),
+    ('FRF', ['francefranc',       '1|6.55957 euro']),
+    ('DEM', ['germanymark',       '1|1.95583 euro']),
+    ('GRD', ['greecedrachma',     '1|340.75 euro']),
+    ('IEP', ['irelandpunt',       '1|0.787564 euro']),
+    ('ITL', ['italylira',         '1|1936.27 euro']),
+    ('LVL', ['latvialats',        '1|0.702804 euro']),
+    ('LTL', ['lithuanialitas',    '1|3.4528 euro']),
+    ('LUF', ['luxembourgfranc',   '1|40.3399 euro']),
+    ('MTL', ['maltalira',         '1|0.4293 euro']),
+    ('SKK', ['slovakiakornua',    '1|30.1260 euro']),
+    ('SIT', ['sloveniatolar',     '1|239.640 euro']),
+    ('ESP', ['spainpeseta',       '1|166.386 euro']),
+    ('NLG', ['netherlandsguilder','1|2.20371 euro']),
+    ('PTE', ['portugalescudo',    '1|200.482 euro']),
+    ('CVE', ['capeverdeescudo',   '1|110.265 euro']),
+    ('BGN', ['bulgarialev',       '1|1.9558 euro']),
+    ('BAM', ['bosniaconvertiblemark','germanymark']),
+    ('KMF', ['comorosfranc',      '1|491.96775 euro']),
+    ('XOF', ['westafricafranc',   '1|655.957 euro']),
+    ('XPF', ['cfpfranc',          '1|119.33 euro']),
+    ('XAF', ['centralafricacfafranc','1|655.957 euro']),
+    ('AED', ['uaedirham','']),
+    ('AFN', ['afghanafghani','']),
+    ('ALL', ['albanialek','']),
+    ('AMD', ['armeniadram','']),
+    ('ANG', ['antillesguilder','']),
+    ('AOA', ['angolakwanza','']),
+    ('ARS', ['argentinapeso','']),
+    ('AUD', ['australiadollar','']),
+    ('AWG', ['arubaflorin','']),
+    ('AZN', ['azerbaijanmanat','']),
+    ('BAM', ['bosniaconvertiblemark','']),
+    ('BBD', ['barbadosdollar','']),
+    ('BDT', ['bangladeshtaka','']),
+    ('BGN', ['bulgarialev','']),
+    ('BHD', ['bahraindinar','']),
+    ('BIF', ['burundifranc','']),
+    ('BMD', ['bermudadollar','']),
+    ('BND', ['bruneidollar','']),
+    ('BOB', ['boliviaboliviano','']),
+    ('BRL', ['brazilreal','']),
+    ('BSD', ['bahamasdollar','']),
+    ('BTN', ['bhutanngultrum','']),
+    ('BWP', ['botswanapula','']),
+    ('BYN', ['belarusruble','']),
+    ('BYR', ['oldbelarusruble','1|10000 BYN']),  
+    ('BZD', ['belizedollar','']),
+    ('CAD', ['canadadollar','']),
+    ('CDF', ['drcfranccongolais','']),
+    ('CHF', ['swissfranc','']),
+    ('CLP', ['chilepeso','']),
+    ('CNY', ['chinayuan','']),
+    ('COP', ['colombiapeso','']),
+    ('CRC', ['costaricacolon','']),
+    ('CUP', ['cubapeso','']),
+    ('CVE', ['capeverdeescudo','']),
+    ('CZK', ['czechkoruna','']),
+    ('DJF', ['djiboutifranc','']),
+    ('DKK', ['denmarkkrona','']),
+    ('DOP', ['dominicanrepublicpeso','']),
+    ('DZD', ['algeriadinar','']),
+    ('EGP', ['egyptpound','']),
+    ('ERN', ['eritreanakfa','']),
+    ('ETB', ['ethiopiabirr','']),
+    ('EUR', ['euro','']),
+    ('FJD', ['fijidollar','']),
+    ('FKP', ['falklandislandspound','']),
+    ('GBP', ['ukpound','']),
+    ('GEL', ['georgialari','']),
+    ('GHS', ['ghanacedi','']),
+    ('GIP', ['gibraltarpound','']),
+    ('GMD', ['gambiadalasi','']),
+    ('GNF', ['guineafranc','']),
+    ('GTQ', ['guatemalaquetzal','']),
+    ('GYD', ['guyanadollar','']),
+    ('HKD', ['hongkongdollar','']),
+    ('HNL', ['honduraslempira','']),
+    ('HRK', ['croatiakuna','']),
+    ('HTG', ['haitigourde','']),
+    ('HUF', ['hungariaforint','']),
+    ('IDR', ['indonesiarupiah','']),
+    ('ILS', ['israelnewshekel','']),
+    ('INR', ['indiarupee','']),
+    ('IQD', ['iraqdinar','']),
+    ('IRR', ['iranrial','']),
+    ('ISK', ['icelandkrona','']),
+    ('JMD', ['jamaicadollar','']),
+    ('JOD', ['jordandinar','']),
+    ('JPY', ['japanyen','']),
+    ('KES', ['kenyaschilling','']),
+    ('KGS', ['kyrgyzstansom','']),
+    ('KHR', ['cambodiariel','']),
+    ('KMF', ['comorosfranc','']),
+    ('KPW', ['northkoreawon','']),
+    ('KRW', ['southkoreawon','']),
+    ('KWD', ['kuwaitdinar','']),
+    ('KYD', ['caymanislandsdollar','']),
+    ('KZT', ['kazakhstantenge','']),
+    ('LAK', ['laokip','']),
+    ('LBP', ['lebanonpound','']),
+    ('LKR', ['srilankarupee','']),
+    ('LRD', ['liberiadollar','']),
+    ('LSL', ['lesotholoti','']),
+    ('LYD', ['libyadinar','']),
+    ('MAD', ['moroccodirham','']),
+    ('MDL', ['moldovaleu','']),
+    ('MGA', ['madagascarariary','']),
+    ('MKD', ['macedoniadenar','']),
+    ('MMK', ['myanmarkyat','']),
+    ('MNT', ['mongoliatugrik','']),  
+    ('MOP', ['macaupataca','']),
+    ('MRO', ['mauritaniaoldouguiya','1|10 MRU']),
+    ('MRU', ['mauritaniaouguiya', '']), 
+    ('MUR', ['mauritiusrupee','']),
+    ('MVR', ['maldiverufiyaa','']),
+    ('MWK', ['malawikwacha','']),
+    ('MXN', ['mexicopeso','']),
+    ('MYR', ['malaysiaringgit','']),
+    ('MZN', ['mozambiquemetical','']),
+    ('NAD', ['namibiadollar','']),
+    ('NGN', ['nigerianaira','']),
+    ('NIO', ['nicaraguacordobaoro','']),
+    ('NOK', ['norwaykrone','']),
+    ('NPR', ['nepalrupee','']),
+    ('NZD', ['newzealanddollar','']),
+    ('OMR', ['omanrial','']),
+    ('PAB', ['panamabalboa','']),
+    ('PEN', ['perunuevosol','']),
+    ('PGK', ['papuanewguineakina','']),
+    ('PHP', ['philippinepeso','']),
+    ('PKR', ['pakistanrupee','']),
+    ('PLN', ['polandzloty','']),
+    ('PYG', ['paraguayguarani','']),
+    ('QAR', ['qatarrial','']),
+    ('RON', ['romanianewlei','']),
+    ('RSD', ['serbiadinar','']),
+    ('RUB', ['russiaruble','']),
+    ('RWF', ['rwandafranc','']),
+    ('SAR', ['saudiarabiariyal','']),
+    ('SBD', ['solomonislandsdollar','']),
+    ('SCR', ['seychellesrupee','']),
+    ('SDG', ['sudanpound','']),
+    ('SEK', ['swedenkrona','']),
+    ('SGD', ['singaporedollar','']),
+    ('SHP', ['sainthelenapound','']),
+    ('SLL', ['sierraleoneleone','']),
+    ('SOS', ['somaliaschilling','']),
+    ('SRD', ['surinamedollar','']),
+    ('SSP', ['southsudanpound','']),
+    ('STD', ['saotome&principeolddobra','']),
+    ('STN', ['saotome&principedobra','']),
+    ('SVC', ['elsalvadorcolon','']),
+    ('SYP', ['syriapound','']),
+    ('SZL', ['swazilandlilangeni','']),
+    ('THB', ['thailandbaht','']),
+    ('TJS', ['tajikistansomoni','']),
+    ('TMT', ['turkmenistanmanat','']),
+    ('TND', ['tunisiadinar','']),
+    ('TOP', ["tongapa'anga",'']),
+    ('TRY', ['turkeylira','']),
+    ('TTD', ['trinidadandtobagodollar','']),
+    ('TWD', ['taiwandollar','']),
+    ('TZS', ['tanzaniashilling','']),
+    ('UAH', ['ukrainehryvnia','']),
+    ('UGX', ['ugandaschilling','']),
+    ('USD', ['US$', '']),
+    ('UYU', ['uruguaypeso','']),
+    ('UZS', ['uzbekistansum','']),
+    ('VEF', ['venezuelabolivarfuerte','']),
+    ('VES', ['venezuelabolivarsoberano','']),
+    ('VND', ['vietnamdong','']),
+    ('VUV', ['vanuatuvatu','']),
+    ('WST', ['samoatala','']),
+    ('XAF', ['centralafricacfafranc','']),
+    ('XCD', ['eastcaribbeandollar','']),
+    ('XDR', ['specialdrawingrights','']),
+    ('YER', ['yemenrial','']),
+    ('ZAR', ['southafricarand','']),
+    ('ZMW', ['zambiakwacha','']),
+    ('ZWL', ['zimbabwedollar','']),
+])
+
+def validfloat(x):
+  try:
+    float(x)
+    return True
+  except ValueError:
+    return False
+
+def addrate(verbose,form,code,rate):
+  if code not in currency.keys():
+    if (verbose):
+      stderr.write('Got unknown currency with code {}\n'.format(code))
+  else:
+    if not currency[code][rate_index]:
+      if validfloat(rate):
+        currency[code][rate_index] = form.format(rate)
+      else:
+        stderr.write('Got invalid rate "{}" for currency "{}"\n'.format(
+                                  rate, code))
+    elif verbose:
+      if currency[code][rate_index] != form.format(rate):
+        stderr.write('Got value "{}" for currency "{}" but '
+                   'it is already defined as {}\n'.format(rate, code,
+                                                  currency[code][rate_index]))
+
+def getjson(address,args=None):
+  try:
+    res = requests.get(address,args)
+    res.raise_for_status()
+    return(res.json())
+  except requests.exceptions.RequestException as e:
+    stderr.write('Error connecting to currency server:\n{}.\n'.format(e))
+    exit(1)
+        
+########################################################
+#
+#  Connect to floatrates for currency update
+#
+
+def floatrates(verbose,base,dummy):
+  webdata = getjson('https://www.floatrates.com/daily/'+base+'.json')
+  for index in webdata:
+    entry = webdata[index]
+    if 'rate' not in entry or 'code' not in entry:    # Skip empty/bad entries
+      if verbose:
+        stderr.write('Got bad entry from server: '+str(entry)+'\n')
+    else:      
+      addrate(verbose,'{} '+base,entry['code'],entry['inverseRate'])
+  currency[base][rate_index] = PRIMITIVE
+  return('FloatRates ('+base+' base)')
+
+########################################################
+#
+# Connect to European central bank site
+#
+
+def eubankrates(verbose,base,dummy):
+  if verbose and base!='EUR':
+    stderr.write('European bank uses euro for base currency.  Specified base {} ignored.\n'.format(base))
+  import xml.etree.ElementTree as ET
+  try:
+    res=requests.get('https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml')
+    res.raise_for_status()
+    data = ET.fromstring(res.content)[2][0]
+  except requests.exceptions.RequestException as e:
+    stderr.write('Error connecting to currency server:\n{}.\n'.
+                 format(e))
+    exit(1)
+  for entry in data.iter():
+    if entry.get('time'):
+      continue
+    rate = entry.get('rate')
+    code = entry.get('currency')
+    if not rate or not code:                # Skip empty/bad entries
+      if verbose:
+        stderr.write('Got bad entry from server, code {} and rate {}\n'.format(code,rate))
+    else:      
+      addrate(verbose,'1|{} euro', code, rate)
+  currency['EUR'][rate_index]=PRIMITIVE
+  return('the European Central Bank (euro base)')
+      
+########################################################
+#
+# Connect to fixer.io (requires API key)
+#
+# Free API key does not allow changing base currency
+# With free key only euro base is supported, and https is not allowed
+#
+      
+def fixer(verbose,base,key):
+  if not key:
+    stderr.write('API key required for this source\n')
+    exit(1)
+  if verbose and base!='EUR':
+    stderr.write('Fixer uses euro for base currency.  Specified base {} ignored.\n'.format(base))
+  webdata = getjson('http://data.fixer.io/api/latest', {'access_key':key})
+  if not webdata['success']:
+    stderr.write('Currency server error: '+webdata['error']['info'])
+    exit(1)
+  for code in webdata['rates']:
+    addrate(verbose,'1|{} euro', code, webdata['rates'][code])
+  currency['EUR'][rate_index] = PRIMITIVE
+  return('Fixer (euro base)')
+
+########################################################
+#
+# Connect to openexchangerates (requires API key)
+#
+# Free API key does not allow changing the base currency
+#
+         
+def openexchangerates(verbose,base,key):
+  if not key:
+    stderr.write('API key required for this source\n')
+    exit(1)
+  if verbose and base!='USD':
+    stderr.write('Open Exchange Rates uses US dollar for base currency.  Specified base {} ignored.\n'.format(base))
+  webdata = getjson('https://openexchangerates.org/api/latest.json',
+                    {'app_id':key}
+                    )
+  for code in webdata['rates']:
+    addrate(verbose,'1|{} US$', code, webdata['rates'][code])
+  currency['USD'][rate_index] = PRIMITIVE
+  return('open exchange rates (USD base)')
+
+#######################################################
+#
+# list of valid source names and corresponding functions
+#
+
+sources = {       
+  'floatrates': floatrates,
+  'eubank' : eubankrates,
+  'fixer' : fixer,
+  'openexchangerates': openexchangerates,
+}
+
+#######################################################
+#
+# Argument Processing
+#
+
+ap = ArgumentParser(
+    description="Update currency information for 'units' "
+    "into the specified filename or if no filename is "
+    "given, the default: '{}'.  The special filename '-' "
+    "will send the currency data to stdout.".format(outfile_name),
+)
+
+ap.add_argument(
+    'output_file',
+    default=outfile_name,
+    help='the file to update',
+    metavar='filename',
+    nargs='?',
+    type=str,
+)
+
+ap.add_argument('-V','--version',
+                action='version',
+                version='%(prog)s version ' + version,
+                help='display units_cur version',
+)
+
+ap.add_argument('-v','--verbose',
+                action='store_true',
+                help='display details when fetching currency data',
+)
+
+ap.add_argument('-s','--source',choices=list(sources.keys()),
+                default='floatrates',
+                help='set currency data source',
+)
+
+ap.add_argument('-b','--base',default='USD',
+                help='set the base currency (when allowed by source).  BASE should be a 3 letter ISO currency code, e.g. USD.  The specified currency will be the primitive currency unit used by units.  Only the floatrates source supports this option.',
+)                
+
+ap.add_argument('-k','--key',default='',
+                help='set API key for sources that require it'
+)
+
+args = ap.parse_args()  
+outfile_name = args.output_file
+verbose = args.verbose
+source = args.source
+base = args.base
+apikey = args.key
+
+if base not in currency.keys():
+  stderr.write('Base currency {} is not a known currency code.\n'.format(base))
+  exit(1)
+
+########################################################
+#
+# Fetch currency data from specified curerncy source
+#
+
+sourcename = sources[source](verbose,base,apikey)
+            
+# Delete currencies where we have no rate data
+for code in list(currency.keys()):
+  if not currency[code][rate_index]:
+    if verbose:
+      stderr.write('No data for {}\n'.format(code))
+    del currency[code]
+
+cnames = [currency[code][0] for code in currency.keys()]
+crates = [currency[code][1] for code in currency.keys()]
+
+codestr = '\n'.join('{:23}{}'.
+   format(code, name) for (code,name) in zip(currency.keys(), cnames))
+
+maxlen = max(len(name) for name in cnames) + 2
+
+ratestr = '\n'.join(
+    '{:{}}{}'.format(name, maxlen, rate) for (name, rate) in zip(cnames, crates)
+    )
+
+#######################################################
+#
+# Get precious metals data and bitcoin
+#
+
+metals = getjson('https://services.packetizer.com/spotprices',{'f':'json'})
+bitcoin = getjson('https://services.packetizer.com/btc',{'f':'json'})
+
+metallist = ['']*len(validmetals)
+for metal, price in metals.items():
+  if metal in validmetals:
+    metalindex = validmetals.index(metal)
+    if validfloat(price):
+      if not metallist[metalindex]:
+        metallist[validmetals.index(metal)] = '{:19}{} US$/troyounce'.format(
+                                                         metal + 'price', price)
+      elif verbose:
+        stderr.write('Got value "{}" for metal "{}" but '
+                     'it is already defined\n'.format(price,metal))
+    else:
+      stderr.write('Got invalid rate "{}" for metal "{}"\n'.format(price,metal))
+  elif metal != 'date' and verbose:  # Don't print a message for the "date" entry
+    stderr.write('Got unknown metal "{}" with value "{}"\n'.format(metal,price))
+metalstr = '\n'.join(metallist)
+
+if validfloat(bitcoin['usd']):
+  bitcoinstr = '{:{}}{} US$ # From services.packetizer.com/btc\n'.format(
+                'bitcoin',maxlen,bitcoin['usd'])
+else:
+  stderr.write('Got invalid bitcoin rate "{}"\n', bitcoint['usd'])
+  bitcointstr=''
+
+#######################################################
+#
+# Format output and write the currency file
+#
+
+datestr = date.today().isoformat()
+  
+outstr = (
+"""# ISO Currency Codes
+
+{codestr}
+
+# Currency exchange rates source 
+
+!message Currency exchange rates from {sourcename} on {datestr}
+
+{ratestr}
+{bitcoinstr}
+
+# Precious metals prices from Packetizer (services.packetizer.com/spotprices)
+
+{metalstr}
+
+""".format(codestr=codestr, datestr=datestr, ratestr=ratestr, metalstr=metalstr,
+           bitcoinstr=bitcoinstr, sourcename=sourcename)
+).replace('\n', linesep)
+
+try:
+    if outfile_name == '-':
+        codecs.StreamReader(stdout, codecs.getreader('utf8')).write(outstr)
+    else:    
+        with codecs.open(outfile_name, 'w', 'utf8') as of:
+            of.write(outstr)
+except IOError as e:
+    stderr.write('Unable to write to output file:\n{}\n'.format(e))
+    exit(1)
