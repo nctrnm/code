@@ -1,3 +1,9 @@
+commit ef57cfaca551abe801a437687adb63e0367f0cfc
+Author: mwmcgilvery <mwmcgilvery@github.com>
+Date:   Thu Dec 26 18:57:00 2019 -0800
+
+    Updates to the mobile nm repository
+
 commit 44bd2c9557c7b28b9768f040955f52c9f35eb9ef
 Author: mwmcgilvery <mwmcgilvery@github.com>
 Date:   Thu Dec 26 11:33:27 2019 -0800
