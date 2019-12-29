@@ -74,4 +74,4 @@ cd /storage/emulated/0/ngt;
 pwd;
 echo Printing Global Aliases;
 alias -p;
-echo Ready;
+echo Ready;export PATH=/bin/lscript:/bin/lscript:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets
