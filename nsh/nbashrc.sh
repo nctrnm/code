@@ -56,7 +56,7 @@ alias fm='ranger';
 alias x='kill job -1';
 alias h='/storage/emulated/0/ngt';
 alias p='ping ';
-alias pg='ping -c 8 nctrnm.com > /storage/emulated/0/ngt/nsitepng.txt; micro /storage/emulated/0/nsitepng.txt';
+alias pg='ping -c8 nctrnm.com > /storage/emulated/0/ngt/nsitepng.txt; micro /storage/emulated/0/ngt/nsudo/nsitepng.txt';
 echo Saving Initialization File Updates;
 cd ; cp .bashrc /storage/emulated/0/ngt/nsh/nbashrc.sh;
 apt upgrade && pkg upgrade;                                  
