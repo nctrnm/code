@@ -1,13 +1,7 @@
-On branch master
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	new file:   ndoc/fooViewSaveText_1577726971518.txt
-	new file:   ndoc/fooViewSaveText_1577727223167.txt
-	modified:   nsudo/ngits.txt
-	modified:   nsudo/npng.txt
-
+SSOn branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   nsudo/ngits.txt
 
+no changes added to commit (use "git add" and/or "git commit -a")

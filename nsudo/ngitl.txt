@@ -1,3 +1,15 @@
+commit 01d8307f0b1bb635ed6459c409a77ffac4c0a37b
+Author: mwmcgilvery <mwmcgilvery@github.com>
+Date:   Mon Dec 30 10:56:00 2019 -0800
+
+    Updates to the mobile nm repository
+
+commit 47539dc35b32dc25b9331e93b559d1a2be16e1cf
+Author: mwmcgilvery <mwmcgilvery@github.com>
+Date:   Mon Dec 30 01:47:58 2019 -0800
+
+    ahskjs
+
 commit 2e3cd821ee196ac84e910d0b2fb2bb9bc1db0532
 Author: mwmcgilvery <mwmcgilvery@github.com>
 Date:   Mon Dec 30 01:18:33 2019 -0800
