@@ -1,13 +1,13 @@
-PING google.com (172.217.16.46) 56(84) bytes of data.
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=1 ttl=44 time=398 ms
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=2 ttl=44 time=355 ms
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=3 ttl=44 time=317 ms
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=4 ttl=44 time=275 ms
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=5 ttl=44 time=206 ms
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=6 ttl=44 time=211 ms
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=7 ttl=44 time=469 ms
-64 bytes from muc03s08-in-f46.1e100.net (172.217.16.46): icmp_seq=8 ttl=44 time=430 ms
+PING google.com (172.217.14.110) 56(84) bytes of data.
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=1 ttl=53 time=57.5 ms
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=2 ttl=53 time=83.9 ms
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=3 ttl=53 time=82.9 ms
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=4 ttl=53 time=82.8 ms
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=5 ttl=53 time=80.2 ms
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=6 ttl=53 time=98.2 ms
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=7 ttl=53 time=87.9 ms
+64 bytes from lax31s01-in-f14.1e100.net (172.217.14.110): icmp_seq=8 ttl=53 time=87.5 ms
 
 --- google.com ping statistics ---
-8 packets transmitted, 8 received, 0% packet loss, time 7006ms
-rtt min/avg/max/mdev = 206.978/333.015/469.416/91.625 ms
+8 packets transmitted, 8 received, 0% packet loss, time 7009ms
+rtt min/avg/max/mdev = 57.536/82.662/98.228/10.805 ms
