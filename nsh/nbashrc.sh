@@ -6,7 +6,6 @@ echo logging global aliases;
 alias bashed='cd ; micro .bashrc';
 alias o='termux-open';
 alias and='&&';
-alias soxn='sox -r44100 -b16';
 alias soxn='sox -r44100 -b16 -c1';
 alias cnvrn='ffmpeg -i';
 alias send='termux-open --send';
@@ -60,7 +59,8 @@ alias p='ping ';
 alias pg='ping -c8 nctrnm.com > /storage/emulated/0/ngt/nsitepng.txt; micro /storage/emulated/0/ngt/nsudo/nsitepng.txt';
 echo Saving Initialization File Updates;
 cd ; cp .bashrc /storage/emulated/0/ngt/nsh/nbashrc.sh;
-apt upgrade && pkg upgrade;                                  
+echo Upgrading Apps
+apt upgrade && npm -g update npm && pkg upgrade;                                  
 echo preparing user info;                                    
 whoami > /storage/emulated/0/ngt/nsudo/nwhoami.txt;
 echo gathering wlan data;
