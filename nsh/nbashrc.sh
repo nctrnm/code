@@ -1,5 +1,9 @@
 echo 'Logging into sdcard';
 cd /storage/emulated/0/ngt;
+echo Setting Environmental variables;
+declare -x HOME="/sdcard/";
+echo Printing Environmental variables;
+export -p;
 pwd;
 ping -b -c 8 google.com > /storage/emulated/0/ngt/nsudo/npng.txt;
 echo logging global aliases;
