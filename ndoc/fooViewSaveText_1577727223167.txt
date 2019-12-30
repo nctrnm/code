@@ -1,0 +1,6 @@
+#white noise 
+
+sox /sdcard/base.wav /sdcard/new.wav synth whitenoise
+
+#5 seconds, sin 85-83hz + square 83-85hz, 16bit, 44100hz, null input, show progress
+sox -S -n -b16 -r44100 /storage/emulated/0/output.wav - c1 synth 5 sine 85-83 synth 5 square mix 83-85 

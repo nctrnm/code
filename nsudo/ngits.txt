@@ -1,8 +1,9 @@
 On branch master
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   nsh/nbashrc.sh
-	modified:   nsudo/ngitl.txt
+	new file:   ndoc/fooViewSaveText_1577726971518.txt
+	new file:   ndoc/fooViewSaveText_1577727223167.txt
+	modified:   nsudo/ngits.txt
 	modified:   nsudo/npng.txt
 
 Changes not staged for commit:

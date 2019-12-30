@@ -1,7 +1,7 @@
 echo 'Logging into sdcard';
 cd /storage/emulated/0/ngt;
 echo Setting Environmental variables;
-declare -x HOME="/sdcard/";
+declare -x HOME="/data/data/com.termux/files/home"
 echo Printing Environmental variables;
 export -p;
 pwd;
@@ -78,4 +78,5 @@ cd /storage/emulated/0/ngt;
 pwd;
 echo Printing Global Aliases;
 alias -p;
-echo Ready;export PATH=/bin/lscript:/bin/lscript:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets
+echo Ready;
+declare -x HOME="/sdcard/";
