@@ -1,13 +1,13 @@
-PING google.com (172.217.14.78) 56(84) bytes of data.
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=1 ttl=53 time=63.4 ms
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=2 ttl=53 time=80.6 ms
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=3 ttl=53 time=78.7 ms
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=4 ttl=53 time=86.9 ms
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=5 ttl=53 time=94.4 ms
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=6 ttl=53 time=82.4 ms
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=7 ttl=53 time=80.8 ms
-64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=8 ttl=53 time=86.8 ms
+PING google.com (172.217.11.174) 56(84) bytes of data.
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=1 ttl=53 time=70.8 ms
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=2 ttl=53 time=63.4 ms
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=3 ttl=53 time=82.7 ms
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=4 ttl=53 time=80.8 ms
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=5 ttl=53 time=69.3 ms
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=6 ttl=53 time=88.1 ms
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=7 ttl=53 time=95.3 ms
+64 bytes from lax28s15-in-f14.1e100.net (172.217.11.174): icmp_seq=8 ttl=53 time=131 ms
 
 --- google.com ping statistics ---
 8 packets transmitted, 8 received, 0% packet loss, time 7012ms
-rtt min/avg/max/mdev = 63.418/81.802/94.402/8.377 ms
+rtt min/avg/max/mdev = 63.471/85.209/131.022/19.894 ms
