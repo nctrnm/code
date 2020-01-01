@@ -9,6 +9,7 @@ ping -b -c 8 google.com > /storage/emulated/0/ngt/nsudo/npng.txt;
 echo logging global aliases;
 alias bashed='cd ; micro .bashrc';
 alias o='termux-open';
+alias nm='/sdcard/'FLM User Files'/'My Samples'/NctrnmSounds/';
 alias and='&&';
 alias soxn='sox -r44100 -b16 -c1';
 alias cnvrn='ffmpeg -i';
