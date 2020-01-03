@@ -1,0 +1,7 @@
+PING google.com (172.217.14.78) 56(84) bytes of data.
+64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=1 ttl=54 time=22.5 ms
+64 bytes from lax17s38-in-f14.1e100.net (172.217.14.78): icmp_seq=2 ttl=54 time=218 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 22.553/120.470/218.388/97.918 ms
