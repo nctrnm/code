@@ -62,6 +62,7 @@ alias fm='nnn';
 alias x='kill job -1';
 alias h='/storage/emulated/0/ngt';
 alias p='ping ';
+alias flm='(bash /sdcard/nflm.sh)';
 alias pg='ping -c8 nctrnm.com > /storage/emulated/0/ngt/nsitepng.txt; micro /storage/emulated/0/ngt/nsudo/nsitepng.txt';
 echo Saving Initialization File Updates;
 cd ; cp .bashrc /storage/emulated/0/ngt/nsh/nbashrc.sh;
@@ -81,3 +82,4 @@ pwd;
 echo Printing Global Aliases;
 alias -p;
 echo Ready;
+
