@@ -1,0 +1,2235 @@
+GAWK(1)                        Utility Commands                        GAWK(1)
+
+
+
+[1mNAME(B[m
+       gawk - pattern scanning and processing language
+
+[1mSYNOPSIS(B[m
+       [1mgawk(B[m [ POSIX or GNU style options ] [1m-f(B[m [4mprogram-file[24m [ [1m--(B[m ] file ...
+       [1mgawk(B[m [ POSIX or GNU style options ] [ [1m--(B[m ] [4mprogram-text[24m file ...
+
+[1mDESCRIPTION(B[m
+       [4mGawk[24m is the GNU Project's implementation of the AWK programming
+       language.  It conforms to the definition of the language in the POSIX
+       1003.1 standard.  This version in turn is based on the description in
+       [4mThe[24m [4mAWK[24m [4mProgramming[24m [4mLanguage[24m, by Aho, Kernighan, and Weinberger.  [4mGawk[24m
+       provides the additional features found in the current version of Brian
+       Kernighan's [4mawk[24m and numerous GNU-specific extensions.
+
+       The command line consists of options to [4mgawk[24m itself, the AWK program
+       text (if not supplied via the [1m-f(B[m or [1m--include(B[m options), and values to
+       be made available in the [1mARGC(B[m and [1mARGV(B[m pre-defined AWK variables.
+
+       When [4mgawk[24m is invoked with the [1m--profile(B[m option, it starts gathering
+       profiling statistics from the execution of the program.  [4mGawk[24m runs more
+       slowly in this mode, and automatically produces an execution profile in
+       the file [1mawkprof.out(B[m when done.  See the [1m--profile(B[m option, below.
+
+       [4mGawk[24m also has an integrated debugger. An interactive debugging session
+       can be started by supplying the [1m--debug(B[m option to the command line. In
+       this mode of execution, [4mgawk[24m loads the AWK source code and then prompts
+       for debugging commands.  [4mGawk[24m can only debug AWK program source
+       provided with the [1m-f(B[m and [1m--include(B[m options.  The debugger is documented
+       in [4mGAWK:[24m [4mEffective[24m [4mAWK[24m [4mProgramming[24m.
+
+[1mOPTION(B[m [1mFORMAT(B[m
+       [4mGawk[24m options may be either traditional POSIX-style one letter options,
+       or GNU-style long options.  POSIX options start with a single "-",
+       while long options start with "--".  Long options are provided for both
+       GNU-specific features and for POSIX-mandated features.
+
+       [4mGawk[24m-specific options are typically used in long-option form.
+       Arguments to long options are either joined with the option by an [1m=(B[m
+       sign, with no intervening spaces, or they may be provided in the next
+       command line argument.  Long options may be abbreviated, as long as the
+       abbreviation remains unique.
+
+       Additionally, every long option has a corresponding short option, so
+       that the option's functionality may be used from within [1m#!(B[m  executable
+       scripts.
+
+[1mOPTIONS(B[m
+       [4mGawk[24m accepts the following options.  Standard options are listed first,
+       followed by options for [4mgawk[24m extensions, listed alphabetically by short
+       option.
+
+       [1m-f(B[m [4mprogram-file[24m
+       [1m--file(B[m [4mprogram-file[24m
+              Read the AWK program source from the file [4mprogram-file[24m, instead
+              of from the first command line argument.  Multiple [1m-f(B[m (or
+              [1m--file(B[m) options may be used.  Files read with [1m-f(B[m are treated as
+              if they begin with an implicit [1m@namespace(B[m [1m"awk"(B[m statement.
+
+       [1m-F(B[m [4mfs[24m
+       [1m--field-separator(B[m [4mfs[24m
+              Use [4mfs[24m for the input field separator (the value of the [1mFS(B[m
+              predefined variable).
+
+       [1m-v(B[m [4mvar[24m[1m=(B[m[4mval[24m
+       [1m--assign(B[m [4mvar[24m[1m=(B[m[4mval[24m
+              Assign the value [4mval[24m to the variable [4mvar[24m, before execution of
+              the program begins.  Such variable values are available to the
+              [1mBEGIN(B[m rule of an AWK program.
+
+       [1m-b(B[m
+       [1m--characters-as-bytes(B[m
+              Treat all input data as single-byte characters. In other words,
+              don't pay any attention to the locale information when
+              attempting to process strings as multibyte characters.  The
+              [1m--posix(B[m option overrides this one.
+
+       [1m-c(B[m
+       [1m--traditional(B[m
+              Run in [4mcompatibility[24m mode.  In compatibility mode, [4mgawk[24m behaves
+              identically to Brian Kernighan's [4mawk[24m; none of the GNU-specific
+              extensions are recognized.  See [1mGNU(B[m [1mEXTENSIONS(B[m, below, for more
+              information.
+
+       [1m-C(B[m
+       [1m--copyright(B[m
+              Print the short version of the GNU copyright information message
+              on the standard output and exit successfully.
+
+       [1m-d(B[m[[4mfile[24m]
+       [1m--dump-variables(B[m[[1m=(B[m[4mfile[24m]
+              Print a sorted list of global variables, their types and final
+              values to [4mfile[24m.  If no [4mfile[24m is provided, [4mgawk[24m uses a file named
+              [1mawkvars.out(B[m in the current directory.
+              Having a list of all the global variables is a good way to look
+              for typographical errors in your programs.  You would also use
+              this option if you have a large program with a lot of functions,
+              and you want to be sure that your functions don't inadvertently
+              use global variables that you meant to be local.  (This is a
+              particularly easy mistake to make with simple variable names
+              like [1mi(B[m, [1mj(B[m, and so on.)
+
+       [1m-D(B[m[[4mfile[24m]
+       [1m--debug(B[m[[1m=(B[m[4mfile[24m]
+              Enable debugging of AWK programs.  By default, the debugger
+              reads commands interactively from the keyboard (standard input).
+              The optional [4mfile[24m argument specifies a file with a list of
+              commands for the debugger to execute non-interactively.
+
+       [1m-e(B[m [4mprogram-text[24m
+       [1m--source(B[m [4mprogram-text[24m
+              Use [4mprogram-text[24m as AWK program source code.  This option allows
+              the easy intermixing of library functions (used via the [1m-f(B[m and
+              [1m--include(B[m options) with source code entered on the command line.
+              It is intended primarily for medium to large AWK programs used
+              in shell scripts.  Each argument supplied via [1m-e(B[m is treated as
+              if it begins with an implicit [1m@namespace(B[m [1m"awk"(B[m statement.
+
+       [1m-E(B[m [4mfile[24m
+       [1m--exec(B[m [4mfile[24m
+              Similar to [1m-f(B[m, however, this is option is the last one
+              processed.  This should be used with [1m#!(B[m  scripts, particularly
+              for CGI applications, to avoid passing in options or source code
+              (!) on the command line from a URL.  This option disables
+              command-line variable assignments.
+
+       [1m-g(B[m
+       [1m--gen-pot(B[m
+              Scan and parse the AWK program, and generate a GNU [1m.pot(B[m
+              (Portable Object Template) format file on standard output with
+              entries for all localizable strings in the program.  The program
+              itself is not executed.  See the GNU [4mgettext[24m distribution for
+              more information on [1m.pot(B[m files.
+
+       [1m-h(B[m
+       [1m--help(B[m Print a relatively short summary of the available options on the
+              standard output.  (Per the [4mGNU[24m [4mCoding[24m [4mStandards[24m, these options
+              cause an immediate, successful exit.)
+
+       [1m-i(B[m [4minclude-file[24m
+       [1m--include(B[m [4minclude-file[24m
+              Load an awk source library.  This searches for the library using
+              the [1mAWKPATH(B[m environment variable.  If the initial search fails,
+              another attempt will be made after appending the [1m.awk(B[m suffix.
+              The file will be loaded only once (i.e., duplicates are
+              eliminated), and the code does not constitute the main program
+              source.  Files read with [1m--include(B[m are treated as if they begin
+              with an implicit [1m@namespace(B[m [1m"awk"(B[m statement.
+
+       [1m-l(B[m [4mlib[24m
+       [1m--load(B[m [4mlib[24m
+              Load a [4mgawk[24m extension from the shared library [4mlib[24m.  This
+              searches for the library using the [1mAWKLIBPATH(B[m environment
+              variable.  If the initial search fails, another attempt will be
+              made after appending the default shared library suffix for the
+              platform.  The library initialization routine is expected to be
+              named [1mdl(B[m[4m_[24m[1mload()(B[m.
+
+       [1m-L(B[m [[4mvalue[24m]
+       [1m--lint(B[m[[1m=(B[m[4mvalue[24m]
+              Provide warnings about constructs that are dubious or non-
+              portable to other AWK implementations.  With an optional
+              argument of [1mfatal(B[m, lint warnings become fatal errors.  This may
+              be drastic, but its use will certainly encourage the development
+              of cleaner AWK programs.  With an optional argument of [1minvalid(B[m,
+              only warnings about things that are actually invalid are issued.
+              (This is not fully implemented yet.)  With an optional argument
+              of [1mno-ext(B[m, warnings about [4mgawk[24m extensions are disabled.
+
+       [1m-M(B[m
+       [1m--bignum(B[m
+              Force arbitrary precision arithmetic on numbers. This option has
+              no effect if [4mgawk[24m is not compiled to use the GNU MPFR and GMP
+              libraries.  (In such a case, [4mgawk[24m issues a warning.)
+
+       [1m-n(B[m
+       [1m--non-decimal-data(B[m
+              Recognize octal and hexadecimal values in input data.  [4mUse[24m [4mthis[24m
+              [4moption[24m [4mwith[24m [4mgreat[24m [4mcaution![24m
+
+       [1m-N(B[m
+       [1m--use-lc-numeric(B[m
+              Force [4mgawk[24m to use the locale's decimal point character when
+              parsing input data.  Although the POSIX standard requires this
+              behavior, and [4mgawk[24m does so when [1m--posix(B[m is in effect, the
+              default is to follow traditional behavior and use a period as
+              the decimal point, even in locales where the period is not the
+              decimal point character.  This option overrides the default
+              behavior, without the full draconian strictness of the [1m--posix(B[m
+              option.
+
+       [1m-o(B[m[[4mfile[24m]
+       [1m--pretty-print(B[m[[1m=(B[m[4mfile[24m]
+              Output a pretty printed version of the program to [4mfile[24m.  If no
+              [4mfile[24m is provided, [4mgawk[24m uses a file named [1mawkprof.out(B[m in the
+              current directory.  This option implies [1m--no-optimize(B[m.
+
+       [1m-O(B[m
+       [1m--optimize(B[m
+              Enable [4mgawk[24m's default optimizations upon the internal
+              representation of the program.  Currently, this just includes
+              simple constant folding.  This option is on by default.
+
+       [1m-p(B[m[[4mprof-file[24m]
+       [1m--profile(B[m[[1m=(B[m[4mprof-file[24m]
+              Start a profiling session, and send the profiling data to
+              [4mprof-file[24m.  The default is [1mawkprof.out(B[m.  The profile contains
+              execution counts of each statement in the program in the left
+              margin and function call counts for each user-defined function.
+              This option implies [1m--no-optimize(B[m.
+
+       [1m-P(B[m
+       [1m--posix(B[m
+              This turns on [4mcompatibility[24m mode, with the following additional
+              restrictions:
+
+              +
+               [1m\x(B[m escape sequences are not recognized.
+
+              +
+               You cannot continue lines after [1m?(B[m  and [1m:(B[m.
+
+              +
+               The synonym [1mfunc(B[m for the keyword [1mfunction(B[m is not recognized.
+
+              +
+               The operators [1m**(B[m and [1m**=(B[m cannot be used in place of [1m^(B[m and [1m^=(B[m.
+
+       [1m-r(B[m
+       [1m--re-interval(B[m
+              Enable the use of [4minterval[24m [4mexpressions[24m in regular expression
+              matching (see [1mRegular(B[m [1mExpressions(B[m, below).  Interval expressions
+              were not traditionally available in the AWK language.  The POSIX
+              standard added them, to make [4mawk[24m and [4megrep[24m consistent with each
+              other.  They are enabled by default, but this option remains for
+              use together with [1m--traditional(B[m.
+
+       [1m-s(B[m
+       [1m--no-optimize(B[m
+              Disable [4mgawk[24m's default optimizations upon the internal
+              representation of the program.
+
+       [1m-S(B[m
+       [1m--sandbox(B[m
+              Run [4mgawk[24m in sandbox mode, disabling the [1msystem()(B[m function, input
+              redirection with [1mgetline(B[m, output redirection with [1mprint(B[m and
+              [1mprintf(B[m, and loading dynamic extensions.  Command execution
+              (through pipelines) is also disabled.  This effectively blocks a
+              script from accessing local resources, except for the files
+              specified on the command line.
+
+       [1m-t(B[m
+       [1m--lint-old(B[m
+              Provide warnings about constructs that are not portable to the
+              original version of UNIX [4mawk[24m.
+
+       [1m-V(B[m
+       [1m--version(B[m
+              Print version information for this particular copy of [4mgawk[24m on
+              the standard output.  This is useful mainly for knowing if the
+              current copy of [4mgawk[24m on your system is up to date with respect
+              to whatever the Free Software Foundation is distributing.  This
+              is also useful when reporting bugs.  (Per the [4mGNU[24m [4mCoding[24m
+              [4mStandards[24m, these options cause an immediate, successful exit.)
+
+       [1m--(B[m     Signal the end of options. This is useful to allow further
+              arguments to the AWK program itself to start with a "-".  This
+              provides consistency with the argument parsing convention used
+              by most other POSIX programs.
+
+       In compatibility mode, any other options are flagged as invalid, but
+       are otherwise ignored.  In normal operation, as long as program text
+       has been supplied, unknown options are passed on to the AWK program in
+       the [1mARGV(B[m array for processing.  This is particularly useful for running
+       AWK programs via the [1m#!(B[m  executable interpreter mechanism.
+
+       For POSIX compatibility, the [1m-W(B[m option may be used, followed by the
+       name of a long option.
+
+[1mAWK(B[m [1mPROGRAM(B[m [1mEXECUTION(B[m
+       An AWK program consists of a sequence of optional directives, pattern-
+       action statements, and optional function definitions.
+
+              [1m@include(B[m [1m"(B[m[4mfilename[24m[1m"(B[m
+              [1m@load(B[m [1m"(B[m[4mfilename[24m[1m"(B[m
+              [1m@namespace(B[m [1m"(B[m[4mname[24m[1m"(B[m
+              [4mpattern[24m   [1m{(B[m [4maction[24m [4mstatements[24m [1m}(B[m
+              [1mfunction(B[m [4mname[24m[1m((B[m[4mparameter[24m [4mlist[24m[1m)(B[m [1m{(B[m [4mstatements[24m [1m}(B[m
+
+       [4mGawk[24m first reads the program source from the [4mprogram-file[24m(s) if
+       specified, from arguments to [1m--source(B[m, or from the first non-option
+       argument on the command line.  The [1m-f(B[m and [1m--source(B[m options may be used
+       multiple times on the command line.  [4mGawk[24m reads the program text as if
+       all the [4mprogram-file[24ms and command line source texts had been
+       concatenated together.  This is useful for building libraries of AWK
+       functions, without having to include them in each new AWK program that
+       uses them.  It also provides the ability to mix library functions with
+       command line programs.
+
+       In addition, lines beginning with [1m@include(B[m may be used to include other
+       source files into your program, making library use even easier.  This
+       is equivalent to using the [1m--include(B[m option.
+
+       Lines beginning with [1m@load(B[m may be used to load extension functions into
+       your program.  This is equivalent to using the [1m--load(B[m option.
+
+       The environment variable [1mAWKPATH(B[m specifies a search path to use when
+       finding source files named with the [1m-f(B[m and [1m--include(B[m options.  If this
+       variable does not exist, the default path is [1m".:/usr/local/share/awk"(B[m.
+       (The actual directory may vary, depending upon how [4mgawk[24m was built and
+       installed.)  If a file name given to the [1m-f(B[m option contains a "/"
+       character, no path search is performed.
+
+       The environment variable [1mAWKLIBPATH(B[m specifies a search path to use when
+       finding source files named with the [1m--load(B[m option.  If this variable
+       does not exist, the default path is [1m"/usr/local/lib/gawk"(B[m.  (The actual
+       directory may vary, depending upon how [4mgawk[24m was built and installed.)
+
+       [4mGawk[24m executes AWK programs in the following order.  First, all variable
+       assignments specified via the [1m-v(B[m option are performed.  Next, [4mgawk[24m
+       compiles the program into an internal form.  Then, [4mgawk[24m executes the
+       code in the [1mBEGIN(B[m rule(s) (if any), and then proceeds to read each file
+       named in the [1mARGV(B[m array (up to [1mARGV[ARGC-1](B[m).  If there are no files
+       named on the command line, [4mgawk[24m reads the standard input.
+
+       If a filename on the command line has the form [4mvar[24m[1m=(B[m[4mval[24m it is treated as
+       a variable assignment.  The variable [4mvar[24m will be assigned the value
+       [4mval[24m.  (This happens after any [1mBEGIN(B[m rule(s) have been run.)  Command
+       line variable assignment is most useful for dynamically assigning
+       values to the variables AWK uses to control how input is broken into
+       fields and records.  It is also useful for controlling state if
+       multiple passes are needed over a single data file.
+
+       If the value of a particular element of [1mARGV(B[m is empty ([1m""(B[m), [4mgawk[24m skips
+       over it.
+
+       For each input file, if a [1mBEGINFILE(B[m rule exists, [4mgawk[24m executes the
+       associated code before processing the contents of the file. Similarly,
+       [4mgawk[24m executes the code associated with [1mENDFILE(B[m after processing the
+       file.
+
+       For each record in the input, [4mgawk[24m tests to see if it matches any
+       [4mpattern[24m in the AWK program.  For each pattern that the record matches,
+       [4mgawk[24m executes the associated [4maction[24m.  The patterns are tested in the
+       order they occur in the program.
+
+       Finally, after all the input is exhausted, [4mgawk[24m executes the code in
+       the [1mEND(B[m rule(s) (if any).
+
+   [1mCommand(B[m [1mLine(B[m [1mDirectories(B[m
+       According to POSIX, files named on the [4mawk[24m command line must be text
+       files.  The behavior is ``undefined'' if they are not.  Most versions
+       of [4mawk[24m treat a directory on the command line as a fatal error.
+
+       Starting with version 4.0 of [4mgawk[24m, a directory on the command line
+       produces a warning, but is otherwise skipped.  If either of the [1m--posix(B[m
+       or [1m--traditional(B[m options is given, then [4mgawk[24m reverts to treating
+       directories on the command line as a fatal error.
+
+[1mVARIABLES,(B[m [1mRECORDS(B[m [1mAND(B[m [1mFIELDS(B[m
+       AWK variables are dynamic; they come into existence when they are first
+       used.  Their values are either floating-point numbers or strings, or
+       both, depending upon how they are used.  Additionally, [4mgawk[24m allows
+       variables to have regular-expression type.  AWK also has one
+       dimensional arrays; arrays with multiple dimensions may be simulated.
+       [4mGawk[24m provides true arrays of arrays; see [1mArrays(B[m, below.  Several pre-
+       defined variables are set as a program runs; these are described as
+       needed and summarized below.
+
+   [1mRecords(B[m
+       Normally, records are separated by newline characters.  You can control
+       how records are separated by assigning values to the built-in variable
+       [1mRS(B[m.  If [1mRS(B[m is any single character, that character separates records.
+       Otherwise, [1mRS(B[m is a regular expression.  Text in the input that matches
+       this regular expression separates the record.  However, in
+       compatibility mode, only the first character of its string value is
+       used for separating records.  If [1mRS(B[m is set to the null string, then
+       records are separated by empty lines.  When [1mRS(B[m is set to the null
+       string, the newline character always acts as a field separator, in
+       addition to whatever value [1mFS(B[m may have.
+
+   [1mFields(B[m
+       As each input record is read, [4mgawk[24m splits the record into [4mfields[24m, using
+       the value of the [1mFS(B[m variable as the field separator.  If [1mFS(B[m is a single
+       character, fields are separated by that character.  If [1mFS(B[m is the null
+       string, then each individual character becomes a separate field.
+       Otherwise, [1mFS(B[m is expected to be a full regular expression.  In the
+       special case that [1mFS(B[m is a single space, fields are separated by runs of
+       spaces and/or tabs and/or newlines.  [1mNOTE(B[m: The value of [1mIGNORECASE(B[m (see
+       below) also affects how fields are split when [1mFS(B[m is a regular
+       expression, and how records are separated when [1mRS(B[m is a regular
+       expression.
+
+       If the [1mFIELDWIDTHS(B[m variable is set to a space-separated list of
+       numbers, each field is expected to have fixed width, and [4mgawk[24m splits up
+       the record using the specified widths.  Each field width may optionally
+       be preceded by a colon-separated value specifying the number of
+       characters to skip before the field starts.  The value of [1mFS(B[m is
+       ignored.  Assigning a new value to [1mFS(B[m or [1mFPAT(B[m overrides the use of
+       [1mFIELDWIDTHS(B[m.
+
+       Similarly, if the [1mFPAT(B[m variable is set to a string representing a
+       regular expression, each field is made up of text that matches that
+       regular expression. In this case, the regular expression describes the
+       fields themselves, instead of the text that separates the fields.
+       Assigning a new value to [1mFS(B[m or [1mFIELDWIDTHS(B[m overrides the use of [1mFPAT(B[m.
+
+       Each field in the input record may be referenced by its position: [1m$1(B[m,
+       [1m$2(B[m, and so on.  [1m$0(B[m is the whole record, including leading and trailing
+       whitespace.  Fields need not be referenced by constants:
+
+              [1mn(B[m [1m=(B[m [1m5(B[m
+              [1mprint(B[m [1m$n(B[m
+
+       prints the fifth field in the input record.
+
+       The variable [1mNF(B[m is set to the total number of fields in the input
+       record.
+
+       References to non-existent fields (i.e., fields after [1m$NF(B[m) produce the
+       null string.  However, assigning to a non-existent field (e.g., [1m$(NF+2)(B[m
+       [1m=(B[m [1m5(B[m) increases the value of [1mNF(B[m, creates any intervening fields with the
+       null string as their values, and causes the value of [1m$0(B[m to be
+       recomputed, with the fields being separated by the value of [1mOFS(B[m.
+       References to negative numbered fields cause a fatal error.
+       Decrementing [1mNF(B[m causes the values of fields past the new value to be
+       lost, and the value of [1m$0(B[m to be recomputed, with the fields being
+       separated by the value of [1mOFS(B[m.
+
+       Assigning a value to an existing field causes the whole record to be
+       rebuilt when [1m$0(B[m is referenced.  Similarly, assigning a value to [1m$0(B[m
+       causes the record to be resplit, creating new values for the fields.
+
+   [1mBuilt-in(B[m [1mVariables(B[m
+       [4mGawk[24m's built-in variables are:
+
+       [1mARGC(B[m       The number of command line arguments (does not include
+                  options to [4mgawk[24m, or the program source).
+
+       [1mARGIND(B[m     The index in [1mARGV(B[m of the current file being processed.
+
+       [1mARGV(B[m       Array of command line arguments.  The array is indexed from
+                  0 to [1mARGC(B[m - 1.  Dynamically changing the contents of [1mARGV(B[m
+                  can control the files used for data.
+
+       [1mBINMODE(B[m    On non-POSIX systems, specifies use of "binary" mode for all
+                  file I/O.  Numeric values of 1, 2, or 3, specify that input
+                  files, output files, or all files, respectively, should use
+                  binary I/O.  String values of [1m"r"(B[m, or [1m"w"(B[m specify that input
+                  files, or output files, respectively, should use binary I/O.
+                  String values of [1m"rw"(B[m or [1m"wr"(B[m specify that all files should
+                  use binary I/O.  Any other string value is treated as [1m"rw"(B[m,
+                  but generates a warning message.
+
+       [1mCONVFMT(B[m    The conversion format for numbers, [1m"%.6g"(B[m, by default.
+
+       [1mENVIRON(B[m    An array containing the values of the current environment.
+                  The array is indexed by the environment variables, each
+                  element being the value of that variable (e.g.,
+                  [1mENVIRON["HOME"](B[m might be [1m"/home/arnold"(B[m).
+
+                  In POSIX mode, changing this array does not affect the
+                  environment seen by programs which [4mgawk[24m spawns via
+                  redirection or the [1msystem()(B[m function.  Otherwise, [4mgawk[24m
+                  updates its real environment so that programs it spawns see
+                  the changes.
+
+       [1mERRNO(B[m      If a system error occurs either doing a redirection for
+                  [1mgetline(B[m, during a read for [1mgetline(B[m, or during a [1mclose()(B[m,
+                  then [1mERRNO(B[m is set to a string describing the error.  The
+                  value is subject to translation in non-English locales.  If
+                  the string in [1mERRNO(B[m corresponds to a system error in the
+                  [4merrno[24m(3) variable, then the numeric value can be found in
+                  [1mPROCINFO["errno"].(B[m  For non-system errors, [1mPROCINFO["errno"](B[m
+                  will be zero.
+
+       [1mFIELDWIDTHS(B[m
+                  A whitespace-separated list of field widths.  When set, [4mgawk[24m
+                  parses the input into fields of fixed width, instead of
+                  using the value of the [1mFS(B[m variable as the field separator.
+                  Each field width may optionally be preceded by a colon-
+                  separated value specifying the number of characters to skip
+                  before the field starts.  See [1mFields(B[m, above.
+
+       [1mFILENAME(B[m   The name of the current input file.  If no files are
+                  specified on the command line, the value of [1mFILENAME(B[m is "-".
+                  However, [1mFILENAME(B[m is undefined inside the [1mBEGIN(B[m rule (unless
+                  set by [1mgetline(B[m).
+
+       [1mFNR(B[m        The input record number in the current input file.
+
+       [1mFPAT(B[m       A regular expression describing the contents of the fields
+                  in a record.  When set, [4mgawk[24m parses the input into fields,
+                  where the fields match the regular expression, instead of
+                  using the value of [1mFS(B[m as the field separator.  See [1mFields(B[m,
+                  above.
+
+       [1mFS(B[m         The input field separator, a space by default.  See [1mFields(B[m,
+                  above.
+
+       [1mFUNCTAB(B[m    An array whose indices and corresponding values are the
+                  names of all the user-defined or extension functions in the
+                  program.  [1mNOTE(B[m: You may not use the [1mdelete(B[m statement with
+                  the [1mFUNCTAB(B[m array.
+
+       [1mIGNORECASE(B[m Controls the case-sensitivity of all regular expression and
+                  string operations.  If [1mIGNORECASE(B[m has a non-zero value, then
+                  string comparisons and pattern matching in rules, field
+                  splitting with [1mFS(B[m and [1mFPAT(B[m, record separating with [1mRS(B[m,
+                  regular expression matching with [1m~(B[m and [1m!~(B[m, and the [1mgensub()(B[m,
+                  [1mgsub()(B[m, [1mindex()(B[m, [1mmatch()(B[m, [1mpatsplit()(B[m, [1msplit()(B[m, and [1msub()(B[m
+                  built-in functions all ignore case when doing regular
+                  expression operations.  [1mNOTE(B[m: Array subscripting is [4mnot[24m
+                  affected.  However, the [1masort()(B[m and [1masorti()(B[m functions are
+                  affected.
+                  Thus, if [1mIGNORECASE(B[m is not equal to zero, [1m/aB/(B[m matches all
+                  of the strings [1m"ab"(B[m, [1m"aB"(B[m, [1m"Ab"(B[m, and [1m"AB"(B[m.  As with all AWK
+                  variables, the initial value of [1mIGNORECASE(B[m is zero, so all
+                  regular expression and string operations are normally case-
+                  sensitive.
+
+       [1mLINT(B[m       Provides dynamic control of the [1m--lint(B[m option from within an
+                  AWK program.  When true, [4mgawk[24m prints lint warnings. When
+                  false, it does not.  When assigned the string value [1m"fatal"(B[m,
+                  lint warnings become fatal errors, exactly like
+                  [1m--lint=fatal(B[m.  Any other true value just prints warnings.
+
+       [1mNF(B[m         The number of fields in the current input record.
+
+       [1mNR(B[m         The total number of input records seen so far.
+
+       [1mOFMT(B[m       The output format for numbers, [1m"%.6g"(B[m, by default.
+
+       [1mOFS(B[m        The output field separator, a space by default.
+
+       [1mORS(B[m        The output record separator, by default a newline.
+
+       [1mPREC(B[m       The working precision of arbitrary precision floating-point
+                  numbers, 53 by default.
+
+       [1mPROCINFO(B[m   The elements of this array provide access to information
+                  about the running AWK program.  On some systems, there may
+                  be elements in the array, [1m"group1"(B[m through [1m"group(B[m[4mn[24m[1m"(B[m for some
+                  [4mn[24m, which is the number of supplementary groups that the
+                  process has.  Use the [1min(B[m operator to test for these
+                  elements.  The following elements are guaranteed to be
+                  available:
+
+                  [1mPROCINFO["argv"](B[m    The command line arguments as received
+                                      by [4mgawk[24m at the C-language level.  The
+                                      subscripts start from zero.
+
+                  [1mPROCINFO["egid"](B[m    The value of the [4mgetegid[24m(2) system call.
+
+                  [1mPROCINFO["errno"](B[m   The value of [4merrno[24m(3) when [1mERRNO(B[m is set
+                                      to the associated error message.
+
+                  [1mPROCINFO["euid"](B[m    The value of the [4mgeteuid[24m(2) system call.
+
+                  [1mPROCINFO["FS"](B[m      [1m"FS"(B[m if field splitting with [1mFS(B[m is in
+                                      effect, [1m"FPAT"(B[m if field splitting with
+                                      [1mFPAT(B[m is in effect, [1m"FIELDWIDTHS"(B[m if
+                                      field splitting with [1mFIELDWIDTHS(B[m is in
+                                      effect, or [1m"API"(B[m if API input parser
+                                      field splitting is in effect.
+
+                  [1mPROCINFO["gid"](B[m     The value of the [4mgetgid[24m(2) system call.
+
+                  [1mPROCINFO["identifiers"](B[m
+                                      A subarray, indexed by the names of all
+                                      identifiers used in the text of the AWK
+                                      program.  The values indicate what [4mgawk[24m
+                                      knows about the identifiers after it has
+                                      finished parsing the program; they are
+                                      [4mnot[24m updated while the program runs.  For
+                                      each identifier, the value of the
+                                      element is one of the following:
+
+                                      [1m"array"(B[m    The identifier is an array.
+
+                                      [1m"builtin"(B[m  The identifier is a built-in
+                                                 function.
+
+                                      [1m"extension"(B[m
+                                                 The identifier is an
+                                                 extension function loaded via
+                                                 [1m@load(B[m or [1m--load(B[m.
+
+                                      [1m"scalar"(B[m   The identifier is a scalar.
+
+                                      [1m"untyped"(B[m  The identifier is untyped
+                                                 (could be used as a scalar or
+                                                 array, [4mgawk[24m doesn't know
+                                                 yet).
+
+                                      [1m"user"(B[m     The identifier is a user-
+                                                 defined function.
+
+                  [1mPROCINFO["pgrpid"](B[m  The value of the [4mgetpgrp[24m(2) system call.
+
+                  [1mPROCINFO["pid"](B[m     The value of the [4mgetpid[24m(2) system call.
+
+                  [1mPROCINFO["platform"](B[m
+                                      A string indicating the platform for
+                                      which [4mgawk[24m was compiled.  It is one of:
+
+                                      [1m"djgpp"(B[m, [1m"mingw"(B[m
+                                             Microsoft Windows, using either
+                                             DJGPP, or MinGW, respectively.
+
+                                      [1m"os2"(B[m  OS/2.
+
+                                      [1m"posix"(B[m
+                                             GNU/Linux, Cygwin, Mac OS X, and
+                                             legacy Unix systems.
+
+                                      [1m"vms"(B[m  OpenVMS or Vax/VMS.
+
+                  [1mPROCINFO["ppid"](B[m    The value of the [4mgetppid[24m(2) system call.
+
+                  [1mPROCINFO["strftime"](B[m
+                                      The default time format string for
+                                      [1mstrftime()(B[m.  Changing its value affects
+                                      how [1mstrftime()(B[m formats time values when
+                                      called with no arguments.
+
+                  [1mPROCINFO["uid"](B[m     The value of the [4mgetuid[24m(2) system call.
+
+                  [1mPROCINFO["version"](B[m The version of [4mgawk[24m.
+
+                  The following elements are present if loading dynamic
+                  extensions is available:
+
+                  [1mPROCINFO["api(B[m[4m_[24m[1mmajor"](B[m
+                         The major version of the extension API.
+
+                  [1mPROCINFO["api(B[m[4m_[24m[1mminor"](B[m
+                         The minor version of the extension API.
+
+                  The following elements are available if MPFR support is
+                  compiled into [4mgawk[24m:
+
+                  [1mPROCINFO["gmp(B[m[4m_[24m[1mversion"](B[m
+                         The version of the GNU GMP library used for arbitrary
+                         precision number support in [4mgawk[24m.
+
+                  [1mPROCINFO["mpfr(B[m[4m_[24m[1mversion"](B[m
+                         The version of the GNU MPFR library used for
+                         arbitrary precision number support in [4mgawk[24m.
+
+                  [1mPROCINFO["prec(B[m[4m_[24m[1mmax"](B[m
+                         The maximum precision supported by the GNU MPFR
+                         library for arbitrary precision floating-point
+                         numbers.
+
+                  [1mPROCINFO["prec(B[m[4m_[24m[1mmin"](B[m
+                         The minimum precision allowed by the GNU MPFR library
+                         for arbitrary precision floating-point numbers.
+
+                  The following elements may set by a program to change [4mgawk[24m's
+                  behavior:
+
+                  [1mPROCINFO["NONFATAL"](B[m
+                         If this exists, then I/O errors for all redirections
+                         become nonfatal.
+
+                  [1mPROCINFO["(B[m[4mname[24m[1m",(B[m [1m"NONFATAL"](B[m
+                         Make I/O errors for [4mname[24m be nonfatal.
+
+                  [1mPROCINFO["(B[m[4mcommand[24m[1m",(B[m [1m"pty"](B[m
+                         Use a pseudo-tty for two-way communication with
+                         [4mcommand[24m instead of setting up two one-way pipes.
+
+                  [1mPROCINFO["(B[m[4minput[24m[1m",(B[m [1m"READ(B[m[4m_[24m[1mTIMEOUT"](B[m
+                         The timeout in milliseconds for reading data from
+                         [4minput[24m, where [4minput[24m is a redirection string or a
+                         filename. A value of zero or less than zero means no
+                         timeout.
+
+                  [1mPROCINFO["(B[m[4minput[24m[1m",(B[m [1m"RETRY"](B[m
+                         If an I/O error that may be retried occurs when
+                         reading data from [4minput[24m, and this array entry exists,
+                         then [1mgetline(B[m returns -2 instead of following the
+                         default behavior of returning -1 and configuring
+                         [4minput[24m to return no further data.  An I/O error that
+                         may be retried is one where [4merrno[24m(3) has the value
+                         EAGAIN, EWOULDBLOCK, EINTR, or ETIMEDOUT.  This may
+                         be useful in conjunction with [1mPROCINFO["(B[m[4minput[24m[1m",(B[m
+                         [1m"READ(B[m[4m_[24m[1mTIMEOUT"](B[m or in situations where a file
+                         descriptor has been configured to behave in a non-
+                         blocking fashion.
+
+                  [1mPROCINFO["sorted(B[m[4m_[24m[1min"](B[m
+                         If this element exists in [1mPROCINFO(B[m, then its value
+                         controls the order in which array elements are
+                         traversed in [1mfor(B[m loops.  Supported values are
+                         [1m"@ind(B[m[4m_[24m[1mstr(B[m[4m_[24m[1masc"(B[m, [1m"@ind(B[m[4m_[24m[1mnum(B[m[4m_[24m[1masc"(B[m, [1m"@val(B[m[4m_[24m[1mtype(B[m[4m_[24m[1masc"(B[m,
+                         [1m"@val(B[m[4m_[24m[1mstr(B[m[4m_[24m[1masc"(B[m, [1m"@val(B[m[4m_[24m[1mnum(B[m[4m_[24m[1masc"(B[m, [1m"@ind(B[m[4m_[24m[1mstr(B[m[4m_[24m[1mdesc"(B[m,
+                         [1m"@ind(B[m[4m_[24m[1mnum(B[m[4m_[24m[1mdesc"(B[m, [1m"@val(B[m[4m_[24m[1mtype(B[m[4m_[24m[1mdesc"(B[m, [1m"@val(B[m[4m_[24m[1mstr(B[m[4m_[24m[1mdesc"(B[m,
+                         [1m"@val(B[m[4m_[24m[1mnum(B[m[4m_[24m[1mdesc"(B[m, and [1m"@unsorted"(B[m.  The value can also
+                         be the name (as a [4mstring[24m) of any comparison function
+                         defined as follows:
+
+                              [1mfunction(B[m [1mcmp(B[m[4m_[24m[1mfunc(i1,(B[m [1mv1,(B[m [1mi2,(B[m [1mv2)(B[m
+
+                         where [4mi1[24m and [4mi2[24m are the indices, and [4mv1[24m and [4mv2[24m are
+                         the corresponding values of the two elements being
+                         compared.  It should return a number less than, equal
+                         to, or greater than 0, depending on how the elements
+                         of the array are to be ordered.
+
+       [1mROUNDMODE(B[m  The rounding mode to use for arbitrary precision arithmetic
+                  on numbers, by default [1m"N"(B[m (IEEE-754 roundTiesToEven mode).
+                  The accepted values are:
+
+                  [1m"A"(B[m or [1m"a"(B[m
+                         for rounding away from zero.  These are only
+                         available if your version of the GNU MPFR library
+                         supports rounding away from zero.
+
+                  [1m"D"(B[m or [1m"d"(B[m
+                            for roundTowardNegative.
+
+                  [1m"N"(B[m or [1m"n"(B[m
+                            for roundTiesToEven.
+
+                  [1m"U"(B[m or [1m"u"(B[m
+                            for roundTowardPositive.
+
+                  [1m"Z"(B[m or [1m"z"(B[m
+                            for roundTowardZero.
+
+       [1mRS(B[m         The input record separator, by default a newline.
+
+       [1mRT(B[m         The record terminator.  [4mGawk[24m sets [1mRT(B[m to the input text that
+                  matched the character or regular expression specified by [1mRS(B[m.
+
+       [1mRSTART(B[m     The index of the first character matched by [1mmatch()(B[m; 0 if no
+                  match.  (This implies that character indices start at one.)
+
+       [1mRLENGTH(B[m    The length of the string matched by [1mmatch()(B[m; -1 if no match.
+
+       [1mSUBSEP(B[m     The string used to separate multiple subscripts in array
+                  elements, by default [1m"\034"(B[m.
+
+       [1mSYMTAB(B[m     An array whose indices are the names of all currently
+                  defined global variables and arrays in the program.  The
+                  array may be used for indirect access to read or write the
+                  value of a variable:
+
+                       [1mfoo(B[m [1m=(B[m [1m5(B[m
+                       [1mSYMTAB["foo"](B[m [1m=(B[m [1m4(B[m
+                       [1mprint(B[m [1mfoo(B[m    [1m#(B[m [1mprints(B[m [1m4(B[m
+
+                  The [1mtypeof()(B[m function may be used to test if an element in
+                  [1mSYMTAB(B[m is an array.  You may not use the [1mdelete(B[m statement
+                  with the [1mSYMTAB(B[m array, nor assign to elements with an index
+                  that is not a variable name.
+
+       [1mTEXTDOMAIN(B[m The text domain of the AWK program; used to find the
+                  localized translations for the program's strings.
+
+   [1mArrays(B[m
+       Arrays are subscripted with an expression between square brackets ([1m[(B[m
+       and [1m](B[m).  If the expression is an expression list ([4mexpr[24m, [4mexpr[24m ...) then
+       the array subscript is a string consisting of the concatenation of the
+       (string) value of each expression, separated by the value of the [1mSUBSEP(B[m
+       variable.  This facility is used to simulate multiply dimensioned
+       arrays.  For example:
+
+              [1mi(B[m [1m=(B[m [1m"A";(B[m [1mj(B[m [1m=(B[m [1m"B";(B[m [1mk(B[m [1m=(B[m [1m"C"(B[m
+              [1mx[i,(B[m [1mj,(B[m [1mk](B[m [1m=(B[m [1m"hello,(B[m [1mworld\n"(B[m
+
+       assigns the string [1m"hello,(B[m [1mworld\n"(B[m to the element of the array [1mx(B[m which
+       is indexed by the string [1m"A\034B\034C"(B[m.  All arrays in AWK are
+       associative, i.e., indexed by string values.
+
+       The special operator [1min(B[m may be used to test if an array has an index
+       consisting of a particular value:
+
+              [1mif(B[m [1m(val(B[m [1min(B[m [1marray)(B[m
+                   [1mprint(B[m [1marray[val](B[m
+
+       If the array has multiple subscripts, use [1m(i,(B[m [1mj)(B[m [1min(B[m [1marray(B[m.
+
+       The [1min(B[m construct may also be used in a [1mfor(B[m loop to iterate over all the
+       elements of an array.  However, the [1m(i,(B[m [1mj)(B[m [1min(B[m [1marray(B[m construct only
+       works in tests, not in [1mfor(B[m loops.
+
+       An element may be deleted from an array using the [1mdelete(B[m statement.
+       The [1mdelete(B[m statement may also be used to delete the entire contents of
+       an array, just by specifying the array name without a subscript.
+
+       [4mgawk[24m supports true multidimensional arrays. It does not require that
+       such arrays be ``rectangular'' as in C or C++.  For example:
+
+              [1ma[1](B[m [1m=(B[m [1m5(B[m
+              [1ma[2][1](B[m [1m=(B[m [1m6(B[m
+              [1ma[2][2](B[m [1m=(B[m [1m7(B[m
+
+       [1mNOTE(B[m: You may need to tell [4mgawk[24m that an array element is really a
+       subarray in order to use it where [4mgawk[24m expects an array (such as in the
+       second argument to [1msplit()(B[m).  You can do this by creating an element in
+       the subarray and then deleting it with the [1mdelete(B[m statement.
+
+   [1mNamespaces(B[m
+       [4mGawk[24m provides a simple [4mnamespace[24m facility to help work around the fact
+       that all variables in AWK are global.
+
+       A [4mqualified[24m [4mname[24m consists of a two simple identifiers joined by a
+       double colon ([1m::(B[m).  The left-hand identifier represents the namespace
+       and the right-hand identifier is the variable within it.  All simple
+       (non-qualified) names are considered to be in the ``current''
+       namespace; the default namespace is [1mawk(B[m.  However, simple identifiers
+       consisting solely of uppercase letters are forced into the [1mawk(B[m
+       namespace, even if the current namespace is different.
+
+       You change the current namespace with an [1m@namespace(B[m [1m"(B[m[4mname[24m[1m"(B[m directive.
+
+       The standard predefined builtin function names may not be used as
+       namespace names.  The names of additional functions provided by [4mgawk[24m
+       may be used as namespace names or as simple identifiers in other
+       namespaces.  For more details, see [4mGAWK:[24m [4mEffective[24m [4mAWK[24m [4mProgramming[24m.
+
+   [1mVariable(B[m [1mTyping(B[m [1mAnd(B[m [1mConversion(B[m
+       Variables and fields may be (floating point) numbers, or strings, or
+       both.  They may also be regular expressions. How the value of a
+       variable is interpreted depends upon its context.  If used in a numeric
+       expression, it will be treated as a number; if used as a string it will
+       be treated as a string.
+
+       To force a variable to be treated as a number, add zero to it; to force
+       it to be treated as a string, concatenate it with the null string.
+
+       Uninitialized variables have the numeric value zero and the string
+       value "" (the null, or empty, string).
+
+       When a string must be converted to a number, the conversion is
+       accomplished using [4mstrtod[24m(3).  A number is converted to a string by
+       using the value of [1mCONVFMT(B[m as a format string for [4msprintf[24m(3), with the
+       numeric value of the variable as the argument.  However, even though
+       all numbers in AWK are floating-point, integral values are [4malways[24m
+       converted as integers.  Thus, given
+
+              [1mCONVFMT(B[m [1m=(B[m [1m"%2.2f"(B[m
+              [1ma(B[m [1m=(B[m [1m12(B[m
+              [1mb(B[m [1m=(B[m [1ma(B[m [1m""(B[m
+
+       the variable [1mb(B[m has a string value of [1m"12"(B[m and not [1m"12.00"(B[m.
+
+       [1mNOTE(B[m: When operating in POSIX mode (such as with the [1m--posix(B[m option),
+       beware that locale settings may interfere with the way decimal numbers
+       are treated: the decimal separator of the numbers you are feeding to
+       [4mgawk[24m must conform to what your locale would expect, be it a comma (,)
+       or a period (.).
+
+       [4mGawk[24m performs comparisons as follows: If two variables are numeric,
+       they are compared numerically.  If one value is numeric and the other
+       has a string value that is a "numeric string," then comparisons are
+       also done numerically.  Otherwise, the numeric value is converted to a
+       string and a string comparison is performed.  Two strings are compared,
+       of course, as strings.
+
+       Note that string constants, such as [1m"57"(B[m, are [4mnot[24m numeric strings, they
+       are string constants.  The idea of "numeric string" only applies to
+       fields, [1mgetline(B[m input, [1mFILENAME(B[m, [1mARGV(B[m elements, [1mENVIRON(B[m elements and
+       the elements of an array created by [1msplit()(B[m or [1mpatsplit()(B[m that are
+       numeric strings.  The basic idea is that [4muser[24m [4minput[24m, and only user
+       input, that looks numeric, should be treated that way.
+
+   [1mOctal(B[m [1mand(B[m [1mHexadecimal(B[m [1mConstants(B[m
+       You may use C-style octal and hexadecimal constants in your AWK program
+       source code.  For example, the octal value [1m011(B[m is equal to decimal [1m9(B[m,
+       and the hexadecimal value [1m0x11(B[m is equal to decimal 17.
+
+   [1mString(B[m [1mConstants(B[m
+       String constants in AWK are sequences of characters enclosed between
+       double quotes (like [1m"value"(B[m).  Within strings, certain [4mescape[24m [4msequences[24m
+       are recognized, as in C.  These are:
+
+       [1m\\(B[m  A literal backslash.
+
+       [1m\a(B[m  The "alert" character; usually the ASCII BEL character.
+
+       [1m\b(B[m  Backspace.
+
+       [1m\f(B[m  Form-feed.
+
+       [1m\n(B[m  Newline.
+
+       [1m\r(B[m  Carriage return.
+
+       [1m\t(B[m  Horizontal tab.
+
+       [1m\v(B[m  Vertical tab.
+
+       [1m\x(B[m[4mhex[24m [4mdigits[24m
+           The character represented by the string of hexadecimal digits
+           following the [1m\x(B[m.  Up to two following hexadecimal digits are
+           considered part of the escape sequence.  E.g., [1m"\x1B"(B[m is the ASCII
+           ESC (escape) character.
+
+       [1m\(B[m[4mddd[24m
+           The character represented by the 1-, 2-, or 3-digit sequence of
+           octal digits.  E.g., [1m"\033"(B[m is the ASCII ESC (escape) character.
+
+       [1m\(B[m[4mc[24m  The literal character [4mc[24m.
+
+       In compatibility mode, the characters represented by octal and
+       hexadecimal escape sequences are treated literally when used in regular
+       expression constants.  Thus, [1m/a\52b/(B[m is equivalent to [1m/a\*b/(B[m.
+
+   [1mRegexp(B[m [1mConstants(B[m
+       A regular expression constant is a sequence of characters enclosed
+       between forward slashes (like [1m/value/(B[m).  Regular expression matching is
+       described more fully below; see [1mRegular(B[m [1mExpressions(B[m.
+
+       The escape sequences described earlier may also be used inside constant
+       regular expressions (e.g., [1m/[(B[m [1m\t\f\n\r\v]/(B[m matches whitespace
+       characters).
+
+       [4mGawk[24m provides [4mstrongly[24m [4mtyped[24m regular expression constants. These are
+       written with a leading [1m@(B[m symbol (like so: [1m@/value/(B[m).  Such constants
+       may be assigned to scalars (variables, array elements) and passed to
+       user-defined functions. Variables that have been so assigned have
+       regular expression type.
+
+[1mPATTERNS(B[m [1mAND(B[m [1mACTIONS(B[m
+       AWK is a line-oriented language.  The pattern comes first, and then the
+       action.  Action statements are enclosed in [1m{(B[m and [1m}(B[m.  Either the pattern
+       may be missing, or the action may be missing, but, of course, not both.
+       If the pattern is missing, the action executes for every single record
+       of input.  A missing action is equivalent to
+
+              [1m{(B[m [1mprint(B[m [1m}(B[m
+
+       which prints the entire record.
+
+       Comments begin with the [1m#(B[m character, and continue until the end of the
+       line.  Empty lines may be used to separate statements.  Normally, a
+       statement ends with a newline, however, this is not the case for lines
+       ending in a comma, [1m{(B[m, [1m?(B[m, [1m:(B[m, [1m&&(B[m, or [1m||(B[m.  Lines ending in [1mdo(B[m or [1melse(B[m also
+       have their statements automatically continued on the following line.
+       In other cases, a line can be continued by ending it with a "\", in
+       which case the newline is ignored.  However, a "\" after a [1m#(B[m is not
+       special.
+
+       Multiple statements may be put on one line by separating them with a
+       ";".  This applies to both the statements within the action part of a
+       pattern-action pair (the usual case), and to the pattern-action
+       statements themselves.
+
+   [1mPatterns(B[m
+       AWK patterns may be one of the following:
+
+              [1mBEGIN(B[m
+              [1mEND(B[m
+              [1mBEGINFILE(B[m
+              [1mENDFILE(B[m
+              [1m/(B[m[4mregular[24m [4mexpression[24m[1m/(B[m
+              [4mrelational[24m [4mexpression[24m
+              [4mpattern[24m [1m&&(B[m [4mpattern[24m
+              [4mpattern[24m [1m||(B[m [4mpattern[24m
+              [4mpattern[24m [1m?(B[m [4mpattern[24m [1m:(B[m [4mpattern[24m
+              [1m((B[m[4mpattern[24m[1m)(B[m
+              [1m!(B[m [4mpattern[24m
+              [4mpattern1[24m[1m,(B[m [4mpattern2[24m
+
+       [1mBEGIN(B[m and [1mEND(B[m are two special kinds of patterns which are not tested
+       against the input.  The action parts of all [1mBEGIN(B[m patterns are merged
+       as if all the statements had been written in a single [1mBEGIN(B[m rule.  They
+       are executed before any of the input is read.  Similarly, all the [1mEND(B[m
+       rules are merged, and executed when all the input is exhausted (or when
+       an [1mexit(B[m statement is executed).  [1mBEGIN(B[m and [1mEND(B[m patterns cannot be
+       combined with other patterns in pattern expressions.  [1mBEGIN(B[m and [1mEND(B[m
+       patterns cannot have missing action parts.
+
+       [1mBEGINFILE(B[m and [1mENDFILE(B[m are additional special patterns whose actions are
+       executed before reading the first record of each command-line input
+       file and after reading the last record of each file.  Inside the
+       [1mBEGINFILE(B[m rule, the value of [1mERRNO(B[m is the empty string if the file was
+       opened successfully.  Otherwise, there is some problem with the file
+       and the code should use [1mnextfile(B[m to skip it. If that is not done, [4mgawk[24m
+       produces its usual fatal error for files that cannot be opened.
+
+       For [1m/(B[m[4mregular[24m [4mexpression[24m[1m/(B[m patterns, the associated statement is executed
+       for each input record that matches the regular expression.  Regular
+       expressions are the same as those in [4megrep[24m(1), and are summarized
+       below.
+
+       A [4mrelational[24m [4mexpression[24m may use any of the operators defined below in
+       the section on actions.  These generally test whether certain fields
+       match certain regular expressions.
+
+       The [1m&&(B[m, [1m||(B[m, and [1m!(B[m  operators are logical AND, logical OR, and logical
+       NOT, respectively, as in C.  They do short-circuit evaluation, also as
+       in C, and are used for combining more primitive pattern expressions.
+       As in most languages, parentheses may be used to change the order of
+       evaluation.
+
+       The [1m?:(B[m operator is like the same operator in C.  If the first pattern
+       is true then the pattern used for testing is the second pattern,
+       otherwise it is the third.  Only one of the second and third patterns
+       is evaluated.
+
+       The [4mpattern1[24m[1m,(B[m [4mpattern2[24m form of an expression is called a [4mrange[24m [4mpattern[24m.
+       It matches all input records starting with a record that matches
+       [4mpattern1[24m, and continuing until a record that matches [4mpattern2[24m,
+       inclusive.  It does not combine with any other sort of pattern
+       expression.
+
+   [1mRegular(B[m [1mExpressions(B[m
+       Regular expressions are the extended kind found in [4megrep[24m.  They are
+       composed of characters as follows:
+
+       [4mc[24m        Matches the non-metacharacter [4mc[24m.
+
+       [4m\c[24m       Matches the literal character [4mc[24m.
+
+       [1m.(B[m        Matches any character [4mincluding[24m newline.
+
+       [1m^(B[m        Matches the beginning of a string.
+
+       [1m$(B[m        Matches the end of a string.
+
+       [1m[(B[m[4mabc...[24m[1m](B[m A character list: matches any of the characters [4mabc...[24m.  You
+                may include a range of characters by separating them with a
+                dash.  To include a literal dash in the list, put it first or
+                last.
+
+       [1m[^(B[m[4mabc...[24m[1m](B[m
+                A negated character list: matches any character except [4mabc...[24m.
+
+       [4mr1[24m[1m|(B[m[4mr2[24m    Alternation: matches either [4mr1[24m or [4mr2[24m.
+
+       [4mr1r2[24m     Concatenation: matches [4mr1[24m, and then [4mr2[24m.
+
+       [4mr[24m[1m+(B[m       Matches one or more [4mr[24m's.
+
+       [4mr[24m[1m*(B[m       Matches zero or more [4mr[24m's.
+
+       [4mr[24m[1m?(B[m       Matches zero or one [4mr[24m's.
+
+       [1m((B[m[4mr[24m[1m)(B[m      Grouping: matches [4mr[24m.
+
+       [4mr[24m[1m{(B[m[4mn[24m[1m}(B[m
+       [4mr[24m[1m{(B[m[4mn[24m[1m,}(B[m
+       [4mr[24m[1m{(B[m[4mn[24m[1m,(B[m[4mm[24m[1m}(B[m   One or two numbers inside braces denote an [4minterval[24m
+                [4mexpression[24m.  If there is one number in the braces, the
+                preceding regular expression [4mr[24m is repeated [4mn[24m times.  If there
+                are two numbers separated by a comma, [4mr[24m is repeated [4mn[24m to [4mm[24m
+                times.  If there is one number followed by a comma, then [4mr[24m is
+                repeated at least [4mn[24m times.
+
+       [1m\y(B[m       Matches the empty string at either the beginning or the end of
+                a word.
+
+       [1m\B(B[m       Matches the empty string within a word.
+
+       [1m\<(B[m       Matches the empty string at the beginning of a word.
+
+       [1m\>(B[m       Matches the empty string at the end of a word.
+
+       [1m\s(B[m       Matches any whitespace character.
+
+       [1m\S(B[m       Matches any nonwhitespace character.
+
+       [1m\w(B[m       Matches any word-constituent character (letter, digit, or
+                underscore).
+
+       [1m\W(B[m       Matches any character that is not word-constituent.
+
+       [1m\`(B[m       Matches the empty string at the beginning of a buffer
+                (string).
+
+       [1m\'(B[m       Matches the empty string at the end of a buffer.
+
+       The escape sequences that are valid in string constants (see [1mString(B[m
+       [1mConstants(B[m) are also valid in regular expressions.
+
+       [4mCharacter[24m [4mclasses[24m are a feature introduced in the POSIX standard.  A
+       character class is a special notation for describing lists of
+       characters that have a specific attribute, but where the actual
+       characters themselves can vary from country to country and/or from
+       character set to character set.  For example, the notion of what is an
+       alphabetic character differs in the USA and in France.
+
+       A character class is only valid in a regular expression [4minside[24m the
+       brackets of a character list.  Character classes consist of [1m[:(B[m, a
+       keyword denoting the class, and [1m:](B[m.  The character classes defined by
+       the POSIX standard are:
+
+       [1m[:alnum:](B[m
+                Alphanumeric characters.
+
+       [1m[:alpha:](B[m
+                Alphabetic characters.
+
+       [1m[:blank:](B[m
+                Space or tab characters.
+
+       [1m[:cntrl:](B[m
+                Control characters.
+
+       [1m[:digit:](B[m
+                Numeric characters.
+
+       [1m[:graph:](B[m
+                Characters that are both printable and visible.  (A space is
+                printable, but not visible, while an [1ma(B[m is both.)
+
+       [1m[:lower:](B[m
+                Lowercase alphabetic characters.
+
+       [1m[:print:](B[m
+                Printable characters (characters that are not control
+                characters.)
+
+       [1m[:punct:](B[m
+                Punctuation characters (characters that are not letter,
+                digits, control characters, or space characters).
+
+       [1m[:space:](B[m
+                Space characters (such as space, tab, and formfeed, to name a
+                few).
+
+       [1m[:upper:](B[m
+                Uppercase alphabetic characters.
+
+       [1m[:xdigit:](B[m
+                Characters that are hexadecimal digits.
+
+       For example, before the POSIX standard, to match alphanumeric
+       characters, you would have had to write [1m/[A-Za-z0-9]/(B[m.  If your
+       character set had other alphabetic characters in it, this would not
+       match them, and if your character set collated differently from ASCII,
+       this might not even match the ASCII alphanumeric characters.  With the
+       POSIX character classes, you can write [1m/[[:alnum:]]/(B[m, and this matches
+       the alphabetic and numeric characters in your character set, no matter
+       what it is.
+
+       Two additional special sequences can appear in character lists.  These
+       apply to non-ASCII character sets, which can have single symbols
+       (called [4mcollating[24m [4melements[24m) that are represented with more than one
+       character, as well as several characters that are equivalent for
+       [4mcollating[24m, or sorting, purposes.  (E.g., in French, a plain "e" and a
+       grave-accented "`" are equivalent.)
+
+       Collating Symbols
+              A collating symbol is a multi-character collating element
+              enclosed in [1m[.(B[m  and [1m.](B[m.  For example, if [1mch(B[m is a collating
+              element, then [1m[[.ch.]](B[m  is a regular expression that matches
+              this collating element, while [1m[ch](B[m is a regular expression that
+              matches either [1mc(B[m or [1mh(B[m.
+
+       Equivalence Classes
+              An equivalence class is a locale-specific name for a list of
+              characters that are equivalent.  The name is enclosed in [1m[=(B[m and
+              [1m=](B[m.  For example, the name [1me(B[m might be used to represent all of
+              "e", "'", and "`".  In this case, [1m[[=e=]](B[m is a regular
+              expression that matches any of [1me(B[m, e, or e.
+
+       These features are very valuable in non-English speaking locales.  The
+       library functions that [4mgawk[24m uses for regular expression matching
+       currently only recognize POSIX character classes; they do not recognize
+       collating symbols or equivalence classes.
+
+       The [1m\y(B[m, [1m\B(B[m, [1m\<(B[m, [1m\>(B[m, [1m\s(B[m, [1m\S(B[m, [1m\w(B[m, [1m\W(B[m, [1m\`(B[m, and [1m\'(B[m operators are specific
+       to [4mgawk[24m; they are extensions based on facilities in the GNU regular
+       expression libraries.
+
+       The various command line options control how [4mgawk[24m interprets characters
+       in regular expressions.
+
+       No options
+              In the default case, [4mgawk[24m provides all the facilities of POSIX
+              regular expressions and the GNU regular expression operators
+              described above.
+
+       [1m--posix(B[m
+              Only POSIX regular expressions are supported, the GNU operators
+              are not special.  (E.g., [1m\w(B[m matches a literal [1mw(B[m).
+
+       [1m--traditional(B[m
+              Traditional UNIX [4mawk[24m regular expressions are matched.  The GNU
+              operators are not special, and interval expressions are not
+              available.  Characters described by octal and hexadecimal escape
+              sequences are treated literally, even if they represent regular
+              expression metacharacters.
+
+       [1m--re-interval(B[m
+              Allow interval expressions in regular expressions, even if
+              [1m--traditional(B[m has been provided.
+
+   [1mActions(B[m
+       Action statements are enclosed in braces, [1m{(B[m and [1m}(B[m.  Action statements
+       consist of the usual assignment, conditional, and looping statements
+       found in most languages.  The operators, control statements, and
+       input/output statements available are patterned after those in C.
+
+   [1mOperators(B[m
+       The operators in AWK, in order of decreasing precedence, are:
+
+       [1m((B[m...[1m)(B[m      Grouping
+
+       [1m$(B[m          Field reference.
+
+       [1m++(B[m [1m--(B[m      Increment and decrement, both prefix and postfix.
+
+       [1m^(B[m          Exponentiation ([1m**(B[m may also be used, and [1m**=(B[m for the
+                  assignment operator).
+
+       [1m+(B[m [1m-(B[m [1m!(B[m      Unary plus, unary minus, and logical negation.
+
+       [1m*(B[m [1m/(B[m [1m%(B[m      Multiplication, division, and modulus.
+
+       [1m+(B[m [1m-(B[m        Addition and subtraction.
+
+       [4mspace[24m      String concatenation.
+
+       [1m|(B[m   [1m|&(B[m     Piped I/O for [1mgetline(B[m, [1mprint(B[m, and [1mprintf(B[m.
+
+       [1m<(B[m [1m>(B[m [1m<=(B[m [1m>=(B[m [1m==(B[m [1m!=(B[m
+                  The regular relational operators.
+
+       [1m~(B[m [1m!~(B[m       Regular expression match, negated match.  [1mNOTE(B[m: Do not use a
+                  constant regular expression ([1m/foo/(B[m) on the left-hand side of
+                  a [1m~(B[m or [1m!~(B[m.  Only use one on the right-hand side.  The
+                  expression [1m/foo/(B[m [1m~(B[m [4mexp[24m has the same meaning as [1m(($0(B[m [1m~(B[m [1m/foo/)(B[m
+                  [1m~(B[m [4mexp[24m[1m)(B[m.  This is usually [4mnot[24m what you want.
+
+       [1min(B[m         Array membership.
+
+       [1m&&(B[m         Logical AND.
+
+       [1m||(B[m         Logical OR.
+
+       [1m?:(B[m         The C conditional expression.  This has the form [4mexpr1[24m [1m?(B[m
+                  [4mexpr2[24m [1m:(B[m [4mexpr3[24m.  If [4mexpr1[24m is true, the value of the
+                  expression is [4mexpr2[24m, otherwise it is [4mexpr3[24m.  Only one of
+                  [4mexpr2[24m and [4mexpr3[24m is evaluated.
+
+       [1m=(B[m [1m+=(B[m [1m-=(B[m [1m*=(B[m [1m/=(B[m [1m%=(B[m [1m^=(B[m
+                  Assignment.  Both absolute assignment [1m((B[m[4mvar[24m [1m=(B[m [4mvalue[24m[1m)(B[m and
+                  operator-assignment (the other forms) are supported.
+
+   [1mControl(B[m [1mStatements(B[m
+       The control statements are as follows:
+
+              [1mif(B[m [1m((B[m[4mcondition[24m[1m)(B[m [4mstatement[24m [ [1melse(B[m [4mstatement[24m ]
+              [1mwhile(B[m [1m((B[m[4mcondition[24m[1m)(B[m [4mstatement[24m
+              [1mdo(B[m [4mstatement[24m [1mwhile(B[m [1m((B[m[4mcondition[24m[1m)(B[m
+              [1mfor(B[m [1m((B[m[4mexpr1[24m[1m;(B[m [4mexpr2[24m[1m;(B[m [4mexpr3[24m[1m)(B[m [4mstatement[24m
+              [1mfor(B[m [1m((B[m[4mvar[24m [1min(B[m [4marray[24m[1m)(B[m [4mstatement[24m
+              [1mbreak(B[m
+              [1mcontinue(B[m
+              [1mdelete(B[m [4marray[24m[1m[(B[m[4mindex[24m[1m](B[m
+              [1mdelete(B[m [4marray[24m
+              [1mexit(B[m [ [4mexpression[24m ]
+              [1m{(B[m [4mstatements[24m [1m}(B[m
+              [1mswitch(B[m [1m((B[m[4mexpression[24m[1m)(B[m [1m{(B[m
+              [1mcase(B[m [4mvalue[24m[1m|(B[m[4mregex[24m [1m:(B[m [4mstatement[24m
+              [4m...[24m
+              [ [1mdefault:(B[m [4mstatement[24m ]
+              [1m}(B[m
+
+   [1mI/O(B[m [1mStatements(B[m
+       The input/output statements are as follows:
+
+       [1mclose((B[m[4mfile[24m [[1m,(B[m [4mhow[24m][1m)(B[m  Close file, pipe or coprocess.  The optional [4mhow[24m
+                            should only be used when closing one end of a two-
+                            way pipe to a coprocess.  It must be a string
+                            value, either [1m"to"(B[m or [1m"from"(B[m.
+
+       [1mgetline(B[m              Set [1m$0(B[m from the next input record; set [1mNF(B[m, [1mNR(B[m,
+                            [1mFNR(B[m, [1mRT(B[m.
+
+       [1mgetline(B[m [1m<(B[m[4mfile[24m        Set [1m$0(B[m from the next record of [4mfile[24m; set [1mNF(B[m, [1mRT(B[m.
+
+       [1mgetline(B[m [4mvar[24m          Set [4mvar[24m from the next input record; set [1mNR(B[m, [1mFNR(B[m,
+                            [1mRT(B[m.
+
+       [1mgetline(B[m [4mvar[24m [1m<(B[m[4mfile[24m    Set [4mvar[24m from the next record of [4mfile[24m; set [1mRT(B[m.
+
+       [4mcommand[24m [1m|(B[m [1mgetline(B[m [[4mvar[24m]
+                            Run [4mcommand[24m, piping the output either into [1m$0(B[m or
+                            [4mvar[24m, as above, and [1mRT(B[m.
+
+       [4mcommand[24m [1m|&(B[m [1mgetline(B[m [[4mvar[24m]
+                            Run [4mcommand[24m as a coprocess piping the output
+                            either into [1m$0(B[m or [4mvar[24m, as above, and [1mRT(B[m.
+                            Coprocesses are a [4mgawk[24m extension.  (The [4mcommand[24m
+                            can also be a socket.  See the subsection [1mSpecial(B[m
+                            [1mFile(B[m [1mNames(B[m, below.)
+
+       [1mnext(B[m                 Stop processing the current input record.  Read
+                            the next input record and start processing over
+                            with the first pattern in the AWK program.  Upon
+                            reaching the end of the input data, execute any
+                            [1mEND(B[m rule(s).
+
+       [1mnextfile(B[m             Stop processing the current input file.  The next
+                            input record read comes from the next input file.
+                            Update [1mFILENAME(B[m and [1mARGIND(B[m, reset [1mFNR(B[m to 1, and
+                            start processing over with the first pattern in
+                            the AWK program.  Upon reaching the end of the
+                            input data, execute any [1mENDFILE(B[m and [1mEND(B[m rule(s).
+
+       [1mprint(B[m                Print the current record.  The output record is
+                            terminated with the value of [1mORS(B[m.
+
+       [1mprint(B[m [4mexpr-list[24m      Print expressions.  Each expression is separated
+                            by the value of [1mOFS(B[m.  The output record is
+                            terminated with the value of [1mORS(B[m.
+
+       [1mprint(B[m [4mexpr-list[24m [1m>(B[m[4mfile[24m
+                            Print expressions on [4mfile[24m.  Each expression is
+                            separated by the value of [1mOFS(B[m.  The output record
+                            is terminated with the value of [1mORS(B[m.
+
+       [1mprintf(B[m [4mfmt,[24m [4mexpr-list[24m
+                            Format and print.  See [1mThe(B[m [4mprintf[24m [1mStatement(B[m,
+                            below.
+
+       [1mprintf(B[m [4mfmt,[24m [4mexpr-list[24m [1m>(B[m[4mfile[24m
+                            Format and print on [4mfile[24m.
+
+       [1msystem((B[m[4mcmd-line[24m[1m)(B[m     Execute the command [4mcmd-line[24m, and return the exit
+                            status.  (This may not be available on non-POSIX
+                            systems.)  See [4mGAWK:[24m [4mEffective[24m [4mAWK[24m [4mProgramming[24m for
+                            the full details on the exit status.
+
+       [1mfflush((B[m[[4mfile[24m][1m)(B[m       Flush any buffers associated with the open output
+                            file or pipe [4mfile[24m.  If [4mfile[24m is missing or if it is
+                            the null string, then flush all open output files
+                            and pipes.
+
+       Additional output redirections are allowed for [1mprint(B[m and [1mprintf(B[m.
+
+       [1mprint(B[m [1m...(B[m [1m>>(B[m [4mfile[24m
+              Append output to the [4mfile[24m.
+
+       [1mprint(B[m [1m...(B[m [1m|(B[m [4mcommand[24m
+              Write on a pipe.
+
+       [1mprint(B[m [1m...(B[m [1m|&(B[m [4mcommand[24m
+              Send data to a coprocess or socket.  (See also the subsection
+              [1mSpecial(B[m [1mFile(B[m [1mNames(B[m, below.)
+
+       The [1mgetline(B[m command returns 1 on success, zero on end of file, and -1
+       on an error.  If the [4merrno[24m(3) value indicates that the I/O operation
+       may be retried, and [1mPROCINFO["(B[m[4minput[24m[1m",(B[m [1m"RETRY"](B[m is set, then -2 is
+       returned instead of -1, and further calls to [1mgetline(B[m may be attempted.
+       Upon an error, [1mERRNO(B[m is set to a string describing the problem.
+
+       [1mNOTE(B[m: Failure in opening a two-way socket results in a non-fatal error
+       being returned to the calling function. If using a pipe, coprocess, or
+       socket to [1mgetline(B[m, or from [1mprint(B[m or [1mprintf(B[m within a loop, you [4mmust[24m use
+       [1mclose()(B[m to create new instances of the command or socket.  AWK does not
+       automatically close pipes, sockets, or coprocesses when they return
+       EOF.
+
+   [1mThe(B[m [4mprintf[24m [1mStatement(B[m
+       The AWK versions of the [1mprintf(B[m statement and [1msprintf()(B[m function (see
+       below) accept the following conversion specification formats:
+
+       [1m%a(B[m, [1m%A(B[m
+             A floating point number of the form [[1m-(B[m][1m0x(B[m[4mh[24m[1m.(B[m[4mhhhh[24m[1mp+-(B[m[4mdd[24m (C99
+             hexadecimal floating point format).  For [1m%A(B[m, uppercase letters
+             are used instead of lowercase ones.
+
+       [1m%c(B[m    A single character.  If the argument used for [1m%c(B[m is numeric, it
+             is treated as a character and printed.  Otherwise, the argument
+             is assumed to be a string, and the only first character of that
+             string is printed.
+
+       [1m%d(B[m, [1m%i(B[m
+             A decimal number (the integer part).
+
+       [1m%e(B[m, [1m%E(B[m
+             A floating point number of the form [[1m-(B[m][4md[24m[1m.(B[m[4mdddddd[24m[1me(B[m[[1m+-(B[m][4mdd[24m.  The [1m%E(B[m
+             format uses [1mE(B[m instead of [1me(B[m.
+
+       [1m%f(B[m, [1m%F(B[m
+             A floating point number of the form [[1m-(B[m][4mddd[24m[1m.(B[m[4mdddddd[24m.  If the system
+             library supports it, [1m%F(B[m is available as well. This is like [1m%f(B[m,
+             but uses capital letters for special "not a number" and
+             "infinity" values. If [1m%F(B[m is not available, [4mgawk[24m uses [1m%f(B[m.
+
+       [1m%g(B[m, [1m%G(B[m
+             Use [1m%e(B[m or [1m%f(B[m conversion, whichever is shorter, with
+             nonsignificant zeros suppressed.  The [1m%G(B[m format uses [1m%E(B[m instead
+             of [1m%e(B[m.
+
+       [1m%o(B[m    An unsigned octal number (also an integer).
+
+       [1m%u(B[m    An unsigned decimal number (again, an integer).
+
+       [1m%s(B[m    A character string.
+
+       [1m%x(B[m, [1m%X(B[m
+             An unsigned hexadecimal number (an integer).  The [1m%X(B[m format uses
+             [1mABCDEF(B[m instead of [1mabcdef(B[m.
+
+       [1m%%(B[m    A single [1m%(B[m character; no argument is converted.
+
+       Optional, additional parameters may lie between the [1m%(B[m and the control
+       letter:
+
+       [4mcount[24m[1m$(B[m Use the [4mcount[24m'th argument at this point in the formatting.  This
+              is called a [4mpositional[24m [4mspecifier[24m and is intended primarily for
+              use in translated versions of format strings, not in the
+              original text of an AWK program.  It is a [4mgawk[24m extension.
+
+       [1m-(B[m      The expression should be left-justified within its field.
+
+       [4mspace[24m  For numeric conversions, prefix positive values with a space,
+              and negative values with a minus sign.
+
+       [1m+(B[m      The plus sign, used before the width modifier (see below), says
+              to always supply a sign for numeric conversions, even if the
+              data to be formatted is positive.  The [1m+(B[m overrides the space
+              modifier.
+
+       [1m#(B[m      Use an "alternate form" for certain control letters.  For [1m%o(B[m,
+              supply a leading zero.  For [1m%x(B[m, and [1m%X(B[m, supply a leading [1m0x(B[m or
+              [1m0X(B[m for a nonzero result.  For [1m%e(B[m, [1m%E(B[m, [1m%f(B[m and [1m%F(B[m, the result
+              always contains a decimal point.  For [1m%g(B[m, and [1m%G(B[m, trailing zeros
+              are not removed from the result.
+
+       [1m0(B[m      A leading [1m0(B[m (zero) acts as a flag, indicating that output should
+              be padded with zeroes instead of spaces.  This applies only to
+              the numeric output formats.  This flag only has an effect when
+              the field width is wider than the value to be printed.
+
+       [1m'(B[m      A single quote character instructs [4mgawk[24m to insert the locale's
+              thousands-separator character into decimal numbers, and to also
+              use the locale's decimal point character with floating point
+              formats.  This requires correct locale support in the C library
+              and in the definition of the current locale.
+
+       [4mwidth[24m  The field should be padded to this width.  The field is normally
+              padded with spaces.  With the [1m0(B[m flag, it is padded with zeroes.
+
+       [1m.(B[m[4mprec[24m  A number that specifies the precision to use when printing.  For
+              the [1m%e(B[m, [1m%E(B[m, [1m%f(B[m and [1m%F(B[m, formats, this specifies the number of
+              digits you want printed to the right of the decimal point.  For
+              the [1m%g(B[m, and [1m%G(B[m formats, it specifies the maximum number of
+              significant digits.  For the [1m%d(B[m, [1m%i(B[m, [1m%o(B[m, [1m%u(B[m, [1m%x(B[m, and [1m%X(B[m formats,
+              it specifies the minimum number of digits to print.  For the [1m%s(B[m
+              format, it specifies the maximum number of characters from the
+              string that should be printed.
+
+       The dynamic [4mwidth[24m and [4mprec[24m capabilities of the ISO C [1mprintf()(B[m routines
+       are supported.  A [1m*(B[m in place of either the [4mwidth[24m or [4mprec[24m specifications
+       causes their values to be taken from the argument list to [1mprintf(B[m or
+       [1msprintf()(B[m.  To use a positional specifier with a dynamic width or
+       precision, supply the [4mcount[24m[1m$(B[m after the [1m*(B[m in the format string.  For
+       example, [1m"%3$*2$.*1$s"(B[m.
+
+   [1mSpecial(B[m [1mFile(B[m [1mNames(B[m
+       When doing I/O redirection from either [1mprint(B[m or [1mprintf(B[m into a file, or
+       via [1mgetline(B[m from a file, [4mgawk[24m recognizes certain special filenames
+       internally.  These filenames allow access to open file descriptors
+       inherited from [4mgawk[24m's parent process (usually the shell).  These file
+       names may also be used on the command line to name data files.  The
+       filenames are:
+
+       [1m-(B[m          The standard input.
+
+       [1m/dev/stdin(B[m The standard input.
+
+       [1m/dev/stdout(B[m
+                  The standard output.
+
+       [1m/dev/stderr(B[m
+                  The standard error output.
+
+       [1m/dev/fd/(B[m[4mn[24m  The file associated with the open file descriptor [4mn[24m.
+
+       These are particularly useful for error messages.  For example:
+
+              [1mprint(B[m [1m"You(B[m [1mblew(B[m [1mit!"(B[m [1m>(B[m [1m"/dev/stderr"(B[m
+
+       whereas you would otherwise have to use
+
+              [1mprint(B[m [1m"You(B[m [1mblew(B[m [1mit!"(B[m [1m|(B[m [1m"cat(B[m [1m1>&2"(B[m
+
+       The following special filenames may be used with the [1m|&(B[m coprocess
+       operator for creating TCP/IP network connections:
+
+       [1m/inet/tcp/(B[m[4mlport[24m[1m/(B[m[4mrhost[24m[1m/(B[m[4mrport[24m
+       [1m/inet4/tcp/(B[m[4mlport[24m[1m/(B[m[4mrhost[24m[1m/(B[m[4mrport[24m
+       [1m/inet6/tcp/(B[m[4mlport[24m[1m/(B[m[4mrhost[24m[1m/(B[m[4mrport[24m
+              Files for a TCP/IP connection on local port [4mlport[24m to remote host
+              [4mrhost[24m on remote port [4mrport[24m.  Use a port of [1m0(B[m to have the system
+              pick a port.  Use [1m/inet4(B[m to force an IPv4 connection, and [1m/inet6(B[m
+              to force an IPv6 connection.  Plain [1m/inet(B[m uses the system
+              default (most likely IPv4).  Usable only with the [1m|&(B[m two-way I/O
+              operator.
+
+       [1m/inet/udp/(B[m[4mlport[24m[1m/(B[m[4mrhost[24m[1m/(B[m[4mrport[24m
+       [1m/inet4/udp/(B[m[4mlport[24m[1m/(B[m[4mrhost[24m[1m/(B[m[4mrport[24m
+       [1m/inet6/udp/(B[m[4mlport[24m[1m/(B[m[4mrhost[24m[1m/(B[m[4mrport[24m
+              Similar, but use UDP/IP instead of TCP/IP.
+
+   [1mNumeric(B[m [1mFunctions(B[m
+       AWK has the following built-in arithmetic functions:
+
+       [1matan2((B[m[4my[24m[1m,(B[m [4mx[24m[1m)(B[m  Return the arctangent of [4my/x[24m in radians.
+
+       [1mcos((B[m[4mexpr[24m[1m)(B[m    Return the cosine of [4mexpr[24m, which is in radians.
+
+       [1mexp((B[m[4mexpr[24m[1m)(B[m    The exponential function.
+
+       [1mint((B[m[4mexpr[24m[1m)(B[m    Truncate to integer.
+
+       [1mlog((B[m[4mexpr[24m[1m)(B[m    The natural logarithm function.
+
+       [1mrand()(B[m       Return a random number [4mN[24m, between zero and one, such that
+                    0 <= [4mN[24m < 1.
+
+       [1msin((B[m[4mexpr[24m[1m)(B[m    Return the sine of [4mexpr[24m, which is in radians.
+
+       [1msqrt((B[m[4mexpr[24m[1m)(B[m   Return the square root of [4mexpr[24m.
+
+       [1msrand((B[m[[4mexpr[24m][1m)(B[m
+                    Use [4mexpr[24m as the new seed for the random number generator.
+                    If no [4mexpr[24m is provided, use the time of day.  Return the
+                    previous seed for the random number generator.
+
+   [1mString(B[m [1mFunctions(B[m
+       [4mGawk[24m has the following built-in string functions:
+
+       [1masort((B[m[4ms[24m [[1m,(B[m [4md[24m [[1m,(B[m [4mhow[24m] ][1m)(B[m
+                              Return the number of elements in the source
+                              array [4ms[24m.  Sort the contents of [4ms[24m using [4mgawk[24m's
+                              normal rules for comparing values, and replace
+                              the indices of the sorted values [4ms[24m with
+                              sequential integers starting with 1. If the
+                              optional destination array [4md[24m is specified, first
+                              duplicate [4ms[24m into [4md[24m, and then sort [4md[24m, leaving the
+                              indices of the source array [4ms[24m unchanged. The
+                              optional string [4mhow[24m controls the direction and
+                              the comparison mode.  Valid values for [4mhow[24m are
+                              any of the strings valid for
+                              [1mPROCINFO["sorted(B[m[4m_[24m[1min"](B[m.  It can also be the name
+                              of a user-defined comparison function as
+                              described in [1mPROCINFO["sorted(B[m[4m_[24m[1min"](B[m.
+
+       [1masorti((B[m[4ms[24m [[1m,(B[m [4md[24m [[1m,(B[m [4mhow[24m] ][1m)(B[m
+                              Return the number of elements in the source
+                              array [4ms[24m.  The behavior is the same as that of
+                              [1masort()(B[m, except that the array [4mindices[24m are used
+                              for sorting, not the array values.  When done,
+                              the array is indexed numerically, and the values
+                              are those of the original indices.  The original
+                              values are lost; thus provide a second array if
+                              you wish to preserve the original.  The purpose
+                              of the optional string [4mhow[24m is the same as
+                              described previously for [1masort()(B[m.
+
+       [1mgensub((B[m[4mr[24m[1m,(B[m [4ms[24m[1m,(B[m [4mh[24m [[1m,(B[m [4mt[24m][1m)(B[m  Search the target string [4mt[24m for matches of the
+                              regular expression [4mr[24m.  If [4mh[24m is a string
+                              beginning with [1mg(B[m or [1mG(B[m, then replace all matches
+                              of [4mr[24m with [4ms[24m.  Otherwise, [4mh[24m is a number
+                              indicating which match of [4mr[24m to replace.  If [4mt[24m is
+                              not supplied, use [1m$0(B[m instead.  Within the
+                              replacement text [4ms[24m, the sequence [1m\(B[m[4mn[24m, where [4mn[24m is
+                              a digit from 1 to 9, may be used to indicate
+                              just the text that matched the [4mn[24m'th
+                              parenthesized subexpression.  The sequence [1m\0(B[m
+                              represents the entire matched text, as does the
+                              character [1m&(B[m.  Unlike [1msub()(B[m and [1mgsub()(B[m, the
+                              modified string is returned as the result of the
+                              function, and the original target string is [4mnot[24m
+                              changed.
+
+       [1mgsub((B[m[4mr[24m[1m,(B[m [4ms[24m [[1m,(B[m [4mt[24m][1m)(B[m       For each substring matching the regular
+                              expression [4mr[24m in the string [4mt[24m, substitute the
+                              string [4ms[24m, and return the number of
+                              substitutions.  If [4mt[24m is not supplied, use [1m$0(B[m.
+                              An [1m&(B[m in the replacement text is replaced with
+                              the text that was actually matched.  Use [1m\&(B[m to
+                              get a literal [1m&(B[m.  (This must be typed as [1m"\\&"(B[m;
+                              see [4mGAWK:[24m [4mEffective[24m [4mAWK[24m [4mProgramming[24m for a fuller
+                              discussion of the rules for ampersands and
+                              backslashes in the replacement text of [1msub()(B[m,
+                              [1mgsub()(B[m, and [1mgensub()(B[m.)
+
+       [1mindex((B[m[4ms[24m[1m,(B[m [4mt[24m[1m)(B[m            Return the index of the string [4mt[24m in the string
+                              [4ms[24m, or zero if [4mt[24m is not present.  (This implies
+                              that character indices start at one.)  It is a
+                              fatal error to use a regexp constant for [4mt[24m.
+
+       [1mlength((B[m[[4ms[24m][1m)(B[m            Return the length of the string [4ms[24m, or the length
+                              of [1m$0(B[m if [4ms[24m is not supplied.  As a non-standard
+                              extension, with an array argument, [1mlength()(B[m
+                              returns the number of elements in the array.
+
+       [1mmatch((B[m[4ms[24m[1m,(B[m [4mr[24m [[1m,(B[m [4ma[24m][1m)(B[m      Return the position in [4ms[24m where the regular
+                              expression [4mr[24m occurs, or zero if [4mr[24m is not
+                              present, and set the values of [1mRSTART(B[m and
+                              [1mRLENGTH(B[m.  Note that the argument order is the
+                              same as for the [1m~(B[m operator: [4mstr[24m [1m~(B[m [4mre[24m.  If array
+                              [4ma[24m is provided, [4ma[24m is cleared and then elements 1
+                              through [4mn[24m are filled with the portions of [4ms[24m that
+                              match the corresponding parenthesized
+                              subexpression in [4mr[24m.  The zero'th element of [4ma[24m
+                              contains the portion of [4ms[24m matched by the entire
+                              regular expression [4mr[24m.  Subscripts [1ma[(B[m[4mn[24m[1m,(B[m [1m"start"](B[m,
+                              and [1ma[(B[m[4mn[24m[1m,(B[m [1m"length"](B[m provide the starting index in
+                              the string and length respectively, of each
+                              matching substring.
+
+       [1mpatsplit((B[m[4ms[24m[1m,(B[m [4ma[24m [[1m,(B[m [4mr[24m [[1m,(B[m [4mseps[24m] ][1m)(B[m
+                              Split the string [4ms[24m into the array [4ma[24m and the
+                              separators array [4mseps[24m on the regular expression
+                              [4mr[24m, and return the number of fields.  Element
+                              values are the portions of [4ms[24m that matched [4mr[24m.
+                              The value of [1mseps[(B[m[4mi[24m[1m](B[m is the possibly null
+                              separator that appeared after [1ma[(B[m[4mi[24m[1m](B[m.  The value
+                              of [1mseps[0](B[m is the possibly null leading
+                              separator.  If [4mr[24m is omitted, [1mFPAT(B[m is used
+                              instead.  The arrays [4ma[24m and [4mseps[24m are cleared
+                              first.  Splitting behaves identically to field
+                              splitting with [1mFPAT(B[m, described above.
+
+       [1msplit((B[m[4ms[24m[1m,(B[m [4ma[24m [[1m,(B[m [4mr[24m [[1m,(B[m [4mseps[24m] ][1m)(B[m
+                              Split the string [4ms[24m into the array [4ma[24m and the
+                              separators array [4mseps[24m on the regular expression
+                              [4mr[24m, and return the number of fields.  If [4mr[24m is
+                              omitted, [1mFS(B[m is used instead.  The arrays [4ma[24m and
+                              [4mseps[24m are cleared first.  [1mseps[(B[m[4mi[24m[1m](B[m is the field
+                              separator matched by [4mr[24m between [1ma[(B[m[4mi[24m[1m](B[m and [1ma[(B[m[4mi[24m[1m+1](B[m.
+                              If [4mr[24m is a single space, then leading whitespace
+                              in [4ms[24m goes into the extra array element [1mseps[0](B[m
+                              and trailing whitespace goes into the extra
+                              array element [1mseps[(B[m[4mn[24m[1m](B[m, where [4mn[24m is the return
+                              value of [1msplit((B[m[4ms[24m[1m,(B[m [4ma[24m[1m,(B[m [4mr[24m[1m,(B[m [4mseps[24m[1m)(B[m.  Splitting
+                              behaves identically to field splitting,
+                              described above.  In particular, if [4mr[24m is a
+                              single-character string, that string acts as the
+                              separator, even if it happens to be a regular
+                              expression metacharacter.
+
+       [1msprintf((B[m[4mfmt[24m[1m,(B[m [4mexpr-list[24m[1m)(B[m
+                              Print [4mexpr-list[24m according to [4mfmt[24m, and return the
+                              resulting string.
+
+       [1mstrtonum((B[m[4mstr[24m[1m)(B[m          Examine [4mstr[24m, and return its numeric value.  If
+                              [4mstr[24m begins with a leading [1m0(B[m, treat it as an
+                              octal number.  If [4mstr[24m begins with a leading [1m0x(B[m
+                              or [1m0X(B[m, treat it as a hexadecimal number.
+                              Otherwise, assume it is a decimal number.
+
+       [1msub((B[m[4mr[24m[1m,(B[m [4ms[24m [[1m,(B[m [4mt[24m][1m)(B[m        Just like [1mgsub()(B[m, but replace only the first
+                              matching substring.  Return either zero or one.
+
+       [1msubstr((B[m[4ms[24m[1m,(B[m [4mi[24m [[1m,(B[m [4mn[24m][1m)(B[m     Return the at most [4mn[24m-character substring of [4ms[24m
+                              starting at [4mi[24m.  If [4mn[24m is omitted, use the rest of
+                              [4ms[24m.
+
+       [1mtolower((B[m[4mstr[24m[1m)(B[m           Return a copy of the string [4mstr[24m, with all the
+                              uppercase characters in [4mstr[24m translated to their
+                              corresponding lowercase counterparts.  Non-
+                              alphabetic characters are left unchanged.
+
+       [1mtoupper((B[m[4mstr[24m[1m)(B[m           Return a copy of the string [4mstr[24m, with all the
+                              lowercase characters in [4mstr[24m translated to their
+                              corresponding uppercase counterparts.  Non-
+                              alphabetic characters are left unchanged.
+
+       [4mGawk[24m is multibyte aware.  This means that [1mindex()(B[m, [1mlength()(B[m, [1msubstr()(B[m
+       and [1mmatch()(B[m all work in terms of characters, not bytes.
+
+   [1mTime(B[m [1mFunctions(B[m
+       Since one of the primary uses of AWK programs is processing log files
+       that contain time stamp information, [4mgawk[24m provides the following
+       functions for obtaining time stamps and formatting them.
+
+       [1mmktime((B[m[4mdatespec[24m [[1m,(B[m [4mutc-flag[24m][1m)(B[m
+                Turn [4mdatespec[24m into a time stamp of the same form as returned
+                by [1msystime()(B[m, and return the result.  The [4mdatespec[24m is a string
+                of the form [4mYYYY[24m [4mMM[24m [4mDD[24m [4mHH[24m [4mMM[24m [4mSS[[24m [4mDST][24m.  The contents of the
+                string are six or seven numbers representing respectively the
+                full year including century, the month from 1 to 12, the day
+                of the month from 1 to 31, the hour of the day from 0 to 23,
+                the minute from 0 to 59, the second from 0 to 60, and an
+                optional daylight saving flag.  The values of these numbers
+                need not be within the ranges specified; for example, an hour
+                of -1 means 1 hour before midnight.  The origin-zero Gregorian
+                calendar is assumed, with year 0 preceding year 1 and year -1
+                preceding year 0.  If [4mutc-flag[24m is present and is non-zero or
+                non-null, the time is assumed to be in the UTC time zone;
+                otherwise, the time is assumed to be in the local time zone.
+                If the [4mDST[24m daylight saving flag is positive, the time is
+                assumed to be daylight saving time; if zero, the time is
+                assumed to be standard time; and if negative (the default),
+                [1mmktime()(B[m attempts to determine whether daylight saving time is
+                in effect for the specified time.  If [4mdatespec[24m does not
+                contain enough elements or if the resulting time is out of
+                range, [1mmktime()(B[m returns -1.
+
+       [1mstrftime((B[m[[4mformat[24m [[1m,(B[m [4mtimestamp[24m[[1m,(B[m [4mutc-flag[24m]]][1m)(B[m
+                Format [4mtimestamp[24m according to the specification in [4mformat[24m.  If
+                [4mutc-flag[24m is present and is non-zero or non-null, the result is
+                in UTC, otherwise the result is in local time.  The [4mtimestamp[24m
+                should be of the same form as returned by [1msystime()(B[m.  If
+                [4mtimestamp[24m is missing, the current time of day is used.  If
+                [4mformat[24m is missing, a default format equivalent to the output
+                of [4mdate[24m(1) is used.  The default format is available in
+                [1mPROCINFO["strftime"](B[m.  See the specification for the
+                [1mstrftime()(B[m function in ISO C for the format conversions that
+                are guaranteed to be available.
+
+       [1msystime()(B[m
+                Return the current time of day as the number of seconds since
+                the Epoch (1970-01-01 00:00:00 UTC on POSIX systems).
+
+   [1mBit(B[m [1mManipulations(B[m [1mFunctions(B[m
+       [4mGawk[24m supplies the following bit manipulation functions.  They work by
+       converting double-precision floating point values to [1muintmax(B[m[4m_[24m[1mt(B[m
+       integers, doing the operation, and then converting the result back to
+       floating point.
+
+       [1mNOTE(B[m: Passing negative operands to any of these functions causes a
+       fatal error.
+
+       The functions are:
+
+       [1mand((B[m[4mv1[24m[1m,(B[m [4mv2[24m [, ...][1m)(B[m
+                         Return the bitwise AND of the values provided in the
+                         argument list.  There must be at least two.
+
+       [1mcompl((B[m[4mval[24m[1m)(B[m        Return the bitwise complement of [4mval[24m.
+
+       [1mlshift((B[m[4mval[24m[1m,(B[m [4mcount[24m[1m)(B[m
+                         Return the value of [4mval[24m, shifted left by [4mcount[24m bits.
+
+       [1mor((B[m[4mv1[24m[1m,(B[m [4mv2[24m [, ...][1m)(B[m
+                         Return the bitwise OR of the values provided in the
+                         argument list.  There must be at least two.
+
+       [1mrshift((B[m[4mval[24m[1m,(B[m [4mcount[24m[1m)(B[m
+                         Return the value of [4mval[24m, shifted right by [4mcount[24m bits.
+
+       [1mxor((B[m[4mv1[24m[1m,(B[m [4mv2[24m [, ...][1m)(B[m
+                         Return the bitwise XOR of the values provided in the
+                         argument list.  There must be at least two.
+
+   [1mType(B[m [1mFunctions(B[m
+       The following functions provide type related information about their
+       arguments.
+
+       [1misarray((B[m[4mx[24m[1m)(B[m
+                 Return true if [4mx[24m is an array, false otherwise.  This function
+                 is mainly for use with the elements of multidimensional
+                 arrays and with function parameters.
+
+       [1mtypeof((B[m[4mx[24m[1m)(B[m Return a string indicating the type of [4mx[24m.  The string will be
+                 one of [1m"array"(B[m, [1m"number"(B[m, [1m"regexp"(B[m, [1m"string"(B[m, [1m"strnum"(B[m,
+                 [1m"unassigned"(B[m, or [1m"undefined"(B[m.
+
+   [1mInternationalization(B[m [1mFunctions(B[m
+       The following functions may be used from within your AWK program for
+       translating strings at run-time.  For full details, see [4mGAWK:[24m [4mEffective[24m
+       [4mAWK[24m [4mProgramming[24m.
+
+       [1mbindtextdomain((B[m[4mdirectory[24m [[1m,(B[m [4mdomain[24m][1m)(B[m
+              Specify the directory where [4mgawk[24m looks for the [1m.gmo(B[m files, in
+              case they will not or cannot be placed in the ``standard''
+              locations (e.g., during testing).  It returns the directory
+              where [4mdomain[24m is ``bound.''
+              The default [4mdomain[24m is the value of [1mTEXTDOMAIN(B[m.  If [4mdirectory[24m is
+              the null string ([1m""(B[m), then [1mbindtextdomain()(B[m returns the current
+              binding for the given [4mdomain[24m.
+
+       [1mdcgettext((B[m[4mstring[24m [[1m,(B[m [4mdomain[24m [[1m,(B[m [4mcategory[24m]][1m)(B[m
+              Return the translation of [4mstring[24m in text domain [4mdomain[24m for
+              locale category [4mcategory[24m.  The default value for [4mdomain[24m is the
+              current value of [1mTEXTDOMAIN(B[m.  The default value for [4mcategory[24m is
+              [1m"LC(B[m[4m_[24m[1mMESSAGES"(B[m.
+              If you supply a value for [4mcategory[24m, it must be a string equal to
+              one of the known locale categories described in [4mGAWK:[24m [4mEffective[24m
+              [4mAWK[24m [4mProgramming[24m.  You must also supply a text domain.  Use
+              [1mTEXTDOMAIN(B[m if you want to use the current domain.
+
+       [1mdcngettext((B[m[4mstring1[24m[1m,(B[m [4mstring2[24m[1m,(B[m [4mnumber[24m [[1m,(B[m [4mdomain[24m [[1m,(B[m [4mcategory[24m]][1m)(B[m
+              Return the plural form used for [4mnumber[24m of the translation of
+              [4mstring1[24m and [4mstring2[24m in text domain [4mdomain[24m for locale category
+              [4mcategory[24m.  The default value for [4mdomain[24m is the current value of
+              [1mTEXTDOMAIN(B[m.  The default value for [4mcategory[24m is [1m"LC(B[m[4m_[24m[1mMESSAGES"(B[m.
+              If you supply a value for [4mcategory[24m, it must be a string equal to
+              one of the known locale categories described in [4mGAWK:[24m [4mEffective[24m
+              [4mAWK[24m [4mProgramming[24m.  You must also supply a text domain.  Use
+              [1mTEXTDOMAIN(B[m if you want to use the current domain.
+
+[1mUSER-DEFINED(B[m [1mFUNCTIONS(B[m
+       Functions in AWK are defined as follows:
+
+              [1mfunction(B[m [4mname[24m[1m((B[m[4mparameter[24m [4mlist[24m[1m)(B[m [1m{(B[m [4mstatements[24m [1m}(B[m
+
+       Functions execute when they are called from within expressions in
+       either patterns or actions.  Actual parameters supplied in the function
+       call are used to instantiate the formal parameters declared in the
+       function.  Arrays are passed by reference, other variables are passed
+       by value.
+
+       Since functions were not originally part of the AWK language, the
+       provision for local variables is rather clumsy: They are declared as
+       extra parameters in the parameter list.  The convention is to separate
+       local variables from real parameters by extra spaces in the parameter
+       list.  For example:
+
+              [1mfunction(B[m  [1mf(p,(B[m [1mq,(B[m     [1ma,(B[m [1mb)(B[m   [1m#(B[m [1ma(B[m [1mand(B[m [1mb(B[m [1mare(B[m [1mlocal(B[m
+              [1m{(B[m
+                   [1m...(B[m
+              [1m}(B[m
+
+              [1m/abc/(B[m     [1m{(B[m [1m...(B[m [1m;(B[m [1mf(1,(B[m [1m2)(B[m [1m;(B[m [1m...(B[m [1m}(B[m
+
+       The left parenthesis in a function call is required to immediately
+       follow the function name, without any intervening whitespace.  This
+       avoids a syntactic ambiguity with the concatenation operator.  This
+       restriction does not apply to the built-in functions listed above.
+
+       Functions may call each other and may be recursive.  Function
+       parameters used as local variables are initialized to the null string
+       and the number zero upon function invocation.
+
+       Use [1mreturn(B[m [4mexpr[24m to return a value from a function.  The return value is
+       undefined if no value is provided, or if the function returns by
+       "falling off" the end.
+
+       As a [4mgawk[24m extension, functions may be called indirectly. To do this,
+       assign the name of the function to be called, as a string, to a
+       variable.  Then use the variable as if it were the name of a function,
+       prefixed with an [1m@(B[m sign, like so:
+              [1mfunction(B[m [1mmyfunc()(B[m
+              [1m{(B[m
+                   [1mprint(B[m [1m"myfunc(B[m [1mcalled"(B[m
+                   [1m...(B[m
+              [1m}(B[m
+
+              [1m{(B[m    [1m...(B[m
+                   [1mthe(B[m[4m_[24m[1mfunc(B[m [1m=(B[m [1m"myfunc"(B[m
+                   [1m@the(B[m[4m_[24m[1mfunc()(B[m    [1m#(B[m [1mcall(B[m [1mthrough(B[m [1mthe(B[m[4m_[24m[1mfunc(B[m [1mto(B[m [1mmyfunc(B[m
+                   [1m...(B[m
+              [1m}(B[m
+       As of version 4.1.2, this works with user-defined functions, built-in
+       functions, and extension functions.
+
+       If [1m--lint(B[m has been provided, [4mgawk[24m warns about calls to undefined
+       functions at parse time, instead of at run time.  Calling an undefined
+       function at run time is a fatal error.
+
+       The word [1mfunc(B[m may be used in place of [1mfunction(B[m, although this is
+       deprecated.
+
+[1mDYNAMICALLY(B[m [1mLOADING(B[m [1mNEW(B[m [1mFUNCTIONS(B[m
+       You can dynamically add new functions written in C or C++ to the
+       running [4mgawk[24m interpreter with the [1m@load(B[m statement.  The full details
+       are beyond the scope of this manual page; see [4mGAWK:[24m [4mEffective[24m [4mAWK[24m
+       [4mProgramming[24m.
+
+[1mSIGNALS(B[m
+       The [4mgawk[24m profiler accepts two signals.  [1mSIGUSR1(B[m causes it to dump a
+       profile and function call stack to the profile file, which is either
+       [1mawkprof.out(B[m, or whatever file was named with the [1m--profile(B[m option.  It
+       then continues to run.  [1mSIGHUP(B[m causes [4mgawk[24m to dump the profile and
+       function call stack and then exit.
+
+[1mINTERNATIONALIZATION(B[m
+       String constants are sequences of characters enclosed in double quotes.
+       In non-English speaking environments, it is possible to mark strings in
+       the AWK program as requiring translation to the local natural language.
+       Such strings are marked in the AWK program with a leading underscore
+       ("_").  For example,
+
+              [1mgawk(B[m [1m'BEGIN(B[m [1m{(B[m [1mprint(B[m [1m"hello,(B[m [1mworld"(B[m [1m}'(B[m
+
+       always prints [1mhello,(B[m [1mworld(B[m.  But,
+
+              [1mgawk(B[m [1m'BEGIN(B[m [1m{(B[m [1mprint(B[m [4m_[24m[1m"hello,(B[m [1mworld"(B[m [1m}'(B[m
+
+       might print [1mbonjour,(B[m [1mmonde(B[m in France.
+
+       There are several steps involved in producing and running a localizable
+       AWK program.
+
+       1.
+         Add a [1mBEGIN(B[m action to assign a value to the [1mTEXTDOMAIN(B[m variable to
+         set the text domain to a name associated with your program:
+
+              [1mBEGIN(B[m [1m{(B[m [1mTEXTDOMAIN(B[m [1m=(B[m [1m"myprog"(B[m [1m}(B[m
+
+         This allows [4mgawk[24m to find the [1m.gmo(B[m file associated with your program.
+         Without this step, [4mgawk[24m uses the [1mmessages(B[m text domain, which likely
+         does not contain translations for your program.
+
+       2.
+         Mark all strings that should be translated with leading underscores.
+
+       3.
+         If necessary, use the [1mdcgettext()(B[m and/or [1mbindtextdomain()(B[m functions
+         in your program, as appropriate.
+
+       4.
+         Run [1mgawk(B[m [1m--gen-pot(B[m [1m-f(B[m [1mmyprog.awk(B[m [1m>(B[m [1mmyprog.pot(B[m to generate a [1m.pot(B[m file
+         for your program.
+
+       5.
+         Provide appropriate translations, and build and install the
+         corresponding [1m.gmo(B[m files.
+
+       The internationalization features are described in full detail in [4mGAWK:[24m
+       [4mEffective[24m [4mAWK[24m [4mProgramming[24m.
+
+[1mPOSIX(B[m [1mCOMPATIBILITY(B[m
+       A primary goal for [4mgawk[24m is compatibility with the POSIX standard, as
+       well as with the latest version of Brian Kernighan's [4mawk[24m.  To this end,
+       [4mgawk[24m incorporates the following user visible features which are not
+       described in the AWK book, but are part of the Brian Kernighan's
+       version of [4mawk[24m, and are in the POSIX standard.
+
+       The book indicates that command line variable assignment happens when
+       [4mawk[24m would otherwise open the argument as a file, which is after the
+       [1mBEGIN(B[m rule is executed.  However, in earlier implementations, when such
+       an assignment appeared before any file names, the assignment would
+       happen [4mbefore[24m the [1mBEGIN(B[m rule was run.  Applications came to depend on
+       this "feature." When [4mawk[24m was changed to match its documentation, the [1m-v(B[m
+       option for assigning variables before program execution was added to
+       accommodate applications that depended upon the old behavior.  (This
+       feature was agreed upon by both the Bell Laboratories developers and
+       the GNU developers.)
+
+       When processing arguments, [4mgawk[24m uses the special option "--" to signal
+       the end of arguments.  In compatibility mode, it warns about but
+       otherwise ignores undefined options.  In normal operation, such
+       arguments are passed on to the AWK program for it to process.
+
+       The AWK book does not define the return value of [1msrand()(B[m.  The POSIX
+       standard has it return the seed it was using, to allow keeping track of
+       random number sequences.  Therefore [1msrand()(B[m in [4mgawk[24m also returns its
+       current seed.
+
+       Other features are: The use of multiple [1m-f(B[m options (from MKS [4mawk[24m); the
+       [1mENVIRON(B[m array; the [1m\a(B[m, and [1m\v(B[m escape sequences (done originally in [4mgawk[24m
+       and fed back into the Bell Laboratories version); the [1mtolower()(B[m and
+       [1mtoupper()(B[m built-in functions (from the Bell Laboratories version); and
+       the ISO C conversion specifications in [1mprintf(B[m (done first in the Bell
+       Laboratories version).
+
+[1mHISTORICAL(B[m [1mFEATURES(B[m
+       There is one feature of historical AWK implementations that [4mgawk[24m
+       supports: It is possible to call the [1mlength()(B[m built-in function not
+       only with no argument, but even without parentheses!  Thus,
+
+              [1ma(B[m [1m=(B[m [1mlength(B[m     [1m#(B[m [1mHoly(B[m [1mAlgol(B[m [1m60,(B[m [1mBatman!(B[m
+
+       is the same as either of
+
+              [1ma(B[m [1m=(B[m [1mlength()(B[m
+              [1ma(B[m [1m=(B[m [1mlength($0)(B[m
+
+       Using this feature is poor practice, and [4mgawk[24m issues a warning about
+       its use if [1m--lint(B[m is specified on the command line.
+
+[1mGNU(B[m [1mEXTENSIONS(B[m
+       [4mGawk[24m has a too-large number of extensions to POSIX [4mawk[24m.  They are
+       described in this section.  All the extensions described here can be
+       disabled by invoking [4mgawk[24m with the [1m--traditional(B[m or [1m--posix(B[m options.
+
+       The following features of [4mgawk[24m are not available in POSIX [4mawk[24m.
+
+       +
+        No path search is performed for files named via the [1m-f(B[m option.
+        Therefore the [1mAWKPATH(B[m environment variable is not special.
+
+       +
+        There is no facility for doing file inclusion ([4mgawk[24m's [1m@include(B[m
+        mechanism).
+
+       +
+        There is no facility for dynamically adding new functions written in C
+        ([4mgawk[24m's [1m@load(B[m mechanism).
+
+       +
+        The [1m\x(B[m escape sequence.
+
+       +
+        The ability to continue lines after [1m?(B[m  and [1m:(B[m.
+
+       +
+        Octal and hexadecimal constants in AWK programs.
+
+       +
+        The [1mARGIND(B[m, [1mBINMODE(B[m, [1mERRNO(B[m, [1mLINT(B[m, [1mPREC(B[m, [1mROUNDMODE(B[m, [1mRT(B[m and [1mTEXTDOMAIN(B[m
+        variables are not special.
+
+       +
+        The [1mIGNORECASE(B[m variable and its side-effects are not available.
+
+       +
+        The [1mFIELDWIDTHS(B[m variable and fixed-width field splitting.
+
+       +
+        The [1mFPAT(B[m variable and field splitting based on field values.
+
+       +
+        The [1mFUNCTAB(B[m, [1mSYMTAB(B[m, and [1mPROCINFO(B[m arrays are not available.
+
+       +
+        The use of [1mRS(B[m as a regular expression.
+
+       +
+        The special file names available for I/O redirection are not
+        recognized.
+
+       +
+        The [1m|&(B[m operator for creating coprocesses.
+
+       +
+        The [1mBEGINFILE(B[m and [1mENDFILE(B[m special patterns are not available.
+
+       +
+        The ability to split out individual characters using the null string
+        as the value of [1mFS(B[m, and as the third argument to [1msplit()(B[m.
+
+       +
+        An optional fourth argument to [1msplit()(B[m to receive the separator texts.
+
+       +
+        The optional second argument to the [1mclose()(B[m function.
+
+       +
+        The optional third argument to the [1mmatch()(B[m function.
+
+       +
+        The ability to use positional specifiers with [1mprintf(B[m and [1msprintf()(B[m.
+
+       +
+        The ability to pass an array to [1mlength()(B[m.
+
+       +
+        The [1mand()(B[m, [1masort()(B[m, [1masorti()(B[m, [1mbindtextdomain()(B[m, [1mcompl()(B[m, [1mdcgettext()(B[m,
+        [1mdcngettext()(B[m, [1mgensub()(B[m, [1mlshift()(B[m, [1mmktime()(B[m, [1mor()(B[m, [1mpatsplit()(B[m,
+        [1mrshift()(B[m, [1mstrftime()(B[m, [1mstrtonum()(B[m, [1msystime()(B[m and [1mxor()(B[m functions.
+
+       +
+        Localizable strings.
+
+       +
+        Non-fatal I/O.
+
+       +
+        Retryable I/O.
+
+       The AWK book does not define the return value of the [1mclose()(B[m function.
+       [4mGawk[24m's [1mclose()(B[m returns the value from [4mfclose[24m(3), or [4mpclose[24m(3), when
+       closing an output file or pipe, respectively.  It returns the process's
+       exit status when closing an input pipe.  The return value is -1 if the
+       named file, pipe or coprocess was not opened with a redirection.
+
+       When [4mgawk[24m is invoked with the [1m--traditional(B[m option, if the [4mfs[24m argument
+       to the [1m-F(B[m option is "t", then [1mFS(B[m is set to the tab character.  Note
+       that typing [1mgawk(B[m [1m-F\t(B[m [1m...(B[m  simply causes the shell to quote the "t,"
+       and does not pass "\t" to the [1m-F(B[m option.  Since this is a rather ugly
+       special case, it is not the default behavior.  This behavior also does
+       not occur if [1m--posix(B[m has been specified.  To really get a tab character
+       as the field separator, it is best to use single quotes: [1mgawk(B[m [1m-F'\t'(B[m
+       [1m...(B[m.
+
+[1mENVIRONMENT(B[m [1mVARIABLES(B[m
+       The [1mAWKPATH(B[m environment variable can be used to provide a list of
+       directories that [4mgawk[24m searches when looking for files named via the [1m-f(B[m,
+       [1m--file(B[m, [1m-i(B[m and [1m--include(B[m options, and the [1m@include(B[m directive.  If the
+       initial search fails, the path is searched again after appending [1m.awk(B[m
+       to the filename.
+
+       The [1mAWKLIBPATH(B[m environment variable can be used to provide a list of
+       directories that [4mgawk[24m searches when looking for files named via the [1m-l(B[m
+       and [1m--load(B[m options.
+
+       The [1mGAWK(B[m[4m_[24m[1mREAD(B[m[4m_[24m[1mTIMEOUT(B[m environment variable can be used to specify a
+       timeout in milliseconds for reading input from a terminal, pipe or two-
+       way communication including sockets.
+
+       For connection to a remote host via socket, [1mGAWK(B[m[4m_[24m[1mSOCK(B[m[4m_[24m[1mRETRIES(B[m controls
+       the number of retries, and [1mGAWK(B[m[4m_[24m[1mMSEC(B[m[4m_[24m[1mSLEEP(B[m the interval between
+       retries.  The interval is in milliseconds. On systems that do not
+       support [4musleep[24m(3), the value is rounded up to an integral number of
+       seconds.
+
+       If [1mPOSIXLY(B[m[4m_[24m[1mCORRECT(B[m exists in the environment, then [4mgawk[24m behaves exactly
+       as if [1m--posix(B[m had been specified on the command line.  If [1m--lint(B[m has
+       been specified, [4mgawk[24m issues a warning message to this effect.
+
+[1mEXIT(B[m [1mSTATUS(B[m
+       If the [1mexit(B[m statement is used with a value, then [4mgawk[24m exits with the
+       numeric value given to it.
+
+       Otherwise, if there were no problems during execution, [4mgawk[24m exits with
+       the value of the C constant [1mEXIT(B[m[4m_[24m[1mSUCCESS(B[m.  This is usually zero.
+
+       If an error occurs, [4mgawk[24m exits with the value of the C constant
+       [1mEXIT(B[m[4m_[24m[1mFAILURE(B[m.  This is usually one.
+
+       If [4mgawk[24m exits because of a fatal error, the exit status is 2.  On non-
+       POSIX systems, this value may be mapped to [1mEXIT(B[m[4m_[24m[1mFAILURE(B[m.
+
+[1mVERSION(B[m [1mINFORMATION(B[m
+       This man page documents [4mgawk[24m, version 5.0.
+
+[1mAUTHORS(B[m
+       The original version of UNIX [4mawk[24m was designed and implemented by Alfred
+       Aho, Peter Weinberger, and Brian Kernighan of Bell Laboratories.  Brian
+       Kernighan continues to maintain and enhance it.
+
+       Paul Rubin and Jay Fenlason, of the Free Software Foundation, wrote
+       [4mgawk[24m, to be compatible with the original version of [4mawk[24m distributed in
+       Seventh Edition UNIX.  John Woods contributed a number of bug fixes.
+       David Trueman, with contributions from Arnold Robbins, made [4mgawk[24m
+       compatible with the new version of UNIX [4mawk[24m.  Arnold Robbins is the
+       current maintainer.
+
+       See [4mGAWK:[24m [4mEffective[24m [4mAWK[24m [4mProgramming[24m for a full list of the contributors
+       to [4mgawk[24m and its documentation.
+
+       See the [1mREADME(B[m file in the [4mgawk[24m distribution for up-to-date information
+       about maintainers and which ports are currently supported.
+
+[1mBUG(B[m [1mREPORTS(B[m
+       If you find a bug in [4mgawk[24m, please send electronic mail to
+       [1mbug-gawk@gnu.org(B[m.  Please include your operating system and its
+       revision, the version of [4mgawk[24m (from [1mgawk(B[m [1m--version(B[m), which C compiler
+       you used to compile it, and a test program and data that are as small
+       as possible for reproducing the problem.
+
+       Before sending a bug report, please do the following things.  First,
+       verify that you have the latest version of [4mgawk[24m.  Many bugs (usually
+       subtle ones) are fixed at each release, and if yours is out of date,
+       the problem may already have been solved.  Second, please see if
+       setting the environment variable [1mLC(B[m[4m_[24m[1mALL(B[m to [1mLC(B[m[4m_[24m[1mALL=C(B[m causes things to
+       behave as you expect. If so, it's a locale issue, and may or may not
+       really be a bug.  Finally, please read this man page and the reference
+       manual carefully to be sure that what you think is a bug really is,
+       instead of just a quirk in the language.
+
+       Whatever you do, do [1mNOT(B[m post a bug report in [1mcomp.lang.awk(B[m.  While the
+       [4mgawk[24m developers occasionally read this newsgroup, posting bug reports
+       there is an unreliable way to report bugs.  Similarly, do [1mNOT(B[m use a web
+       forum (such as Stack Overflow) for reporting bugs.  Instead, please use
+       the electronic mail addresses given above.  Really.
+
+       If you're using a GNU/Linux or BSD-based system, you may wish to submit
+       a bug report to the vendor of your distribution.  That's fine, but
+       please send a copy to the official email address as well, since there's
+       no guarantee that the bug report will be forwarded to the [4mgawk[24m
+       maintainer.
+
+[1mBUGS(B[m
+       The [1m-F(B[m option is not necessary given the command line variable
+       assignment feature; it remains only for backwards compatibility.
+
+[1mSEE(B[m [1mALSO(B[m
+       [4megrep[24m(1), [4msed[24m(1), [4mgetpid[24m(2), [4mgetppid[24m(2), [4mgetpgrp[24m(2), [4mgetuid[24m(2),
+       [4mgeteuid[24m(2), [4mgetgid[24m(2), [4mgetegid[24m(2), [4mgetgroups[24m(2), [4mprintf[24m(3),
+       [4mstrftime[24m(3), [4musleep[24m(3)
+
+       [4mThe[24m [4mAWK[24m [4mProgramming[24m [4mLanguage[24m, Alfred V. Aho, Brian W. Kernighan, Peter
+       J. Weinberger, Addison-Wesley, 1988.  ISBN 0-201-07981-X.
+
+       [4mGAWK:[24m [4mEffective[24m [4mAWK[24m [4mProgramming[24m, Edition 5.0, shipped with the [4mgawk[24m
+       source.  The current version of this document is available online at
+       [1mhttps://www.gnu.org/software/gawk/manual(B[m.
+
+       The GNU [1mgettext(B[m documentation, available online at
+       [1mhttps://www.gnu.org/software/gettext(B[m.
+
+[1mEXAMPLES(B[m
+       Print and sort the login names of all users:
+
+            [1mBEGIN(B[m     [1m{(B[m [1mFS(B[m [1m=(B[m [1m":"(B[m [1m}(B[m
+                 [1m{(B[m [1mprint(B[m [1m$1(B[m [1m|(B[m [1m"sort"(B[m [1m}(B[m
+
+       Count lines in a file:
+
+                 [1m{(B[m [1mnlines++(B[m [1m}(B[m
+            [1mEND(B[m  [1m{(B[m [1mprint(B[m [1mnlines(B[m [1m}(B[m
+
+       Precede each line by its number in the file:
+
+            [1m{(B[m [1mprint(B[m [1mFNR,(B[m [1m$0(B[m [1m}(B[m
+
+       Concatenate and line number (a variation on a theme):
+
+            [1m{(B[m [1mprint(B[m [1mNR,(B[m [1m$0(B[m [1m}(B[m
+
+       Run an external command for particular lines of data:
+
+            [1mtail(B[m [1m-f(B[m [1maccess(B[m[4m_[24m[1mlog(B[m [1m|(B[m
+            [1mawk(B[m [1m'/myhome.html/(B[m [1m{(B[m [1msystem("nmap(B[m [1m"(B[m [1m$1(B[m [1m">>(B[m [1mlogdir/myhome.html")(B[m [1m}'(B[m
+
+[1mACKNOWLEDGEMENTS(B[m
+       Brian Kernighan provided valuable assistance during testing and
+       debugging.  We thank him.
+
+[1mCOPYING(B[m [1mPERMISSIONS(B[m
+       Copyright (C) 1989, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998,
+       1999, 2001, 2002, 2003, 2004, 2005, 2007, 2009, 2010, 2011, 2012, 2013,
+       2014, 2015, 2016, 2017, 2018, 2019, Free Software Foundation, Inc.
+
+       Permission is granted to make and distribute verbatim copies of this
+       manual page provided the copyright notice and this permission notice
+       are preserved on all copies.
+
+       Permission is granted to copy and distribute modified versions of this
+       manual page under the conditions for verbatim copying, provided that
+       the entire resulting derived work is distributed under the terms of a
+       permission notice identical to this one.
+
+       Permission is granted to copy and distribute translations of this
+       manual page into another language, under the above conditions for
+       modified versions, except that this permission notice may be stated in
+       a translation approved by the Foundation.
+
+
+
+Free Software Foundation          May 22 2019                          GAWK(1)

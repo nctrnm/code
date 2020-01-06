@@ -1,0 +1,1 @@
+date -d "January 1, 2000" +%A;
