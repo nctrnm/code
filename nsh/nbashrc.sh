@@ -37,8 +37,8 @@ alias ddir='rmdir --ignore-fail-on-non-empty'
 alias ngit='bash /sdcard/ngt/nsh/n_git.sh'
 alias nctrnm='cd /sdcard/ngt && pwd'
 alias home='/sdcard/ngt'
-alias gthb='lynx https://github.com/mwmcgilvery'
-alias google='lynx https://www.google.com/search?q=' 
+alias gthb='elinks https://github.com/mwmcgilvery'
+alias google='elinks https://www.google.com/search?q=' 
 alias sh101='man sh'
 alias bash101='man bash'
 alias png='echo ping && date && arp && httping -c 8 1.1.1.1 && arp -v -a -i wlan0'
@@ -53,7 +53,7 @@ alias rt='cd . && pwd'
 alias note='micro'
 alias nt='micro'
 alias gitl='git log > /sdcard/ngt/nsudo/ngitl.txt'
-alias google='lynx https://google.com/search'
+alias google='elinks https://google.com/search'
 alias fmh='nnn /sdcard/ngt'
 alias hm='mc /sdcard/ngt'
 alias gitp='git push nmbl'
@@ -70,7 +70,7 @@ alias pg='ping -c8 nctrnm.com > /sdcard/ngt/nsitepng.txt; micro /sdcard/ngt/nsud
 echo Saving Initialization File Updates
 cd ; cp .bashrc /sdcard/ngt/nsh/nbashrc.sh
 echo "tidying apps"
-(apt upgrade; apt update; pkg upgrade; npm -g update npm                                  )
+pkg upgrade; npm -g update npm                          )
 echo "logging back into home directory"
 cd /sdcard/
 echo "Printing Global Aliases"
