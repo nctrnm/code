@@ -1,11 +1,4 @@
 #!/bin/bash/;
-cd -; $n;
-echo "logging into sdcard"
-cd /sdcard/ngt;
-echo "Setting Environmental variables"
-echo "printing environmental variables"
-pwd
-ping -b -c 8 google.com > /sdcard/ngt/nsudo/npng.txt
 echo "logging global aliases"
 alias bashed='cd ; micro .bashrc'
 alias nsig='pgrep -u u0_a224'
