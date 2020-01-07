@@ -1,2 +1,0 @@
-#!/bin/bash;
-sox -S -n /sdcard/ngt/nsh/s.mp3 synth pl "C2" pl "B3" pl "A#3" pl "A3" pl "G#3" pl "G3" pl "F#3" pl "F3" pl "E3" pl "D#3" pl "D3" pl "C#3" pl "C3" pl "B4" pl "A#4" pl "A4" pl "G#4" pl "G4" pl "F#4" pl "F4" pl "E4" pl "D#4" pl "D4" pl "C#4" pl "C4" pl "B2" pl "A#2" pl "A2" pl "G2" pl "F#2" pl "F2" pl "E2" pl "D2" pl "C2" pl "G2" pl "F2" delay 0 0.03 0.08 0.12 0.21 0.24 0.33 0.23 0.4 0.43 0.3 0.33 0.2 0.23 0.7 0.76 0.8 0.83 0.9 0.93 1 1.03 1.1 1.13 1.2 1.23 1.2 1.23 1.4 1.43 1.3 1.33 1.2 1.23 1.7 1.76 remix - fade 0 2 .1 norm -1
