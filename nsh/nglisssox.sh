@@ -1,2 +1,2 @@
 #!/bin/bash;
-sox -S -n -c1 /sdcard/nranglis.mp3 synth 10 sin 60  pl "C2" pl- "A3" pl "G3" pl "A3" pl "G2" pl "E3" pl "F3" pl "F2" pl "E2" pl "D3" pl "D2" pl "C3" pl "A3" pl "B2" pl "A2" pl "A3" pl "G2" pl "G3" pl "F2" pl "D2" pl "C2" pl "G2" pl "F2" delay 0 0.03 0.08 0.12 0.21 0.23 0.33 0.23 0.2 0.43 0.3 0.33 0.2 0.23 0.7 0.76 0.8 0.83 0.9 0.93 1 1.03 1.1 1.13 1.2 1.23 1.2 1.23 1.4 1.43 1.3 1.33 1.2 1.23 1.7 1.76 remix - fade 0 2 .1 norm -1
+sox -S -n -c1 /sdcard/nranglis.mp3 synth 10 sin 60-63 -m synth 10 saw 61 fade 0 2 .1 norm -1

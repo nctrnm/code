@@ -1,5 +1,0 @@
-Already up to date.
-[master 96b3200] Updates to the mobile nmbl repository
- 2 files changed, 7 insertions(+)
- create mode 100644 nsudo/nngitrun.txt
-nmbl git syncronized
