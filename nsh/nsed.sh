@@ -1,10 +1,9 @@
-#sed = Stream EDitor
-#-i = in-place (i.e. save back to the original file)
-#The command string:
-#s = the substitute command
-#original = a regular expression describing the word to replace (or just the word itself)
-#new = the text to replace it with
-#g = global (i.e. replace all and not just the first occurrence)
-#file.txt = the file name
-
-sed -i 's/original/new/g' file.txt
+#!/bin/bash
+echo 'enter what you want to change'
+read ns1
+echo 'enter how you want to change it'
+read ns2
+echo 'what file do you want to change'
+read ns3
+sed -i 's/$ns1/$ns2/g' $ns3
+cat $ns3
