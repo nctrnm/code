@@ -1,0 +1,1 @@
+find . -maxdepth 1 -type f -exec sed -i '1i #Author: Matthew McGilvery\n#License: LGPL 3 or later ' {} \;

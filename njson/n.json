@@ -1,0 +1,31 @@
+#Matthew McGilvery
+#LGPL3orLater
+{
+  "name": "Matthew McGilvery's NPM Installation file",
+  "version": "1.1.0",
+  "description": "idk bro lol",
+  "main": "index.js",
+  "dependencies": {
+    "colorrr": "^1.0.10",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew McGilvery",
+  "license": "LGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwmcgilvery/nm.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "js"
+  ],
+  "bugs": {
+    "url": "https://github.com/mwmcgilvery/nm/issues"
+  },
+  "homepage": "https://github.com/mwmcgilvery/nm#readme"
+}

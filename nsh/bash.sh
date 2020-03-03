@@ -1,0 +1,9 @@
+#Author:Matthew McGilvery
+#License: LGPL3
+#!/bin/bash
+
+CONFIGURATION_VARIABLES
+
+FUNCTION_DEFINITIONS
+
+MAIN_CODE

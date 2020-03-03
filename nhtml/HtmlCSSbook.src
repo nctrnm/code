@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Learn HTML &amp; CSS - a book that teaches you in a nicer way</title>
+	<meta name="Description" content="The simpler way to learn HTML and CSS, in a beautifully presented, full-color book.">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/slider.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.js">\x3C/script>')</script>
+	<script src="js/jquery.aviaSlider.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				$('#slideshow').aviaSlider();
+
+			});
+	</script>
+	<!--[if lt IE 9]>
+	<script src="/js/html5.js"></script>
+	<![endif]-->
+	<!--[if IE 6]>
+	<script src="/js/DD_belatedPNG.js"></script>
+	<script>
+	  DD_belatedPNG.fix('.png');
+ 	</script>
+	<![endif]--> 
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="/css/ie-fixes.css" />
+	<![endif]--> 
+</head>
+
+<body>
+
+		<header>
+		<div class="page">
+			<div class="header1"><a href="/"><img src="/images/html-and-css-book-logo.gif" width="312" height="19" id="logo" alt="HTML and CSS Book" /></a></div>
+			<div class="header2 center">
+				<img src="/images/diamond.png" alt="" width="82" height="92" class="png" />
+            </div>
+			<div class="header3">
+			  <nav>
+            	<a href="/about/">About</a>
+            	<a href="/code-samples/">Code Samples</a>
+            	<a href="/extras/">Extras &amp; Tools</a>
+            	<a href="/buy/">BUY</a>
+              </nav>
+			</div>
+        </div><!-- .page -->
+    </header>
+
+	<section id="attractor">
+		<div id="slideshow">
+			<ul class="aviaslider">
+				<li><a href="/about/"><img src="images/slideshow-home/triplicate.jpg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+				<li><a href="/about/"><img src="images/slideshow-home/a-closer-look-at-tags.jpg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+				<li><a href="/about/"><img src="images/slideshow-home/headings.jpg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+				<li><a href="/about/"><img src="images/slideshow-home/example-images.jpg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+				<li><a href="/about/"><img src="images/slideshow-home/background-position.jpg" alt="HTML &amp; CSS (design and build websites)" /></a></li>
+			</ul>
+    	</div>
+    </section>
+
+
+	<section id="content">
+		<div class="home-link-buttons page">
+	    	<div class="columns1"><a href="/sample-chapter/" id="sample-chapter-button" class="png">Read a sample chapter</a></div>
+	    	<div class="columns1">&nbsp;</div>
+	    	<div class="columns1"><a href="/buy/" id="buy-circle-100" class="png">Buy the book online</a></div>
+		</div>
+                
+		<div id="overview" class="page">
+	    	<div class="columns2">
+<h1 id="welcome-text">Welcome to a nicer way to learn about HTML &amp; CSS</h1>
+
+<h2 id="standfirst">A book about code that doesn't read like a 1980s VCR manual...<br /> <span class="byline">It's not just for programmers, it's written and presented to make it easy for designers, bloggers, content and e-commerce managers, marketers to learn  about the code used to write web pages...</span></h2>
+			</div>
+    		<div class="columns1">
+    	    	<h2 class="list-heading">Learn how to:</h2>
+				<ul class="feature-list">
+                	<li>Read and write HTML5 and CSS3</li>
+                    <li>Structure and design web pages and sites</li> 
+                    <li>Prepare images, audio and video for the web</li>
+                    <li>Control typography and layout</li>
+                </ul>
+                <p class="list-description">You will also find lots of helpful hints and practical advice alongside the code.<br /><a href="/about/">Find out more about the book here...</a></p>
+			</div>
+		</div><!-- #overview -->
+	</section>
+
+		<footer id="bottom">
+		<div class="footer-links">
+       		<a href="http://www.wiley.com/" id="wiley-badge" target="blank"><img src="/images/wiley-logo.gif" width="28" height="40" alt="Wiley logo" /></a>
+               <a href="/contact/">Contact</a>
+	   	    <a href="/press/">Press Enquiries</a>
+ 	 	    <a href="/academic/">Academic Copies</a>
+ 			<a href="/errata/">Errata</a>
+		</div>
+
+		<div class="footer-links">
+			<div id="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.htmlandcssbook.com/" data-count="none" data-via="htmlandcssbook">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></div>
+
+       	    <div id="facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.htmlandcssbook.com&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=35&amp;appId=234017593310563" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:35px;" allowTransparency="true"></iframe></div>			
+		</div>
+
+
+		<div id="newsletter-signup">
+			<form action="http://inpreparation.createsend.com/t/r/s/mqukh/" method="post" id="subForm">
+				<label for="mqukh-mqukh" class="newsletter">Email updates:</label> <input type="text" class="newsletter-email" name="cm-mqukh-mqukh" id="mqukh-mqukh" value="Email updates..." onClick="this.value='';" onFocus="this.select()" onBlur="this.value=!this.value?'Email updates...':this.value;"  /> <input type="submit" value="Subscribe" id="newsletter-subscribe" />
+			</form>
+		</div>
+
+
+    </footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26866865-1']);
+  _gaq.push(['_setDomainName', 'htmlandcssbook.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</body>
+</html>
