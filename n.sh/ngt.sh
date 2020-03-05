@@ -11,4 +11,4 @@ hub commit -a; hub push
 #log changes to logfile
 hub log|uniq > /sdcard/n.doc/ngitl.txt
 #print February git logs sorted in reverse chronological order (most recent at bottom)
-cat /sdcard/n.docs/ngitl.txt|grep -e "$(echo "$(date +%b) $(date +%d)")"|uniq|sort
+cat /sdcard/n.doc/ngitl.txt|grep -e "$(echo "$(date +%b) $(date +%d)")"|uniq|sort
