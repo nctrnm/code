@@ -9,6 +9,6 @@ hub add --all; hub push
 #commiting and pushing local changes to HEADfile;
 hub commit -a; hub push
 #log changes to logfile
-hub log|uniq > /sdcard/Documents/ngitl.txt
+hub log|uniq > /sdcard/n.doc/ngitl.txt
 #print February git logs sorted in reverse chronological order (most recent at bottom)
-cat /sdcard/Documents/ngitl.txt|grep -e "$(echo "$(date +%b) $(date +%d)")"|uniq|sort
+cat /sdcard/n.docs/ngitl.txt|grep -e "$(echo "$(date +%b) $(date +%d)")"|uniq|sort
