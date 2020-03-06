@@ -2,20 +2,22 @@
 #License: GPL 3 or Later
 #link: nctrnm.com
 #!/bin/bash/
-stty rows 48 && stty columns 80
-bash /sdcard/n.git/n.sh/n.press.sh
+stty rows 48 columns 80
+bash /sdcard/n.git/n.sh/npress.sh
 date "+%D %T"|fmt -u -w 22 > /sdcard/.ntimelog && date "+%D %T"|fmt -u -w 22 > /sdcard/n.git/TIME.log
 alias github='termux-open https://github.com/mwmcgilvery'
 alias sxh='sox --help-effect'
-alias nsig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
+alias x='exit'
+alias nsig='pgrep -u u0_a224'
 alias ncp='termux-clipboard-set'
 alias npaste='termux-clipboard-get'
 alias py='python3'
 alias sx='sox -S -V -c1'
-alias n.p='play'
+alias p='play'
+alias h='cd /sdcard/ && pwd'
 alias usr='echo $(whoami)'
 alias n.o='termux-open'
-alias n.h='/sdcard/ && pwd'
+alias n.h='/sdcard/'
 alias ls='exa' && alias list='exa -l'
 alias snd='termux-open --send'
 alias srch='pkg search'
@@ -26,7 +28,7 @@ alias apps='list -b /bin'
 alias hm='cd /sdcard/ && pwd'
 alias bashed='vim ~/.bashrc ; cp ~/.bashrc /sdcard/nbash.sh'
 alias ddir='rm -r '
-alias n.git='bash /sdcard/n.git/n.sh/n.gt.sh'
+alias ngit='bash /sdcard/n.git/n.sh/ngt.sh'
 alias rec='termux-microphone-record -l 0'
 alias ngt='cd /sdcard/n.git && pwd'
 alias gthb='lynx https://github.com/mwmcgilvery'
@@ -47,8 +49,7 @@ echo "sync git repo?"
 read ans
 if [[ "$ans" = "y" ]]||[[ "$ans" = "Y" ]]
 then
-	cd /sdcard/n.git && bash /sdcard/n.git/n.sh/n.gt.sh; $h && pwd
+	cd /sdcard/n.git && bash /sdcard/n.git/n.sh/ngt.sh; $h && pwd
 else
 	$h && pwd
 fi
-cd /sdcard/ && touch n.dev//
