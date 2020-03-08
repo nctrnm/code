@@ -3,6 +3,7 @@
 #link: nctrnm.com
 #!/bin/bash/
 stty rows 48 && stty columns 80
+export PS1='j:\j,\t: '
 bash /sdcard/n.git/n.sh/n.press.sh
 date "+%D %T"|fmt -u -w 22 > /sdcard/.ntimelog && date "+%D %T"|fmt -u -w 22 > /sdcard/n.git/TIME.log
 alias github='termux-open https://github.com/mwmcgilvery'
