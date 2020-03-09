@@ -53,4 +53,5 @@ then
 else
 	$h && pwd
 fi
-cd /sdcard/ && touch n.dev//
+cd /sdcard/ && touch n.dev/
+$_tab
