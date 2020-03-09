@@ -44,6 +44,7 @@ alias gitp='git push'
 alias pips='${h}; pip3 search'
 alias _tab='tmux new -c ntm'
 alias go='cd '
+alias n.e='echo'
 alias fm='nnn'
 echo "sync git repo?"
 read ans
