@@ -1,4 +1,5 @@
-<h1>info</h1>
+<t><u>Matthew McGilvery</u> nmoto code remote git repository information</t>
+<h1>about</h1>
 <b>This repository is mainly composed of shell scripts, compressed files, and projects. 
 I maintain this repository from my <iu>Motorola E6</iu> Android non-rooted phone via Termux.
 I also intend for this repository to be a display of my development in programming. 
