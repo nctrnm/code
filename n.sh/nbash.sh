@@ -37,6 +37,7 @@ alias pkgi='pkg install'
 alias dcc='ccrypt -d'
 alias cc='ccrypt -e'
 alias end='kill -9'
+alias rec.q='termux-microphone-record -q'
 alias nt='vim'
 alias ggl="lynx https://google.com/search?q=-"
 alias fmh='nnn /sdcard/n.git'
