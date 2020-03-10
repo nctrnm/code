@@ -4,4 +4,4 @@
 #!/bin/bash/
 #Git Sync
 hub pull && hub add --all && hub commit ;
-hub push && hub status && github&
+hub push && hub status
