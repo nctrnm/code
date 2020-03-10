@@ -36,16 +36,13 @@ alias rec.q='termux-microphone-record -q'
 alias n.t='vim'
 alias ggl="lynx https://google.com/search?q=-"
 alias p.git='git push'
-alias pips='${h}; pip3 search'
-alias _tab='tmux new -c ntm'
-alias go='cd '
-alias n.e='echo'
+alias n.tab='tmux new -c ntm'
 alias f.m='nnn'
 echo "sync git repo?"
 read ans
 if [[ "$ans" = "y" ]]||[[ "$ans" = "Y" ]]
 then
-	cd /sdcard/n.git && bash /sdcard/n.git/n.sh/n.gt.sh; $h && pwd
+	cd /sdcard/n.git && bash /sdcard/n.git/n.sh/n.git.sync.sh; $h && pwd
 else
 	$h && pwd
 fi
