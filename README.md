@@ -1,6 +1,6 @@
 <h1>info</h1>
 <b>This repository is mainly composed of shell scripts, compressed files, and projects. 
-I maintain this repository from my Motorola E3 Android non-rooted phone via Termux.
+I maintain this repository from my <iu>Motorola E6</iu> Android non-rooted phone via Termux.
 I also intend for this repository to be a display of my development in programming. 
 All mwmcgilvery repository software is governed by a GNU General Public License v3.0 while all other content is under All Rights Reserved licensing unless otherwise stated. 
 Find out more at <l>https://nctrnm.com</l>.
