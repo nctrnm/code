@@ -1,3 +1,3 @@
 #Author:Matthew McGilvery
 #!/bin/bash;
-chmod +x ./*;#License: LGPL3
+chmod +x /*;#License: GPL3
