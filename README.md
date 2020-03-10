@@ -1,5 +1,8 @@
-<meta><u>Matthew McGilvery</u> nmoto code remote git repository information</meta>
-<h1>about</h1>
+<head>
+<meta charset="UTF-8"> 
+<meta name="description" content="Matthew McGilvery's remote git repository"> 
+<meta name="keywords" content="Bash, Shell, Termux, Nctrnm, Shell Scripting"> 
+<meta name="author" content="Matthew McGilvery">  <h1>about</h1>
 <b>This repository is mainly composed of shell scripts, compressed files, and projects. 
 I maintain this repository from my <iu>Motorola E6</iu> Android non-rooted phone via Termux.
 I also intend for this repository to be a display of my development in programming. 
@@ -15,3 +18,4 @@ Find out more at <l>https://nctrnm.com</l>.
 "."= repeat of last commit
 Reach out to me for any matter.
 </b>
+</head>
