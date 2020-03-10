@@ -1,4 +1,5 @@
 #Author:Matthew McGilvery
+#GPL3
 #!/bin/bash
 
 date -d "$date1" +%A
@@ -11,5 +12,3 @@ date -d "$date1" +%A
 # \n = next line
 # $() or `` = command sub
 # ${#arrayname[@]} = space used by array
- 
-#License: LGPL3
