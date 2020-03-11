@@ -3,7 +3,7 @@
 #link: nctrnm.com
 #!/bin/bash/
 #Bash Initialization File
-stty rows 48 && stty columns 80
+stty rows 48 && stty columns 64
 export PS1='j:\j,u:\u,$: '
 bash /sdcard/n.git/n.sh/n.press.sh
 date "+%D %T"|fmt -u -w 22 > /sdcard/.ntimelog && date "+%D %T"|fmt -u -w 22 > /sdcard/n.git/TIME.log
@@ -41,3 +41,4 @@ alias n.tab='tmux new -c ntm'
 alias f.m='nnn'
 cd /sdcard/
 cd /sdcard/n.git && bash /sdcard/n.git/n.git.sync.sh && cd /sdcard/ &&  pwd && exa -bh .
+
