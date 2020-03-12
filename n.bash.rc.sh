@@ -3,7 +3,7 @@
 #link: nctrnm.com
 #!/bin/bash/
 #Bash Initialization File
-stty rows 48 && stty columns 64
+stty rows 88  && stty columns 134
 export PS1='j:\j,u:\u,$: '
 bash /sdcard/n.git/n.sh/n.press.sh
 date "+%D %T"|fmt -u -w 22 > /sdcard/.ntimelog && date "+%D %T"|fmt -u -w 22 > /sdcard/n.git/TIME.log
