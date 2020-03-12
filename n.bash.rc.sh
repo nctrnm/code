@@ -24,8 +24,7 @@ alias list='exa -bhtx' && alias apps='exa -b /bin'
 alias bashed='vim ~/.bashrc ; cp ~/.bashrc /sdcard/n.git/n.bash.rc.sh'
 alias d.dir='rm -r'
 alias rec='termux-microphone-record -l 0 -e -r 44100  -b 16  wav'
-alias n.gt='cd /sdcard/n.git && pwd && exa -h'
-alias n.git='bash /sdcard/n.git/n.git.sync.sh'
+alias n.gt='cd /sdcard/n.git && pwd && exa -h' && alias n.git='bash /sdcard/n.git/n.git.sync.sh'
 alias rm.cache='rm -r $(bash /sdcard/n.git/n.sh/n.cache.sh)'
 alias gthb='lynx https://github.com/mwmcgilvery'
 alias google='lynx https://www.google.com/search?q= ' 
@@ -39,6 +38,5 @@ alias ggl="lynx https://google.com/search?q=-"
 alias p.git='git push'
 alias n.tab='tmux new -c ntm'
 alias f.m='nnn'
-cd /sdcard/
 cd /sdcard/n.git && bash /sdcard/n.git/n.git.sync.sh && cd /sdcard/ &&  pwd && exa -bh .
 
