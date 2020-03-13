@@ -1,12 +1,12 @@
 <head>
 <meta charset="UTF-8"> 
-<meta name="description" content="Matthew McGilvery's remote git repository"> 
-<meta name="keywords" content="Bash, Shell, Termux, Nctrnm, Shell Scripting"> 
-<meta name="author" content="Matthew McGilvery">  <h1>about</h1>
+<meta name="description" content="Matthew McGilvery's remote Git repository"> 
+<meta name="keywords" content="Bash, Android, Github, HTML, Shell, Termux, Nctrnm, Shell Scripting"> 
+<meta name="author" content="Matthew McGilvery">  <h1>About <u>mwmcgilvery</u></h1>
 <b>This repository is mainly composed of shell scripts, compressed files, and projects. 
-I maintain this repository from my <iu>Motorola E6</iu> Android non-rooted phone via Termux.
+I maintain this repository from my <i>Motorola E6</i> Android non-rooted phone via Termux.
 I also intend for this repository to be a display of my development in programming. 
-All mwmcgilvery repository code is governed by a GNU General Public License v3.0 while all other content is under All Rights Reserved licensing unless otherwise stated. 
+Unlees otherwise stated, all mwmcgilvery repository code is governed by a GNU General Public License v3.0 while all other content is under All Rights Reserved licensing unless otherwise stated. 
 Find out more at <l>https://nctrnm.com</l>.
 </b>
 
