@@ -1,9 +1,12 @@
-#Author:Matthew McGilvery
-#License: LGPL3
+#Matthew McGilvery
+#GPL3
+#nctrnm.com
+#Bash Format Script 
 #!/bin/bash
+pwd && sleep .88
+echo "
+1. CONFIGURATION_VARIABLES
 
-CONFIGURATION_VARIABLES
+2. FUNCTION_DEFINITIONS
 
-FUNCTION_DEFINITIONS
-
-MAIN_CODE
+3. MAIN_CODE "|fmt
