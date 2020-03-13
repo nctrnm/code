@@ -1,7 +1,5 @@
 #!/bin/bash
 
-date -d "$date1" +%A
-
 #$n = argument 1... 1stcommand line argument...
 #$# = number of arguments
 #$@ = space used by arguments
