@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-apt install hfsutils;
-apt search ***utils && snap search *utils && pkg search *utils;
