@@ -5,12 +5,12 @@
 #Finder (using for loop)
 #!/bin/bash
 cd /storage/emulated/0;
-echo "enter desired search directory" && sleep .44;
+echo "enter desired search directory" && sleep .34;
 echo "format: /foldername[/...]"
 read l_oc
 echo "enter file type" && sleep .34;
-echo "format: *[.*].filetype"
-read t_yp
-for _f in /${l_oc}/${t_yp};
+echo "format: [*.]file[.[type[s]]"
+read f_il
+for _f in /${l_oc}/${f_il};
 do ls ${_f}|fmt -u|sort -du;
 done;
