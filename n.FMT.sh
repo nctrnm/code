@@ -1,7 +1,8 @@
 #Matthew McGilvery
+#Date
 #GPL3
 #nctrnm.com
-#Bash Format Script 
+#Subject 
 #!/bin/bash
 pwd && sleep .88
 echo "
@@ -9,4 +10,4 @@ echo "
 
 2. FUNCTION_DEFINITIONS
 
-3. MAIN_CODE "|fmt
+3. MAIN_CODE "
