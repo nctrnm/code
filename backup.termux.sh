@@ -5,4 +5,4 @@
 #Termux Backup Script
 termux-setup-storage
 cd /data/data/com.termux/files
-tar -zcvf /sdcard/n.tback.tar.gz home usr
+tar -zcvf /sdcard/backup.termux.tar.gz home usr
