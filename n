@@ -1,6 +1,7 @@
 #Matthew McGilvery
 #License: GPL 3 or Later
 #link: nctrnm.com
+#3.13.20
 #!/bin/bash/
 #Bash Initialization File
 stty rows 88  && stty columns 134
