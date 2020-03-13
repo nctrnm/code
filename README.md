@@ -2,7 +2,7 @@
 <meta charset="UTF-8"> 
 <meta name="description" content="Matthew McGilvery's remote Git repository"> 
 <meta name="keywords" content="Bash, Android, Github, HTML, Shell, Termux, Nctrnm, Shell Scripting"> 
-<meta name="author" content="Matthew McGilvery">  <h1>About <u>mwmcgilvery</u></h1>
+<meta name="author" content="Matthew McGilvery">  <h2>About <u>mwmcgilvery</u></h2>
 <b>This repository is mainly composed of shell scripts, compressed files, and projects. 
 I maintain this repository from my <i>Motorola E6</i> Android non-rooted phone via Termux.
 I also intend for this repository to be a display of my development in programming. 
