@@ -10,6 +10,7 @@ date "+%D %T"|fmt -u -w 22 > /sdcard/.ntimelog && date "+%D %T"|fmt -u -w 22 > /
 alias github='termux-open https://github.com/mwmcgilvery'
 alias sxh='sox --help-effect'
 alias nsig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
+alias n.s='sox -SV -r44.1k -b16 -c1|play -'
 alias n.cop='termux-clipboard-set' && alias n.pas='termux-clipboard-get'
 alias py='python3'
 alias n.p='play'
