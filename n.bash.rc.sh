@@ -1,4 +1,4 @@
-#Matthew McGilvery
+#Author: Matthew McGilvery
 #License: GPL 3 or Later
 #link: nctrnm.com
 #!/bin/bash/
@@ -12,7 +12,7 @@ alias sxh='sox --help-effect'
 alias nsig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
 alias n.cop='termux-clipboard-set' && alias n.pas='termux-clipboard-get'
 alias py='python3'
-alias s.x='sox -S -V -c1 - dither' && alias n.p='play'
+alias n.p='play'
 alias usr='echo $USER'
 alias n.o='termux-open' && alias n.h='cd /sdcard/ && pwd'
 alias ls='exa' && alias list='exa -l'
