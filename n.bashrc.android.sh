@@ -34,6 +34,7 @@ alias p.i='pkg install'
 alias d.c='ccrypt -d'
 alias c.c='ccrypt -e'
 alias end='kill -9'
+alias n.cac='bash n.git/n.sh/n.cache.sh'
 alias rec.q='termux-microphone-record -q'
 alias n.t='vim'
 alias ggl="lynx https://google.com/search?q=-"
