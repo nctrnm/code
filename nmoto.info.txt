@@ -1,6 +1,0 @@
-#Matthew McGilvery                       #GPL 3 or Later                          #nctrnm.com
-#My Motorola E6 System Stats
-
-Linux localhost 4.9.112-perf+ #1 SMP PREEMPT Thu
-Dec 26 02:26:15 CST 2019 armv7l Android
-
