@@ -7,12 +7,11 @@ stty rows 1280  && stty columns 720
 export PS1='j:\j,u:\u,$: '
 sleep 5
 date "+%D %T"|fmt -u -w 22 > ~/.ntimelog && date "+%D %T"|fmt -u -w 22 > ~/nmoto/TIME.log
-alias gitgit='termux-open https://gitgit.com/mwmcgilvery'
-alias sxh='sox --help-effect'
-alias nsig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
+alias s.h='sox --help-effect'
+alias n.sig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
 alias n.s='sox -SV -r44.1k -b16 -c1'
 alias n.cop='termux-clipboard-set' && alias n.pas='termux-clipboard-get'
-alias py='python3'
+alias p.y='python3'
 alias n.p='play'
 alias usr='echo $USER'
 alias n.o='termux-open' && alias n.h='~/nmoto && pwd'
@@ -41,5 +40,4 @@ alias ggl="lynx https://google.com/search?q=-"
 alias p.git='git push'
 alias n.tab='tmux new -c ntm'
 alias f.m='nnn'
-cd ~/nmoto && bash ~/nmoto/n.git.sync.sh && cd ~ &&  pwd && ls -bh .
-
+cd ~/nmoto && bash ~/nmoto/n.git.sync.sh && cd ~ &&  pwd && ls -bh . && $shcp;
