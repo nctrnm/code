@@ -3,7 +3,7 @@
 #link: nctrnm.com
 #!/bin/bash/
 #Bash Initialization File
-stty rows $((871/7))  && stty columns $((1370/9))
+stty rows $((871/7))  && stty columns $((1370/7))
 export PS1='j:\j,u:\u,$: '
 bash /sdcard/n.git/n.sh/n.press.sh
 alias github='termux-open https://github.com/mwmcgilvery'
