@@ -1,1 +1,264 @@
-/bin/zcat -> toybox
+acpi -> toybox
+am
+app_process -> app_process32
+app_process32
+applypatch
+appops
+appwidget
+awk
+base64 -> toybox
+basename -> toybox
+bcc
+bl_notify_sys
+blockdev -> toybox
+bmgr
+bu
+bugreport
+bugreportz
+bunzip2 -> bzip2
+bzcat -> bzip2
+bzip2
+cal -> toybox
+cat -> toybox
+chcon -> toybox
+chgrp -> toybox
+chmod -> toybox
+chown -> toybox
+chroot -> toybox
+chrt -> toybox
+cksum -> toybox
+clear -> toybox
+cmd
+cmp -> toybox
+comm -> toybox
+content
+cp -> toybox
+cpio -> toybox
+crash_dump32
+curl
+cut -> toybox
+dalvikvm -> dalvikvm32
+dalvikvm32
+date -> toybox
+dd -> toolbox
+debuggerd
+dex2oat
+dexdiag
+dexdump
+dexlist
+df -> toybox
+diff -> toybox
+dirname -> toybox
+dmesg -> toybox
+dos2unix -> toybox
+dpm
+dropboxhelper
+du -> toybox
+dumpsys
+echo -> toybox
+egrep -> grep
+env -> toybox
+expand -> toybox
+expr -> toybox
+fallocate -> toybox
+false -> toybox
+fgrep -> grep
+file -> toybox
+find -> toybox
+flock -> toybox
+fmt -> toybox
+free -> toybox
+getenforce -> toybox
+getevent -> toolbox
+getfattr -> toolbox
+getprop -> toolbox
+grep
+groups -> toybox
+gunzip -> toybox
+gzip -> toybox
+head -> toybox
+hid
+host_manager_11ad
+hostname -> toybox
+hw
+hwclock -> toybox
+id -> toybox
+ifconfig -> toybox
+ime
+inotifyd -> toybox
+input
+insmod -> toybox
+ionice -> toybox
+iorenice -> toybox
+ip
+ip-wrapper-1.0 -> netutils-wrapper-1.0
+ip6tables
+ip6tables-restore -> ip6tables
+ip6tables-save -> ip6tables
+ip6tables-wrapper-1.0 -> netutils-wrapper-1.0
+ipInfo
+iptables
+iptables-restore -> iptables
+iptables-save -> iptables
+iptables-wrapper-1.0 -> netutils-wrapper-1.0
+iw
+keystore_cli_v2
+kill -> toybox
+killall -> toybox
+ld.mc
+linker
+linker_asan -> linker
+ln -> toybox
+load_policy -> toybox
+locksettings
+log -> toybox
+logcat
+logname -> toybox
+logwrapper
+losetup -> toybox
+ls -> toybox
+lshal
+lsmod -> toybox
+lsof -> toybox
+lspci -> toybox
+lsusb -> toybox
+md5sum -> toybox
+media
+microcom -> toybox
+mkdir -> toybox
+mkfifo -> toybox
+mkfs.exfat
+mkfs.ext2 -> mke2fs
+mkfs.ext3 -> mke2fs
+mkfs.ext4 -> mke2fs
+mknod -> toybox
+mkswap -> toybox
+mktemp -> toybox
+modinfo -> toybox
+modprobe -> toybox
+monkey
+more -> toybox
+motsettings
+mount -> toybox
+mountpoint -> toybox
+move_time_data.sh
+move_wifi_data.sh
+mv -> toybox
+n_smux
+ndc
+ndc-wrapper-1.0 -> netutils-wrapper-1.0
+netstat -> toybox
+newfs_msdos -> toolbox
+nice -> toybox
+nl -> toybox
+nohup -> toybox
+oatdump
+od -> toybox
+paste -> toybox
+patch -> toybox
+patchoat
+pgrep -> toybox
+pidof -> toybox
+ping
+ping6
+pkill -> toybox
+pm
+pmap -> toybox
+ppd
+printenv -> toybox
+printf -> toybox
+ps -> toybox
+pwd -> toybox
+readlink -> toybox
+realpath -> toybox
+renice -> toybox
+requestsync
+resize2fs
+restorecon -> toybox
+rm -> toybox
+rmdir -> toybox
+rmmod -> toybox
+rtspclient
+rtspserver
+run-as
+runcon -> toybox
+schedtest
+screencap
+screenrecord
+secdiscard
+secilc
+sed -> toybox
+sendevent -> toybox
+sendevent2 -> toolbox
+sensorservice
+seq -> toybox
+service
+setenforce -> toybox
+setfattr -> toolbox
+setprop -> toybox
+setsid -> toybox
+settings
+sh
+sha1sum -> toybox
+sha224sum -> toybox
+sha256sum -> toybox
+sha384sum -> toybox
+sha512sum -> toybox
+sleep -> toybox
+sm
+sort -> toybox
+split -> toybox
+start -> toybox
+stat -> toybox
+stop -> toybox
+strings -> toybox
+stty -> toybox
+svc
+swapoff -> toybox
+swapon -> toybox
+sync -> toybox
+sysctl -> toybox
+tac -> toybox
+tail -> toybox
+tar -> toybox
+taskset -> toybox
+tc
+tc-wrapper-1.0 -> netutils-wrapper-1.0
+tee -> toybox
+telecom
+time -> toybox
+timedexec
+timeout -> toybox
+tinycap
+tinypcminfo
+toolbox
+top -> toybox
+touch -> toybox
+toybox
+tr -> toybox
+true -> toybox
+truncate -> toybox
+tty -> toybox
+uiautomator
+ulimit -> toybox
+umount -> toybox
+uname -> toybox
+uniq -> toybox
+unix2dos -> toybox
+uptime -> toybox
+usleep -> toybox
+uudecode -> toybox
+uuencode -> toybox
+vmstat -> toybox
+vr
+wc -> toybox
+which -> toybox
+whoami -> toybox
+wigig_logcollector
+wigig_remoteserver
+wigig_wiburn
+wm
+xargs -> toybox
+xxd -> toybox
+yes -> toybox
+zcat -> toybox
