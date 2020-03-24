@@ -1,9 +1,10 @@
-#Author: Matthew McGilvery
-#License: GPL 3 or Later
-#link: nctrnm.com
+#Matthew McGilvery
+#GPL3
+#nctrnm.com
 #!/bin/bash/
+#1.1.2020
 #Bash Initialization File
-stty rows $((871/7))  && stty columns $((1170/7))
+stty rows $((870/6))  && stty columns $((1175/7))
 export PS1='j:\j,u:\u,$: '
 bash /sdcard/n.git/n.sh/n.press.sh
 alias github='termux-open https://github.com/mwmcgilvery'
