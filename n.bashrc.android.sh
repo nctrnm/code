@@ -5,8 +5,7 @@
 #1.1.2020
 #Bash Initialization File
 stty rows $((870/6))  && stty columns $((1175/7))
-export PS1='j:\j,u:\u,$: '
-bash /sdcard/n.git/n.sh/n.press.sh
+export PS1='j:\j,u:\u,$:'
 alias github='termux-open https://github.com/mwmcgilvery'
 alias sxh='sox --help-effect'
 alias nsig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
@@ -44,5 +43,5 @@ alias ggl="lynx https://google.com/search?q=-"
 alias p.git='git push'
 alias n.tab='tmux new -c ntm'
 alias f.m='nnn'
-cd /sdcard/n.git && bash /sdcard/n.git/n.git.sync.sh && cd /sdcard/ &&  pwd && exa -bh .
+cd /sdcard/n.git/ && bash /sdcard/n.git/n.git.sync.sh && cd /sdcard/ &&  pwd && exa -bh .
 
