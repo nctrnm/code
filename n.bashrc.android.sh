@@ -7,6 +7,7 @@
 stty rows $((870/6))  && stty columns $((1175/7))
 export PS1='j:\j,u:\u,$:'
 alias github='termux-open https://github.com/mwmcgilvery'
+alias k.f='termux-open https://tunebat.com'
 alias sxh='sox --help-effect'
 alias nsig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
 alias n.s='sox -SV -r44.1k -b16 -c1'
