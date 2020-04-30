@@ -1,0 +1,16 @@
+499	 ffmpeg -i nk.wav -ac 2 -ar 44100 -ab 320000 nk.mp3
+500	 ffmpeg -i nk.wav -ac 2 -ar 44100 -ab 320000 nk.mp3
+501	 fc -l
+502	 fc -l | fmt -ug50
+503	 fc -l | fmt -hg50
+504	 fc -l | fmt -Hg50
+505	 fc -l | fmt -g50 
+506	 fc -l | fmt -g
+507	 fc -l | fmt -g 50
+508	 fc -l | fmt
+509	 fc -l | fmt | uniq | sort -urH
+510	 fc -l | fmt | uniq | sort -ubH
+511	 fc -l | fmt | uniq | sort -ubH
+512	 fc -l | fmt | uniq | sort -ubh
+513	 fc -l | fmt | uniq | sort -u
+514	 fc -l | uniq 
