@@ -1,3 +1,8 @@
+#Matthew McGilvery
+#Binary Folder List
+#5.1.20
+#nctrnm.com
+#GPL3orlater
 /bin/acpi -> toybox /bin/am /bin/app_process ->
 app_process32 /bin/app_process32 /bin/applypatch
 /bin/appops /bin/appwidget /bin/awk /bin/base64 -> toybox
