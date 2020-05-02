@@ -1,1248 +1,263 @@
-#Matthew McGilvery
-#GPL3
-#nctrnm.com
-#3.22.20
-#A printout of my home/usr folder  
-./var
-├── [4.0K]  android
-│   └── [4.0K]  dalvik-cache
-│       └── [4.0K]  arm
-│           ├── [ 16K]  system@framework@boot-QPerformance.art
-│           ├── [  46]  system@framework@boot-QPerformance.oat -> /system/framework/arm/boot-QPerformance.oat
-│           ├── [  46]  system@framework@boot-QPerformance.vdex -> /system/framework/arm/boot-QPerformance.vdex
-│           ├── [ 12K]  system@framework@boot-UxPerformance.art
-│           ├── [  46]  system@framework@boot-UxPerformance.oat -> /system/framework/arm/boot-UxPerformance.oat
-│           ├── [  50]  system@framework@boot-UxPerformance.vdex -> /system/framework/arm/boot-UxPerformance.vdex
-│           ├── [ 16K]  system@framework@boot-android.hidl.base-V1.0-java.art
-│           ├── [  62]  system@framework@boot-android.hidl.base-V1.0-java.oat -> /system/framework/arm/boot-android.hidl.base-V1.0-java.oat
-│           ├── [  62]  system@framework@boot-android.hidl.base-V1.0-java.vdex -> /system/framework/arm/boot-android.hidl.base-V1.0-java.vdex
-│           ├── [ 28K]  system@framework@boot-android.hidl.manager-V1.0-java.art
-│           ├── [  66]  system@framework@boot-android.hidl.manager-V1.0-java.oat -> /system/framework/arm/boot-android.hidl.manager-V1.0-java.oat
-│           ├── [  66]  system@framework@boot-android.hidl.manager-V1.0-java.vdex -> /system/framework/arm/boot-android.hidl.manager-V1.0-java.vdex
-│           ├── [ 24K]  system@framework@boot-android.test.base.art
-│           ├── [  50]  system@framework@boot-android.test.base.oat -> /system/framework/arm/boot-android.test.base.oat
-│           ├── [  54]  system@framework@boot-android.test.base.vdex -> /system/framework/arm/boot-android.test.base.vdex
-│           ├── [372K]  system@framework@boot-apache-xml.art
-│           ├── [  46]  system@framework@boot-apache-xml.oat -> /system/framework/arm/boot-apache-xml.oat
-│           ├── [  46]  system@framework@boot-apache-xml.vdex -> /system/framework/arm/boot-apache-xml.vdex
-│           ├── [376K]  system@framework@boot-bouncycastle.art
-│           ├── [  46]  system@framework@boot-bouncycastle.oat -> /system/framework/arm/boot-bouncycastle.oat
-│           ├── [  46]  system@framework@boot-bouncycastle.vdex -> /system/framework/arm/boot-bouncycastle.vdex
-│           ├── [212K]  system@framework@boot-conscrypt.art
-│           ├── [  42]  system@framework@boot-conscrypt.oat -> /system/framework/arm/boot-conscrypt.oat
-│           ├── [  46]  system@framework@boot-conscrypt.vdex -> /system/framework/arm/boot-conscrypt.vdex
-│           ├── [1.0M]  system@framework@boot-core-libart.art
-│           ├── [  46]  system@framework@boot-core-libart.oat -> /system/framework/arm/boot-core-libart.oat
-│           ├── [  46]  system@framework@boot-core-libart.vdex -> /system/framework/arm/boot-core-libart.vdex
-│           ├── [2.2M]  system@framework@boot-core-oj.art
-│           ├── [  42]  system@framework@boot-core-oj.oat -> /system/framework/arm/boot-core-oj.oat
-│           ├── [  42]  system@framework@boot-core-oj.vdex -> /system/framework/arm/boot-core-oj.vdex
-│           ├── [284K]  system@framework@boot-ext.art
-│           ├── [  38]  system@framework@boot-ext.oat -> /system/framework/arm/boot-ext.oat
-│           ├── [  38]  system@framework@boot-ext.vdex -> /system/framework/arm/boot-ext.vdex
-│           ├── [ 12K]  system@framework@boot-framework-oahl-backward-compatibility.art
-│           ├── [  70]  system@framework@boot-framework-oahl-backward-compatibility.oat -> /system/framework/arm/boot-framework-oahl-backward-compatibility.oat
-│           ├── [  74]  system@framework@boot-framework-oahl-backward-compatibility.vdex -> /system/framework/arm/boot-framework-oahl-backward-compatibility.vdex
-│           ├── [8.6M]  system@framework@boot-framework.art
-│           ├── [  42]  system@framework@boot-framework.oat -> /system/framework/arm/boot-framework.oat
-│           ├── [  46]  system@framework@boot-framework.vdex -> /system/framework/arm/boot-framework.vdex
-│           ├── [104K]  system@framework@boot-ims-common.art
-│           ├── [  46]  system@framework@boot-ims-common.oat -> /system/framework/arm/boot-ims-common.oat
-│           ├── [  46]  system@framework@boot-ims-common.vdex -> /system/framework/arm/boot-ims-common.vdex
-│           ├── [196K]  system@framework@boot-okhttp.art
-│           ├── [  42]  system@framework@boot-okhttp.oat -> /system/framework/arm/boot-okhttp.oat
-│           ├── [  42]  system@framework@boot-okhttp.vdex -> /system/framework/arm/boot-okhttp.vdex
-│           ├── [8.0K]  system@framework@boot-tcmiface.art
-│           ├── [  42]  system@framework@boot-tcmiface.oat -> /system/framework/arm/boot-tcmiface.oat
-│           ├── [  42]  system@framework@boot-tcmiface.vdex -> /system/framework/arm/boot-tcmiface.vdex
-│           ├── [1.1M]  system@framework@boot-telephony-common.art
-│           ├── [  50]  system@framework@boot-telephony-common.oat -> /system/framework/arm/boot-telephony-common.oat
-│           ├── [  50]  system@framework@boot-telephony-common.vdex -> /system/framework/arm/boot-telephony-common.vdex
-│           ├── [ 16K]  system@framework@boot-telephony-ext.art
-│           ├── [  46]  system@framework@boot-telephony-ext.oat -> /system/framework/arm/boot-telephony-ext.oat
-│           ├── [  50]  system@framework@boot-telephony-ext.vdex -> /system/framework/arm/boot-telephony-ext.vdex
-│           ├── [ 56K]  system@framework@boot-voip-common.art
-│           ├── [  46]  system@framework@boot-voip-common.oat -> /system/framework/arm/boot-voip-common.oat
-│           ├── [  46]  system@framework@boot-voip-common.vdex -> /system/framework/arm/boot-voip-common.vdex
-│           ├── [124K]  system@framework@boot.art
-│           ├── [  34]  system@framework@boot.oat -> /system/framework/arm/boot.oat
-│           └── [  34]  system@framework@boot.vdex -> /system/framework/arm/boot.vdex
-├── [4.0K]  cache
-│   ├── [4.0K]  apt
-│   │   ├── [4.0K]  archives
-│   │   │   ├── [4.7M]  apache2_2.4.41-4_arm.deb
-│   │   │   ├── [4.1M]  aptly_1.4.0-2_arm.deb
-│   │   │   ├── [106K]  c-ares_1.16.0_arm.deb
-│   │   │   ├── [ 30K]  debootstrap_1.0.121-1_all.deb
-│   │   │   ├── [7.5M]  ffmpeg_4.2.2_arm.deb
-│   │   │   ├── [285K]  file_5.38_arm.deb
-│   │   │   ├── [101K]  fontconfig_2.13.1-5_arm.deb
-│   │   │   ├── [770K]  fossil_2.9-1_arm.deb
-│   │   │   ├── [347K]  freetype_2.10.1-1_arm.deb
-│   │   │   ├── [ 61K]  fribidi_1.0.8_arm.deb
-│   │   │   ├── [ 60K]  git-crypt_0.6.0-1_arm.deb
-│   │   │   ├── [1011K]  glib_2.62.4-2_arm.deb
-│   │   │   ├── [273K]  harfbuzz_2.6.4_arm.deb
-│   │   │   ├── [819K]  krb5_1.17.1-2_arm.deb
-│   │   │   ├── [8.5K]  libandroid-shmem_0.2.1_arm.deb
-│   │   │   ├── [ 69K]  libass_0.14.0-1_arm.deb
-│   │   │   ├── [197K]  libdav1d_0.4.0_arm.deb
-│   │   │   ├── [454K]  libdb_18.1.32-4_arm.deb
-│   │   │   ├── [ 30K]  libffi_3.3_arm.deb
-│   │   │   ├── [115K]  libgd_2.2.5-7_arm.deb
-│   │   │   ├── [1.8M]  libgnutls_3.6.11.1_arm.deb
-│   │   │   ├── [ 65K]  libgraphite_1.3.13-3_arm.deb
-│   │   │   ├── [8.3M]  libicu_66.1-2_arm.deb
-│   │   │   ├── [ 83K]  libidn2_2.3.0-1_arm.deb
-│   │   │   ├── [ 83K]  libidn2_2.3.0_arm.deb
-│   │   │   ├── [ 72K]  liblzo_2.10-2_arm.deb
-│   │   │   ├── [109K]  libmp3lame_3.100-2_arm.deb
-│   │   │   ├── [ 60K]  libmpdclient_2.18-1_arm.deb
-│   │   │   ├── [288K]  libnettle_3.5.1-2_arm.deb
-│   │   │   ├── [186K]  libogg_1.3.4_arm.deb
-│   │   │   ├── [167K]  libopus_1.3.1-3_arm.deb
-│   │   │   ├── [185K]  libpng_1.6.37-2_arm.deb
-│   │   │   ├── [204K]  libsoxr_0.1.3-2_arm.deb
-│   │   │   ├── [462K]  libunistring_0.9.10-3_arm.deb
-│   │   │   ├── [9.1K]  libuuid_1.0.3-3_arm.deb
-│   │   │   ├── [256K]  libvorbis_1.3.6-2_arm.deb
-│   │   │   ├── [610K]  libvpx_1.8.2_arm.deb
-│   │   │   ├── [381K]  libx264_20190215-1_arm.deb
-│   │   │   ├── [344K]  libx265_3.2.1_arm.deb
-│   │   │   ├── [808K]  libxml2_2.9.10_arm.deb
-│   │   │   ├── [293K]  libxslt_1.1.34_arm.deb
-│   │   │   ├── [ 42K]  libyaml_0.2.2-1_arm.deb
-│   │   │   ├── [195K]  libzip_1.6.1_arm.deb
-│   │   │   ├── [   0]  lock
-│   │   │   ├── [ 17M]  mariadb_2%3a10.4.12-2_arm.deb
-│   │   │   ├── [ 62K]  nnn_2.9_arm.deb
-│   │   │   ├── [8.5M]  nodejs-lts_12.14.1-1_arm.deb
-│   │   │   ├── [8.3M]  nodejs_13.0.0-1_arm.deb
-│   │   │   ├── [120K]  oniguruma_6.9.4_arm.deb
-│   │   │   ├── [4.0K]  partial
-│   │   │   │   ├── [2.1M]  micro_2.0.2_arm.deb
-│   │   │   │   └── [3.6K]  poppler_0.85.0_arm.deb
-│   │   │   ├── [810K]  pcre2_10.34_arm.deb
-│   │   │   ├── [4.6M]  postgresql_12.2-3_arm.deb
-│   │   │   ├── [691K]  qpdf_9.1.1-1_arm.deb
-│   │   │   ├── [691K]  qpdf_9.1.1_arm.deb
-│   │   │   ├── [148K]  rhash_1.3.9-1_arm.deb
-│   │   │   ├── [3.6M]  ruby_2.6.5_arm.deb
-│   │   │   ├── [3.7M]  ruby_2.7.0_arm.deb
-│   │   │   ├── [1.5M]  starship_0.37.0-1_arm.deb
-│   │   │   ├── [ 31K]  tree_1.8.0-2_arm.deb
-│   │   │   ├── [2.4M]  ttf-dejavu_2.37-7_all.deb
-│   │   │   ├── [201K]  wget_1.20.3-2_arm.deb
-│   │   │   └── [134K]  xvidcore_1.3.7_arm.deb
-│   │   ├── [1.0M]  pkgcache.bin
-│   │   └── [1.0M]  srcpkgcache.bin
-│   └── [4.0K]  fontconfig
-│       ├── [ 40K]  27b810ef-be5a-4289-82e2-5fd42ccfea38-le32d8.cache-7
-│       ├── [372K]  3336a65c52528c9c368e942d3dd307f8-le32d8.cache-7
-│       ├── [ 200]  CACHEDIR.TAG
-│       └── [ 160]  c03ca012-8925-4d2b-a56b-7e86a12091a7-le32d8.cache-7
-├── [4.0K]  krb5kdc
-│   └── [ 412]  kdc.conf
-├── [4.0K]  lib
-│   ├── [4.0K]  apt
-│   │   ├── [8.1K]  extended_states
-│   │   └── [4.0K]  lists
-│   │       ├── [5.2K]  dl.bintray.com_grimler_science-packages-24_dists_science_Release
-│   │       ├── [ 475]  dl.bintray.com_grimler_science-packages-24_dists_science_Release.gpg
-│   │       ├── [ 18K]  dl.bintray.com_grimler_science-packages-24_dists_science_stable_binary-arm_Packages
-│   │       ├── [6.0K]  dl.bintray.com_grimler_termux-root-packages-24_dists_root_Release
-│   │       ├── [ 475]  dl.bintray.com_grimler_termux-root-packages-24_dists_root_Release.gpg
-│   │       ├── [ 43K]  dl.bintray.com_grimler_termux-root-packages-24_dists_root_stable_binary-arm_Packages
-│   │       ├── [5.9K]  dl.bintray.com_xeffyr_unstable-packages_dists_unstable_Release
-│   │       ├── [ 821]  dl.bintray.com_xeffyr_unstable-packages_dists_unstable_Release.gpg
-│   │       ├── [ 27K]  dl.bintray.com_xeffyr_unstable-packages_dists_unstable_main_binary-arm_Packages
-│   │       ├── [5.9K]  dl.bintray.com_xeffyr_x11-packages_dists_x11_Release
-│   │       ├── [ 821]  dl.bintray.com_xeffyr_x11-packages_dists_x11_Release.gpg
-│   │       ├── [124K]  dl.bintray.com_xeffyr_x11-packages_dists_x11_main_binary-arm_Packages
-│   │       ├── [   0]  lock
-│   │       ├── [4.0K]  partial
-│   │       ├── [5.9K]  termux.org_packages_dists_stable_Release
-│   │       ├── [ 821]  termux.org_packages_dists_stable_Release.gpg
-│   │       └── [472K]  termux.org_packages_dists_stable_main_binary-arm_Packages
-│   ├── [4.0K]  dpkg
-│   │   ├── [4.0K]  alternatives
-│   │   │   └── [ 136]  editor
-│   │   ├── [   0]  available
-│   │   ├── [ 36K]  info
-│   │   │   ├── [ 515]  abduco.list
-│   │   │   ├── [ 168]  abduco.md5sums
-│   │   │   ├── [ 368]  ack-grep.list
-│   │   │   ├── [  73]  ack-grep.md5sums
-│   │   │   ├── [ 26K]  algernon.list
-│   │   │   ├── [ 25K]  algernon.md5sums
-│   │   │   ├── [ 999]  alpine.list
-│   │   │   ├── [ 913]  alpine.md5sums
-│   │   │   ├── [ 617]  alpine.postinst
-│   │   │   ├── [1.1K]  apache2.conffiles
-│   │   │   ├── [143K]  apache2.list
-│   │   │   ├── [193K]  apache2.md5sums
-│   │   │   ├── [2.7K]  apr-util.list
-│   │   │   ├── [3.4K]  apr-util.md5sums
-│   │   │   ├── [3.4K]  apr.list
-│   │   │   ├── [4.4K]  apr.md5sums
-│   │   │   ├── [ 105]  apt.conffiles
-│   │   │   ├── [7.2K]  apt.list
-│   │   │   ├── [9.6K]  apt.md5sums
-│   │   │   ├── [ 511]  aptly.list
-│   │   │   ├── [ 166]  aptly.md5sums
-│   │   │   ├── [1.1K]  aria2.list
-│   │   │   ├── [ 946]  aria2.md5sums
-│   │   │   ├── [ 17K]  asciidoc.list
-│   │   │   ├── [ 18K]  asciidoc.md5sums
-│   │   │   ├── [ 604]  asciinema.list
-│   │   │   ├── [ 198]  asciinema.md5sums
-│   │   │   ├── [ 388]  atomicparsley.list
-│   │   │   ├── [  83]  atomicparsley.md5sums
-│   │   │   ├── [2.1K]  attr.list
-│   │   │   ├── [1.8K]  attr.md5sums
-│   │   │   ├── [ 867]  autossh.list
-│   │   │   ├── [ 548]  autossh.md5sums
-│   │   │   ├── [  92]  bash.conffiles
-│   │   │   ├── [6.3K]  bash.list
-│   │   │   ├── [8.8K]  bash.md5sums
-│   │   │   ├── [ 453]  bc.list
-│   │   │   ├── [ 320]  bc.md5sums
-│   │   │   ├── [7.2K]  binutils.list
-│   │   │   ├── [9.2K]  binutils.md5sums
-│   │   │   ├── [ 338]  busybox.conffiles
-│   │   │   ├── [3.0K]  busybox.list
-│   │   │   ├── [ 800]  busybox.md5sums
-│   │   │   ├── [1.0K]  bzip2.list
-│   │   │   ├── [ 935]  bzip2.md5sums
-│   │   │   ├── [5.3K]  c-ares.list
-│   │   │   ├── [7.0K]  c-ares.md5sums
-│   │   │   ├── [ 431]  ca-certificates.list
-│   │   │   ├── [  82]  ca-certificates.md5sums
-│   │   │   ├── [ 364]  caddy.list
-│   │   │   ├── [  75]  caddy.md5sums
-│   │   │   ├── [ 560]  cava.list
-│   │   │   ├── [ 252]  cava.md5sums
-│   │   │   ├── [ 12K]  clang.list
-│   │   │   ├── [ 15K]  clang.md5sums
-│   │   │   ├── [229K]  cmake.list
-│   │   │   ├── [312K]  cmake.md5sums
-│   │   │   ├── [ 462]  command-not-found.list
-│   │   │   ├── [  98]  command-not-found.md5sums
-│   │   │   ├── [ 10K]  coreutils.list
-│   │   │   ├── [8.9K]  coreutils.md5sums
-│   │   │   ├── [ 363]  cpio.list
-│   │   │   ├── [ 164]  cpio.md5sums
-│   │   │   ├── [ 674]  crunch.list
-│   │   │   ├── [ 348]  crunch.md5sums
-│   │   │   ├── [ 363]  curl.list
-│   │   │   ├── [ 164]  curl.md5sums
-│   │   │   ├── [ 628]  dash.list
-│   │   │   ├── [ 164]  dash.md5sums
-│   │   │   ├── [1.2K]  debianutils.list
-│   │   │   ├── [1.2K]  debianutils.md5sums
-│   │   │   ├── [5.3K]  debootstrap.list
-│   │   │   ├── [2.4K]  debootstrap.md5sums
-│   │   │   ├── [ 560]  dialog.list
-│   │   │   ├── [ 168]  dialog.md5sums
-│   │   │   ├── [1.7K]  dictd.list
-│   │   │   ├── [1.9K]  dictd.md5sums
-│   │   │   ├── [ 948]  diffutils.list
-│   │   │   ├── [ 749]  diffutils.md5sums
-│   │   │   ├── [ 736]  direvent.list
-│   │   │   ├── [ 361]  direvent.md5sums
-│   │   │   ├── [ 627]  dns2tcp.list
-│   │   │   ├── [ 344]  dns2tcp.md5sums
-│   │   │   ├── [ 15K]  dnsutils.list
-│   │   │   ├── [ 23K]  dnsutils.md5sums
-│   │   │   ├── [ 12K]  docbook-xml.list
-│   │   │   ├── [ 16K]  docbook-xml.md5sums
-│   │   │   ├── [1.1K]  docbook-xml.postinst
-│   │   │   ├── [ 210]  docbook-xml.prerm
-│   │   │   ├── [252K]  docbook-xsl.list
-│   │   │   ├── [328K]  docbook-xsl.md5sums
-│   │   │   ├── [1.1K]  docbook-xsl.postinst
-│   │   │   ├── [ 226]  docbook-xsl.prerm
-│   │   │   ├── [1.5K]  dos2unix.list
-│   │   │   ├── [1.1K]  dos2unix.md5sums
-│   │   │   ├── [1.6K]  double-conversion.list
-│   │   │   ├── [1.5K]  double-conversion.md5sums
-│   │   │   ├── [2.4K]  dpkg.list
-│   │   │   ├── [2.3K]  dpkg.md5sums
-│   │   │   ├── [ 624]  dvtm.list
-│   │   │   ├── [ 428]  dvtm.md5sums
-│   │   │   ├── [  48]  e2fsprogs.conffiles
-│   │   │   ├── [5.3K]  e2fsprogs.list
-│   │   │   ├── [5.8K]  e2fsprogs.md5sums
-│   │   │   ├── [ 689]  ed.list
-│   │   │   ├── [ 317]  ed.md5sums
-│   │   │   ├── [ 689]  elinks.list
-│   │   │   ├── [ 361]  elinks.md5sums
-│   │   │   ├── [ 399]  emacs.list
-│   │   │   ├── [9.4K]  enscript.list
-│   │   │   ├── [ 14K]  enscript.md5sums
-│   │   │   ├── [ 32K]  espeak.list
-│   │   │   ├── [ 43K]  espeak.md5sums
-│   │   │   ├── [ 503]  exa.list
-│   │   │   ├── [ 162]  exa.md5sums
-│   │   │   ├── [ 507]  fasd.list
-│   │   │   ├── [ 164]  fasd.md5sums
-│   │   │   ├── [ 499]  fd.list
-│   │   │   ├── [ 160]  fd.md5sums
-│   │   │   ├── [ 626]  fdupes.list
-│   │   │   ├── [ 265]  fdupes.md5sums
-│   │   │   ├── [ 14K]  ffmpeg.list
-│   │   │   ├── [ 20K]  ffmpeg.md5sums
-│   │   │   ├── [2.2K]  fftw.list
-│   │   │   ├── [2.4K]  fftw.md5sums
-│   │   │   ├── [ 988]  file.list
-│   │   │   ├── [ 597]  file.md5sums
-│   │   │   ├── [1005]  findutils.list
-│   │   │   ├── [ 764]  findutils.md5sums
-│   │   │   ├── [ 469]  flac.list
-│   │   │   ├── [ 336]  flac.md5sums
-│   │   │   ├── [1.2K]  flex.list
-│   │   │   ├── [1.0K]  flex.md5sums
-│   │   │   ├── [5.2K]  fontconfig.list
-│   │   │   ├── [4.7K]  fontconfig.md5sums
-│   │   │   ├── [   2]  format
-│   │   │   ├── [ 367]  fossil.list
-│   │   │   ├── [  76]  fossil.md5sums
-│   │   │   ├── [4.4K]  freetype.list
-│   │   │   ├── [5.5K]  freetype.md5sums
-│   │   │   ├── [4.5K]  fribidi.list
-│   │   │   ├── [5.7K]  fribidi.md5sums
-│   │   │   ├── [4.2K]  gawk.list
-│   │   │   ├── [5.2K]  gawk.md5sums
-│   │   │   ├── [1.4K]  gdbm.list
-│   │   │   ├── [1.1K]  gdbm.md5sums
-│   │   │   ├── [3.5K]  gdk-pixbuf.list
-│   │   │   ├── [3.7K]  gdk-pixbuf.md5sums
-│   │   │   ├── [  88]  gdk-pixbuf.postinst
-│   │   │   ├── [ 126]  gdk-pixbuf.postrm
-│   │   │   ├── [  83]  gdk-pixbuf.triggers
-│   │   │   ├── [ 17K]  ghostscript.list
-│   │   │   ├── [ 23K]  ghostscript.md5sums
-│   │   │   ├── [ 560]  giflib.list
-│   │   │   ├── [ 168]  giflib.md5sums
-│   │   │   ├── [ 731]  gifsicle.list
-│   │   │   ├── [ 512]  gifsicle.md5sums
-│   │   │   ├── [ 376]  git-crypt.list
-│   │   │   ├── [  79]  git-crypt.md5sums
-│   │   │   ├── [ 28K]  git.list
-│   │   │   ├── [ 27K]  git.md5sums
-│   │   │   ├── [ 20K]  glib.list
-│   │   │   ├── [ 29K]  glib.md5sums
-│   │   │   ├── [ 281]  glib.postinst
-│   │   │   ├── [ 129]  glib.postrm
-│   │   │   ├── [  72]  glib.triggers
-│   │   │   ├── [4.6K]  gnupg.list
-│   │   │   ├── [6.0K]  gnupg.md5sums
-│   │   │   ├── [ 363]  gpgv.list
-│   │   │   ├── [ 164]  gpgv.md5sums
-│   │   │   ├── [ 23K]  graphicsmagick.list
-│   │   │   ├── [ 31K]  graphicsmagick.md5sums
-│   │   │   ├── [ 803]  grep.list
-│   │   │   ├── [ 582]  grep.md5sums
-│   │   │   ├── [1.7K]  gzip.list
-│   │   │   ├── [2.1K]  gzip.md5sums
-│   │   │   ├── [  56]  haproxy.conffiles
-│   │   │   ├── [3.2K]  haproxy.list
-│   │   │   ├── [3.9K]  haproxy.md5sums
-│   │   │   ├── [2.8K]  harfbuzz.list
-│   │   │   ├── [3.4K]  harfbuzz.md5sums
-│   │   │   ├── [ 369]  hexedit.list
-│   │   │   ├── [ 170]  hexedit.md5sums
-│   │   │   ├── [ 452]  hping3.list
-│   │   │   ├── [ 168]  hping3.md5sums
-│   │   │   ├── [1002]  html2text.list
-│   │   │   ├── [ 913]  html2text.md5sums
-│   │   │   ├── [ 363]  htop.list
-│   │   │   ├── [ 164]  htop.md5sums
-│   │   │   ├── [2.1K]  hub.list
-│   │   │   ├── [2.6K]  hub.md5sums
-│   │   │   ├── [2.8K]  hugo.list
-│   │   │   ├── [3.5K]  hugo.md5sums
-│   │   │   ├── [ 376]  hyperfine.list
-│   │   │   ├── [  79]  hyperfine.md5sums
-│   │   │   ├── [105K]  imagemagick.list
-│   │   │   ├── [141K]  imagemagick.md5sums
-│   │   │   ├── [3.9K]  imlib2.list
-│   │   │   ├── [4.8K]  imlib2.md5sums
-│   │   │   ├── [1.7K]  inetutils.list
-│   │   │   ├── [1.9K]  inetutils.md5sums
-│   │   │   ├── [ 970]  isync.list
-│   │   │   ├── [ 799]  isync.md5sums
-│   │   │   ├── [ 802]  jbig2dec.list
-│   │   │   ├── [ 428]  jbig2dec.md5sums
-│   │   │   ├── [7.5K]  joe.list
-│   │   │   ├── [ 10K]  joe.md5sums
-│   │   │   ├── [ 310]  joe.postinst
-│   │   │   ├── [ 228]  joe.prerm
-│   │   │   ├── [1.5K]  jsoncpp.list
-│   │   │   ├── [1.4K]  jsoncpp.md5sums
-│   │   │   ├── [  99]  krb5.conffiles
-│   │   │   ├── [ 10K]  krb5.list
-│   │   │   ├── [ 12K]  krb5.md5sums
-│   │   │   ├── [1.4K]  lame.list
-│   │   │   ├── [1.5K]  lame.md5sums
-│   │   │   ├── [ 852]  lastpass-cli.list
-│   │   │   ├── [ 362]  lastpass-cli.md5sums
-│   │   │   ├── [ 373]  lazyread.list
-│   │   │   ├── [  78]  lazyread.md5sums
-│   │   │   ├── [ 36K]  ldns.list
-│   │   │   ├── [ 52K]  ldns.md5sums
-│   │   │   ├── [ 746]  less.list
-│   │   │   ├── [ 506]  less.md5sums
-│   │   │   ├── [ 802]  lesspipe.list
-│   │   │   ├── [ 501]  lesspipe.md5sums
-│   │   │   ├── [1.5K]  lftp.list
-│   │   │   ├── [1.1K]  lftp.md5sums
-│   │   │   ├── [ 507]  libandroid-glob.list
-│   │   │   ├── [ 168]  libandroid-glob.md5sums
-│   │   │   ├── [ 534]  libandroid-shmem.list
-│   │   │   ├── [ 172]  libandroid-shmem.md5sums
-│   │   │   ├── [ 426]  libandroid-support.list
-│   │   │   ├── [  91]  libandroid-support.md5sums
-│   │   │   ├── [  47]  libao.conffiles
-│   │   │   ├── [3.9K]  libao.list
-│   │   │   ├── [4.6K]  libao.md5sums
-│   │   │   ├── [3.6K]  libarchive.list
-│   │   │   ├── [4.5K]  libarchive.md5sums
-│   │   │   ├── [ 662]  libass.list
-│   │   │   ├── [ 340]  libass.md5sums
-│   │   │   ├── [ 865]  libassuan.list
-│   │   │   ├── [ 522]  libassuan.md5sums
-│   │   │   ├── [ 585]  libbz2.list
-│   │   │   ├── [ 166]  libbz2.md5sums
-│   │   │   ├── [ 397]  libc++.list
-│   │   │   ├── [  86]  libc++.md5sums
-│   │   │   ├── [2.1K]  libcaca.list
-│   │   │   ├── [2.0K]  libcaca.md5sums
-│   │   │   ├── [2.4K]  libcairo.list
-│   │   │   ├── [2.9K]  libcairo.md5sums
-│   │   │   ├── [3.9K]  libcap.list
-│   │   │   ├── [4.8K]  libcap.md5sums
-│   │   │   ├── [2.8K]  libcroco.list
-│   │   │   ├── [3.3K]  libcroco.md5sums
-│   │   │   ├── [ 487]  libcrypt.list
-│   │   │   ├── [ 162]  libcrypt.md5sums
-│   │   │   ├── [ 32K]  libcurl.list
-│   │   │   ├── [ 46K]  libcurl.md5sums
-│   │   │   ├── [ 893]  libdav1d.list
-│   │   │   ├── [ 697]  libdav1d.md5sums
-│   │   │   ├── [ 803]  libdb.list
-│   │   │   ├── [ 412]  libdb.md5sums
-│   │   │   ├── [3.1K]  libdrm.list
-│   │   │   ├── [3.9K]  libdrm.md5sums
-│   │   │   ├── [3.3K]  libedit.list
-│   │   │   ├── [ 533]  libedit.md5sums
-│   │   │   ├── [ 844]  libepoxy.list
-│   │   │   ├── [ 615]  libepoxy.md5sums
-│   │   │   ├── [3.2K]  libevent.list
-│   │   │   ├── [3.8K]  libevent.md5sums
-│   │   │   ├── [ 839]  libexpat.list
-│   │   │   ├── [ 608]  libexpat.md5sums
-│   │   │   ├── [1.0K]  libffi.list
-│   │   │   ├── [ 803]  libffi.md5sums
-│   │   │   ├── [3.1K]  libflac.list
-│   │   │   ├── [3.7K]  libflac.md5sums
-│   │   │   ├── [ 679]  libfontenc.list
-│   │   │   ├── [ 266]  libfontenc.md5sums
-│   │   │   ├── [1.2K]  libgcrypt.list
-│   │   │   ├── [1.0K]  libgcrypt.md5sums
-│   │   │   ├── [1.7K]  libgd.list
-│   │   │   ├── [2.2K]  libgd.md5sums
-│   │   │   ├── [ 909]  libgmp.list
-│   │   │   ├── [ 753]  libgmp.md5sums
-│   │   │   ├── [ 93K]  libgnutls.list
-│   │   │   ├── [131K]  libgnutls.md5sums
-│   │   │   ├── [1.4K]  libgpg-error.list
-│   │   │   ├── [1.1K]  libgpg-error.md5sums
-│   │   │   ├── [1.0K]  libgraphite.list
-│   │   │   ├── [ 753]  libgraphite.md5sums
-│   │   │   ├── [1.1K]  libice.list
-│   │   │   ├── [ 889]  libice.md5sums
-│   │   │   ├── [1.5K]  libiconv.list
-│   │   │   ├── [1.5K]  libiconv.md5sums
-│   │   │   ├── [ 13K]  libicu.list
-│   │   │   ├── [ 18K]  libicu.md5sums
-│   │   │   ├── [ 574]  libid3tag.list
-│   │   │   ├── [ 170]  libid3tag.md5sums
-│   │   │   ├── [4.3K]  libidn.list
-│   │   │   ├── [5.6K]  libidn.md5sums
-│   │   │   ├── [2.2K]  libidn2.list
-│   │   │   ├── [2.4K]  libidn2.md5sums
-│   │   │   ├── [1.9K]  libjasper.list
-│   │   │   ├── [2.1K]  libjasper.md5sums
-│   │   │   ├── [1.5K]  libjpeg-turbo.list
-│   │   │   ├── [1.6K]  libjpeg-turbo.md5sums
-│   │   │   ├── [ 740]  libksba.list
-│   │   │   ├── [ 414]  libksba.md5sums
-│   │   │   ├── [151K]  libllvm.list
-│   │   │   ├── [209K]  libllvm.md5sums
-│   │   │   ├── [ 185]  libltdl.list
-│   │   │   ├── [  80]  libltdl.md5sums
-│   │   │   ├── [ 854]  liblua.list
-│   │   │   ├── [ 579]  liblua.md5sums
-│   │   │   ├── [ 951]  liblua52.list
-│   │   │   ├── [ 619]  liblua52.md5sums
-│   │   │   ├── [2.7K]  liblzma.list
-│   │   │   ├── [3.2K]  liblzma.md5sums
-│   │   │   ├── [1.6K]  liblzo.list
-│   │   │   ├── [1.8K]  liblzo.md5sums
-│   │   │   ├── [ 456]  libmaa.list
-│   │   │   ├── [ 158]  libmaa.md5sums
-│   │   │   ├── [ 556]  libmad.list
-│   │   │   ├── [ 164]  libmad.md5sums
-│   │   │   ├── [ 519]  libmp3lame.list
-│   │   │   ├── [ 168]  libmp3lame.md5sums
-│   │   │   ├── [3.0K]  libmpdclient.list
-│   │   │   ├── [3.9K]  libmpdclient.md5sums
-│   │   │   ├── [1.6K]  libmpfr.list
-│   │   │   ├── [1.6K]  libmpfr.md5sums
-│   │   │   ├── [4.3K]  libnettle.list
-│   │   │   ├── [5.8K]  libnettle.md5sums
-│   │   │   ├── [1.6K]  libnfs.list
-│   │   │   ├── [1.6K]  libnfs.md5sums
-│   │   │   ├── [ 806]  libnghttp2.list
-│   │   │   ├── [ 455]  libnghttp2.md5sums
-│   │   │   ├── [ 10K]  libnl.list
-│   │   │   ├── [ 13K]  libnl.md5sums
-│   │   │   ├── [ 644]  libnpth.list
-│   │   │   ├── [ 328]  libnpth.md5sums
-│   │   │   ├── [6.9K]  libogg.list
-│   │   │   ├── [9.2K]  libogg.md5sums
-│   │   │   ├── [ 955]  libopus.list
-│   │   │   ├── [ 716]  libopus.md5sums
-│   │   │   ├── [7.4K]  libpcap.list
-│   │   │   ├── [8.0K]  libpcap.md5sums
-│   │   │   ├── [ 585]  libpciaccess.list
-│   │   │   ├── [ 262]  libpciaccess.md5sums
-│   │   │   ├── [ 698]  libpixman.list
-│   │   │   ├── [ 365]  libpixman.md5sums
-│   │   │   ├── [1.4K]  libpng.list
-│   │   │   ├── [ 807]  libpng.md5sums
-│   │   │   ├── [ 808]  libpopt.list
-│   │   │   ├── [ 343]  libpopt.md5sums
-│   │   │   ├── [1.7K]  librsvg.list
-│   │   │   ├── [1.3K]  librsvg.md5sums
-│   │   │   ├── [4.7K]  libsasl.list
-│   │   │   ├── [6.3K]  libsasl.md5sums
-│   │   │   ├── [ 923]  libsm.list
-│   │   │   ├── [ 607]  libsm.md5sums
-│   │   │   ├── [1.6K]  libsndfile.list
-│   │   │   ├── [1.8K]  libsndfile.md5sums
-│   │   │   ├── [1.1K]  libsoxr.list
-│   │   │   ├── [ 787]  libsoxr.md5sums
-│   │   │   ├── [ 767]  libsqlite.list
-│   │   │   ├── [ 434]  libsqlite.md5sums
-│   │   │   ├── [1.2K]  libssh.list
-│   │   │   ├── [1.1K]  libssh.md5sums
-│   │   │   ├── [ 231]  libssh2-static.list
-│   │   │   ├── [ 159]  libssh2-static.md5sums
-│   │   │   ├── [ 14K]  libssh2.list
-│   │   │   ├── [ 19K]  libssh2.md5sums
-│   │   │   ├── [ 824]  libtalloc.list
-│   │   │   ├── [ 351]  libtalloc.md5sums
-│   │   │   ├── [ 12K]  libtiff.list
-│   │   │   ├── [ 17K]  libtiff.md5sums
-│   │   │   ├── [4.3K]  libtool.list
-│   │   │   ├── [5.5K]  libtool.md5sums
-│   │   │   ├── [3.3K]  libunistring.list
-│   │   │   ├── [4.3K]  libunistring.md5sums
-│   │   │   ├── [ 712]  libuuid.list
-│   │   │   ├── [ 258]  libuuid.md5sums
-│   │   │   ├── [ 918]  libuv.list
-│   │   │   ├── [ 764]  libuv.md5sums
-│   │   │   ├── [ 13K]  libvorbis.list
-│   │   │   ├── [ 17K]  libvorbis.md5sums
-│   │   │   ├── [1.2K]  libvpx.list
-│   │   │   ├── [ 971]  libvpx.md5sums
-│   │   │   ├── [4.9K]  libwayland-protocols.list
-│   │   │   ├── [3.6K]  libwayland-protocols.md5sums
-│   │   │   ├── [2.1K]  libwayland.list
-│   │   │   ├── [2.5K]  libwayland.md5sums
-│   │   │   ├── [1.5K]  libwebp.list
-│   │   │   ├── [1.7K]  libwebp.md5sums
-│   │   │   ├── [ 83K]  libx11.list
-│   │   │   ├── [116K]  libx11.md5sums
-│   │   │   ├── [ 665]  libx264.list
-│   │   │   ├── [ 338]  libx264.md5sums
-│   │   │   ├── [ 614]  libx265.list
-│   │   │   ├── [ 334]  libx265.md5sums
-│   │   │   ├── [1.3K]  libxau.list
-│   │   │   ├── [1.1K]  libxau.md5sums
-│   │   │   ├── [193K]  libxcb.list
-│   │   │   ├── [268K]  libxcb.md5sums
-│   │   │   ├── [ 689]  libxdamage.list
-│   │   │   ├── [ 271]  libxdamage.md5sums
-│   │   │   ├── [ 725]  libxdmcp.list
-│   │   │   ├── [ 348]  libxdmcp.md5sums
-│   │   │   ├── [6.2K]  libxext.list
-│   │   │   ├── [8.2K]  libxext.md5sums
-│   │   │   ├── [ 938]  libxfixes.list
-│   │   │   ├── [ 366]  libxfixes.md5sums
-│   │   │   ├── [ 677]  libxfont2.list
-│   │   │   ├── [ 266]  libxfont2.md5sums
-│   │   │   ├── [ 860]  libxft.list
-│   │   │   ├── [ 434]  libxft.md5sums
-│   │   │   ├── [6.0K]  libxi.list
-│   │   │   ├── [8.0K]  libxi.md5sums
-│   │   │   ├── [1.2K]  libxinerama.list
-│   │   │   ├── [ 893]  libxinerama.md5sums
-│   │   │   ├── [1016]  libxkbfile.list
-│   │   │   ├── [ 763]  libxkbfile.md5sums
-│   │   │   ├── [ 479]  libxml2-utils.list
-│   │   │   ├── [ 346]  libxml2-utils.md5sums
-│   │   │   ├── [ 17K]  libxml2.list
-│   │   │   ├── [ 22K]  libxml2.md5sums
-│   │   │   ├── [2.1K]  libxmu.list
-│   │   │   ├── [2.5K]  libxmu.md5sums
-│   │   │   ├── [1.8K]  libxrandr.list
-│   │   │   ├── [1.8K]  libxrandr.md5sums
-│   │   │   ├── [ 918]  libxrender.list
-│   │   │   ├── [ 378]  libxrender.md5sums
-│   │   │   ├── [ 633]  libxshmfence.list
-│   │   │   ├── [ 266]  libxshmfence.md5sums
-│   │   │   ├── [10.0K]  libxslt.list
-│   │   │   ├── [ 13K]  libxslt.md5sums
-│   │   │   ├── [ 22K]  libxt.list
-│   │   │   ├── [ 32K]  libxt.md5sums
-│   │   │   ├── [2.6K]  libxxf86vm.list
-│   │   │   ├── [2.7K]  libxxf86vm.md5sums
-│   │   │   ├── [ 613]  libyaml.list
-│   │   │   ├── [ 253]  libyaml.md5sums
-│   │   │   ├── [9.2K]  libzip.list
-│   │   │   ├── [ 13K]  libzip.md5sums
-│   │   │   ├── [ 407]  lighttpd.list
-│   │   │   ├── [ 726]  littlecms.list
-│   │   │   ├── [ 344]  littlecms.md5sums
-│   │   │   ├── [ 489]  lynx.list
-│   │   │   ├── [ 320]  lynx.md5sums
-│   │   │   ├── [ 699]  m4.list
-│   │   │   ├── [ 416]  m4.md5sums
-│   │   │   ├── [ 803]  make.list
-│   │   │   ├── [ 509]  make.md5sums
-│   │   │   ├── [1.6K]  man.list
-│   │   │   ├── [1.5K]  man.md5sums
-│   │   │   ├── [  62]  man.postinst
-│   │   │   ├── [  59]  man.triggers
-│   │   │   ├── [ 114]  mariadb.conffiles
-│   │   │   ├── [ 51K]  mariadb.list
-│   │   │   ├── [ 68K]  mariadb.md5sums
-│   │   │   ├── [ 347]  mariadb.postinst
-│   │   │   ├── [1.2K]  mesa.list
-│   │   │   ├── [1.0K]  mesa.md5sums
-│   │   │   ├── [  47]  mime-support.conffiles
-│   │   │   ├── [ 383]  mime-support.list
-│   │   │   ├── [  80]  mime-support.md5sums
-│   │   │   ├── [ 696]  mlocate.list
-│   │   │   ├── [ 535]  mlocate.md5sums
-│   │   │   ├── [ 102]  mlocate.postinst
-│   │   │   ├── [1.7K]  moreutils.list
-│   │   │   ├── [2.2K]  moreutils.md5sums
-│   │   │   ├── [ 153]  mpd.conffiles
-│   │   │   ├── [1.3K]  mpd.list
-│   │   │   ├── [ 776]  mpd.md5sums
-│   │   │   ├── [  71]  mpd.postinst
-│   │   │   ├── [1.3K]  mpv.list
-│   │   │   ├── [ 919]  mpv.md5sums
-│   │   │   ├── [ 470]  mupdf-tools.list
-│   │   │   ├── [ 337]  mupdf-tools.md5sums
-│   │   │   ├── [6.9K]  mupdf.list
-│   │   │   ├── [9.7K]  mupdf.md5sums
-│   │   │   ├── [  43]  mutt.conffiles
-│   │   │   ├── [5.9K]  mutt.list
-│   │   │   ├── [7.8K]  mutt.md5sums
-│   │   │   ├── [ 507]  ncdu.list
-│   │   │   ├── [ 164]  ncdu.md5sums
-│   │   │   ├── [1.0K]  ncurses-ui-libs.list
-│   │   │   ├── [ 256]  ncurses-ui-libs.md5sums
-│   │   │   ├── [ 973]  ncurses-utils.list
-│   │   │   ├── [1012]  ncurses-utils.md5sums
-│   │   │   ├── [ 65K]  ncurses.list
-│   │   │   ├── [ 16K]  ncurses.md5sums
-│   │   │   ├── [ 97K]  ndk-sysroot.list
-│   │   │   ├── [143K]  ndk-sysroot.md5sums
-│   │   │   ├── [1.7K]  net-tools.list
-│   │   │   ├── [2.0K]  net-tools.md5sums
-│   │   │   ├── [ 559]  netcat.list
-│   │   │   ├── [ 164]  netcat.md5sums
-│   │   │   ├── [ 519]  nethogs.list
-│   │   │   ├── [ 170]  nethogs.md5sums
-│   │   │   ├── [1.0K]  nginx.list
-│   │   │   ├── [ 55K]  nmap.list
-│   │   │   ├── [ 80K]  nmap.md5sums
-│   │   │   ├── [1.3K]  nmh.conffiles
-│   │   │   ├── [ 11K]  nmh.list
-│   │   │   ├── [ 15K]  nmh.md5sums
-│   │   │   ├── [ 503]  nnn.list
-│   │   │   ├── [ 162]  nnn.md5sums
-│   │   │   ├── [421K]  nodejs-lts.list
-│   │   │   ├── [474K]  nodejs-lts.md5sums
-│   │   │   ├── [1.7K]  oleo.list
-│   │   │   ├── [1.9K]  oleo.md5sums
-│   │   │   ├── [ 760]  oniguruma.list
-│   │   │   ├── [ 506]  oniguruma.md5sums
-│   │   │   ├── [2.0K]  openal-soft.list
-│   │   │   ├── [1.9K]  openal-soft.md5sums
-│   │   │   ├── [1.1K]  openjpeg.list
-│   │   │   ├── [ 811]  openjpeg.md5sums
-│   │   │   ├── [ 213]  openssh.conffiles
-│   │   │   ├── [2.9K]  openssh.list
-│   │   │   ├── [3.2K]  openssh.md5sums
-│   │   │   ├── [ 329]  openssh.postinst
-│   │   │   ├── [ 242]  openssl-tool.list
-│   │   │   ├── [ 170]  openssl-tool.md5sums
-│   │   │   ├── [  52]  openssl.conffiles
-│   │   │   ├── [6.7K]  openssl.list
-│   │   │   ├── [9.6K]  openssl.md5sums
-│   │   │   ├── [ 910]  opusfile.list
-│   │   │   ├── [ 715]  opusfile.md5sums
-│   │   │   ├── [3.7K]  pango.list
-│   │   │   ├── [4.5K]  pango.md5sums
-│   │   │   ├── [ 385]  patch.list
-│   │   │   ├── [ 166]  patch.md5sums
-│   │   │   ├── [1.1K]  pciutils.list
-│   │   │   ├── [ 868]  pciutils.md5sums
-│   │   │   ├── [ 12K]  pcre.list
-│   │   │   ├── [ 12K]  pcre.md5sums
-│   │   │   ├── [ 16K]  pcre2.list
-│   │   │   ├── [ 22K]  pcre2.md5sums
-│   │   │   ├── [185K]  perl.list
-│   │   │   ├── [243K]  perl.md5sums
-│   │   │   ├── [ 280]  php-pgsql.list
-│   │   │   ├── [ 168]  php-pgsql.md5sums
-│   │   │   ├── [ 116]  php.conffiles
-│   │   │   ├── [ 24K]  php.list
-│   │   │   ├── [ 32K]  php.md5sums
-│   │   │   ├── [ 425]  pinentry.list
-│   │   │   ├── [  85]  pinentry.md5sums
-│   │   │   ├── [ 531]  play-audio.list
-│   │   │   ├── [ 176]  play-audio.md5sums
-│   │   │   ├── [ 118]  postgresql.conffiles
-│   │   │   ├── [142K]  postgresql.list
-│   │   │   ├── [175K]  postgresql.md5sums
-│   │   │   ├── [3.0K]  procps.list
-│   │   │   ├── [3.7K]  procps.md5sums
-│   │   │   ├── [ 700]  proot.list
-│   │   │   ├── [ 335]  proot.md5sums
-│   │   │   ├── [1.0K]  psmisc.list
-│   │   │   ├── [1008]  psmisc.md5sums
-│   │   │   ├── [1.6K]  psutils.list
-│   │   │   ├── [1.7K]  psutils.md5sums
-│   │   │   ├── [5.6K]  pulseaudio-static.list
-│   │   │   ├── [7.6K]  pulseaudio-static.md5sums
-│   │   │   ├── [ 213]  pulseaudio.conffiles
-│   │   │   ├── [ 12K]  pulseaudio.list
-│   │   │   ├── [ 13K]  pulseaudio.md5sums
-│   │   │   ├── [  46]  pypanel.conffiles
-│   │   │   ├── [1.0K]  pypanel.list
-│   │   │   ├── [ 701]  pypanel.md5sums
-│   │   │   ├── [229K]  python.list
-│   │   │   ├── [309K]  python.md5sums
-│   │   │   ├── [ 481]  python.postinst
-│   │   │   ├── [ 519]  python.prerm
-│   │   │   ├── [1.5K]  python2-six.list
-│   │   │   ├── [1.2K]  python2-six.md5sums
-│   │   │   ├── [ 11K]  python2-xlib.list
-│   │   │   ├── [ 14K]  python2-xlib.md5sums
-│   │   │   ├── [ 52K]  python2.list
-│   │   │   ├── [ 74K]  python2.md5sums
-│   │   │   ├── [ 387]  python2.postinst
-│   │   │   ├── [ 379]  python2.prerm
-│   │   │   ├── [  41]  python2.prerm:
-│   │   │   ├── [ 24K]  qalc.list
-│   │   │   ├── [ 32K]  qalc.md5sums
-│   │   │   ├── [4.1K]  qpdf.list
-│   │   │   ├── [5.4K]  qpdf.md5sums
-│   │   │   ├── [ 12K]  ranger.list
-│   │   │   ├── [ 14K]  ranger.md5sums
-│   │   │   ├── [1.1K]  rcm.list
-│   │   │   ├── [ 917]  rcm.md5sums
-│   │   │   ├── [  44]  readline.conffiles
-│   │   │   ├── [2.9K]  readline.list
-│   │   │   ├── [3.2K]  readline.md5sums
-│   │   │   ├── [ 632]  redir.list
-│   │   │   ├── [ 353]  redir.md5sums
-│   │   │   ├── [ 713]  remind.list
-│   │   │   ├── [ 425]  remind.md5sums
-│   │   │   ├── [  48]  resolv-conf.conffiles
-│   │   │   ├── [ 186]  resolv-conf.list
-│   │   │   ├── [  81]  resolv-conf.md5sums
-│   │   │   ├── [2.2K]  rhash.list
-│   │   │   ├── [ 587]  rhash.md5sums
-│   │   │   ├── [ 298]  root-repo.list
-│   │   │   ├── [  98]  root-repo.md5sums
-│   │   │   ├── [ 101]  root-repo.postinst
-│   │   │   ├── [  51]  rsnapshot.conffiles
-│   │   │   ├── [ 791]  rsnapshot.list
-│   │   │   ├── [ 534]  rsnapshot.md5sums
-│   │   │   ├── [ 622]  rsync.list
-│   │   │   ├── [ 263]  rsync.md5sums
-│   │   │   ├── [136K]  ruby.list
-│   │   │   ├── [168K]  ruby.md5sums
-│   │   │   ├── [ 523]  samefile.list
-│   │   │   ├── [ 172]  samefile.md5sums
-│   │   │   ├── [ 318]  science-repo.list
-│   │   │   ├── [ 101]  science-repo.md5sums
-│   │   │   ├── [ 101]  science-repo.postinst
-│   │   │   ├── [ 598]  sed.list
-│   │   │   ├── [ 247]  sed.md5sums
-│   │   │   ├── [ 382]  shellharden.list
-│   │   │   ├── [  81]  shellharden.md5sums
-│   │   │   ├── [1.4K]  sox.list
-│   │   │   ├── [ 689]  sox.md5sums
-│   │   │   ├── [ 951]  speexdsp.list
-│   │   │   ├── [ 755]  speexdsp.md5sums
-│   │   │   ├── [ 369]  sqlite.list
-│   │   │   ├── [ 170]  sqlite.md5sums
-│   │   │   ├── [ 369]  sshpass.list
-│   │   │   ├── [ 170]  sshpass.md5sums
-│   │   │   ├── [ 363]  stag.list
-│   │   │   ├── [ 164]  stag.md5sums
-│   │   │   ├── [ 373]  starship.list
-│   │   │   ├── [  78]  starship.md5sums
-│   │   │   ├── [3.7K]  stow.list
-│   │   │   ├── [4.4K]  stow.md5sums
-│   │   │   ├── [7.1K]  taglib.list
-│   │   │   ├── [ 10K]  taglib.md5sums
-│   │   │   ├── [ 893]  tar.list
-│   │   │   ├── [ 587]  tar.md5sums
-│   │   │   ├── [ 75K]  tcl.list
-│   │   │   ├── [ 51K]  tcl.md5sums
-│   │   │   ├── [ 519]  tcpdump.list
-│   │   │   ├── [ 170]  tcpdump.md5sums
-│   │   │   ├── [ 370]  tergent.list
-│   │   │   ├── [  77]  tergent.md5sums
-│   │   │   ├── [ 541]  termux-am.list
-│   │   │   ├── [ 162]  termux-am.md5sums
-│   │   │   ├── [2.8K]  termux-api.list
-│   │   │   ├── [4.0K]  termux-api.md5sums
-│   │   │   ├── [ 190]  termux-apt-repo.list
-│   │   │   ├── [  85]  termux-apt-repo.md5sums
-│   │   │   ├── [ 605]  termux-auth.list
-│   │   │   ├── [ 327]  termux-auth.md5sums
-│   │   │   ├── [ 196]  termux-create-package.list
-│   │   │   ├── [  91]  termux-create-package.md5sums
-│   │   │   ├── [ 403]  termux-elf-cleaner.list
-│   │   │   ├── [  88]  termux-elf-cleaner.md5sums
-│   │   │   ├── [ 388]  termux-exec.list
-│   │   │   ├── [  87]  termux-exec.md5sums
-│   │   │   ├── [ 458]  termux-keyring.list
-│   │   │   ├── [ 306]  termux-keyring.md5sums
-│   │   │   ├── [2.3K]  termux-licenses.list
-│   │   │   ├── [2.9K]  termux-licenses.md5sums
-│   │   │   ├── [ 906]  termux-services.list
-│   │   │   ├── [ 537]  termux-services.md5sums
-│   │   │   ├── [  41]  termux-tools.conffiles
-│   │   │   ├── [1.5K]  termux-tools.list
-│   │   │   ├── [1.9K]  termux-tools.md5sums
-│   │   │   ├── [ 465]  teseq.list
-│   │   │   ├── [ 332]  teseq.md5sums
-│   │   │   ├── [ 36K]  texinfo.list
-│   │   │   ├── [ 47K]  texinfo.md5sums
-│   │   │   ├── [1.5K]  tigervnc.list
-│   │   │   ├── [1.3K]  tigervnc.md5sums
-│   │   │   ├── [  46]  tmux.conffiles
-│   │   │   ├── [ 780]  tmux.list
-│   │   │   ├── [ 347]  tmux.md5sums
-│   │   │   ├── [  90]  tmux.postinst
-│   │   │   ├── [ 422]  tokei.list
-│   │   │   ├── [  75]  tokei.md5sums
-│   │   │   ├── [ 154]  tor.conffiles
-│   │   │   ├── [1.8K]  tor.list
-│   │   │   ├── [1.7K]  tor.md5sums
-│   │   │   ├── [ 863]  torsocks.list
-│   │   │   ├── [ 545]  torsocks.md5sums
-│   │   │   ├── [ 637]  tracepath.list
-│   │   │   ├── [ 174]  tracepath.md5sums
-│   │   │   ├── [ 507]  tree.list
-│   │   │   ├── [ 164]  tree.md5sums
-│   │   │   ├── [ 72K]  tshark.list
-│   │   │   ├── [101K]  tshark.md5sums
-│   │   │   ├── [ 220]  tsu.list
-│   │   │   ├── [ 148]  tsu.md5sums
-│   │   │   ├── [ 465]  ttf-dejavu.conffiles
-│   │   │   ├── [2.5K]  ttf-dejavu.list
-│   │   │   ├── [2.9K]  ttf-dejavu.md5sums
-│   │   │   ├── [ 373]  tty-clock.list
-│   │   │   ├── [ 174]  tty-clock.md5sums
-│   │   │   ├── [ 575]  ttyrec.list
-│   │   │   ├── [ 508]  ttyrec.md5sums
-│   │   │   ├── [ 916]  units.list
-│   │   │   ├── [ 522]  units.md5sums
-│   │   │   ├── [ 502]  unstable-repo.list
-│   │   │   ├── [ 102]  unstable-repo.md5sums
-│   │   │   ├── [ 101]  unstable-repo.postinst
-│   │   │   ├── [ 960]  unzip.list
-│   │   │   ├── [ 769]  unzip.md5sums
-│   │   │   ├── [ 13K]  util-linux.list
-│   │   │   ├── [ 19K]  util-linux.md5sums
-│   │   │   ├── [ 89K]  vim-runtime.list
-│   │   │   ├── [129K]  vim-runtime.md5sums
-│   │   │   ├── [  48]  vim.conffiles
-│   │   │   ├── [1.2K]  vim.list
-│   │   │   ├── [ 670]  vim.md5sums
-│   │   │   ├── [ 310]  vim.postinst
-│   │   │   ├── [ 228]  vim.prerm
-│   │   │   ├── [ 365]  wcalc.list
-│   │   │   ├── [ 166]  wcalc.md5sums
-│   │   │   ├── [1.7K]  weechat.list
-│   │   │   ├── [1.6K]  weechat.md5sums
-│   │   │   ├── [ 442]  wget.list
-│   │   │   ├── [ 240]  wget.md5sums
-│   │   │   ├── [ 487]  x11-repo.list
-│   │   │   ├── [  97]  x11-repo.md5sums
-│   │   │   ├── [ 101]  x11-repo.postinst
-│   │   │   ├── [ 179]  x264.list
-│   │   │   ├── [  74]  x264.md5sums
-│   │   │   ├── [ 179]  x265.list
-│   │   │   ├── [  74]  x265.md5sums
-│   │   │   ├── [ 20K]  xkeyboard-config.list
-│   │   │   ├── [ 27K]  xkeyboard-config.md5sums
-│   │   │   ├── [2.0K]  xorg-font-util.list
-│   │   │   ├── [2.1K]  xorg-font-util.md5sums
-│   │   │   ├── [ 653]  xorg-mkfontscale.list
-│   │   │   ├── [ 352]  xorg-mkfontscale.md5sums
-│   │   │   ├── [ 546]  xorg-mkfontscale.postinst
-│   │   │   ├── [ 426]  xorg-mkfontscale.postrm
-│   │   │   ├── [  61]  xorg-mkfontscale.triggers
-│   │   │   ├── [ 521]  xorg-xauth.list
-│   │   │   ├── [ 166]  xorg-xauth.md5sums
-│   │   │   ├── [ 668]  xorg-xkbcomp.list
-│   │   │   ├── [ 260]  xorg-xkbcomp.md5sums
-│   │   │   ├── [1.4K]  xrdp.conffiles
-│   │   │   ├── [5.8K]  xrdp.list
-│   │   │   ├── [7.8K]  xrdp.md5sums
-│   │   │   ├── [ 193]  xrdp.postinst
-│   │   │   ├── [ 508]  xsel.list
-│   │   │   ├── [ 165]  xsel.md5sums
-│   │   │   ├── [ 371]  xsltproc.list
-│   │   │   ├── [ 172]  xsltproc.md5sums
-│   │   │   ├── [ 574]  xvidcore.list
-│   │   │   ├── [ 168]  xvidcore.md5sums
-│   │   │   ├── [ 867]  xwayland.list
-│   │   │   ├── [ 362]  xwayland.md5sums
-│   │   │   ├── [2.5K]  xz-utils.list
-│   │   │   ├── [1.2K]  xz-utils.md5sums
-│   │   │   ├── [ 677]  zip.list
-│   │   │   ├── [ 676]  zip.md5sums
-│   │   │   ├── [ 876]  zlib.list
-│   │   │   ├── [ 422]  zlib.md5sums
-│   │   │   ├── [1.5K]  zstd.list
-│   │   │   ├── [1013]  zstd.md5sums
-│   │   │   ├── [ 730]  zsync.list
-│   │   │   └── [ 517]  zsync.md5sums
-│   │   ├── [   0]  lock
-│   │   ├── [   0]  lock-frontend
-│   │   ├── [116K]  status
-│   │   ├── [117K]  status-old
-│   │   ├── [4.0K]  triggers
-│   │   │   ├── [ 276]  File
-│   │   │   ├── [   0]  Lock
-│   │   │   └── [   0]  Unincorp
-│   │   └── [ 12K]  updates
-│   └── [4.0K]  mysql
-│       ├── [472K]  aria_log.00000001
-│       ├── [  52]  aria_log_control
-│       ├── [ 854]  ib_buffer_pool
-│       ├── [ 48M]  ib_logfile0
-│       ├── [ 48M]  ib_logfile1
-│       └── [ 12M]  ibdata1
-├── [4.0K]  log
-│   ├── [1.9K]  alternatives.log
-│   ├── [4.0K]  apache2
-│   │   ├── [   0]  access_log
-│   │   └── [ 288]  error_log
-│   ├── [4.0K]  apt
-│   │   ├── [7.4K]  eipp.log.xz
-│   │   ├── [ 45K]  history.log
-│   │   └── [291K]  term.log
-│   ├── [4.0K]  nginx
-│   │   ├── [   0]  access.log
-│   │   └── [ 507]  error.log
-│   ├── [4.0K]  sv
-│   │   ├── [4.0K]  ftpd
-│   │   │   ├── [   0]  current
-│   │   │   └── [   0]  lock
-│   │   ├── [4.0K]  httpd
-│   │   │   ├── [   0]  current
-│   │   │   └── [   0]  lock
-│   │   ├── [4.0K]  mpd
-│   │   │   ├── [   0]  current
-│   │   │   └── [   0]  lock
-│   │   ├── [4.0K]  mysqld
-│   │   │   ├── [976K]  @400000005e663c3f2226c088.s
-│   │   │   ├── [976K]  @400000005e663f1a2e910540.s
-│   │   │   ├── [976K]  @400000005e6647f310963358.s
-│   │   │   ├── [976K]  @400000005e664adb2944f8d0.s
-│   │   │   ├── [976K]  @400000005e664dc2012793f8.s
-│   │   │   ├── [976K]  @400000005e66510a1af68eb0.s
-│   │   │   ├── [976K]  @400000005e6653dd05f4e700.s
-│   │   │   ├── [976K]  @400000005e6657a020ef6198.s
-│   │   │   ├── [976K]  @400000005e665bdf03e04770.s
-│   │   │   ├── [498K]  @400000005e665d663a7462d0.u
-│   │   │   ├── [   0]  current
-│   │   │   └── [   0]  lock
-│   │   ├── [4.0K]  postgres
-│   │   │   ├── [   0]  current
-│   │   │   └── [   0]  lock
-│   │   ├── [4.0K]  sshd
-│   │   │   ├── [   0]  current
-│   │   │   └── [   0]  lock
-│   │   ├── [4.0K]  telnetd
-│   │   │   ├── [   0]  current
-│   │   │   └── [   0]  lock
-│   │   └── [4.0K]  tor
-│   │       ├── [   0]  current
-│   │       └── [   0]  lock
-│   └── [1016]  xrdp.log
-├── [4.0K]  mlocate
-├── [4.0K]  run
-│   ├── [  45]  README.openssh
-│   ├── [4.0K]  apache2
-│   │   └── [  21]  httpd.pid
-│   ├── [   6]  dictd.pid
-│   ├── [   0]  mpd.fifo
-│   ├── [   0]  mpd.socket
-│   ├── [   6]  service-daemon.pid
-│   ├── [4.0K]  tmux-10224
-│   │   └── [   0]  default
-│   └── [   5]  xrdp.pid
-├── [4.0K]  service
-│   ├── [4.0K]  crond
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   0]  pid
-│   │   │       ├── [   5]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [  73]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  emacsd
-│   │   ├── [4.0K]  log
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   0]  pid
-│   │   │       ├── [   5]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [  69]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   5]  pid
-│   │       ├── [   4]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  ftpd
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   ├── [  66]  run.dpkg-new -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   6]  pid
-│   │   │       ├── [   4]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [  89]  run
-│   │   ├── [ 116]  run.dpkg-old
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  httpd
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   6]  pid
-│   │   │       ├── [   4]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [  69]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  lighttpd
-│   │   ├── [4.0K]  log
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   0]  pid
-│   │   │       ├── [   5]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [ 215]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   5]  pid
-│   │       ├── [   4]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  mpd
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   ├── [  66]  run.dpkg-new -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   6]  pid
-│   │   │       ├── [   4]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [ 191]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  mysqld
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   ├── [  66]  run.dpkg-new -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   6]  pid
-│   │   │       ├── [   4]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [ 108]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  nginx
-│   │   ├── [4.0K]  log
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   0]  pid
-│   │   │       ├── [   5]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [ 221]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   5]  pid
-│   │       ├── [   4]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  postgres
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   ├── [  66]  run.dpkg-new -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   6]  pid
-│   │   │       ├── [   4]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [  97]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  sshd
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   ├── [  66]  run.dpkg-new -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   6]  pid
-│   │   │       ├── [   4]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [  62]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   ├── [4.0K]  telnetd
-│   │   ├── [   0]  down
-│   │   ├── [4.0K]  log
-│   │   │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   ├── [  66]  run.dpkg-new -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│   │   │   └── [4.0K]  supervise
-│   │   │       ├── [   0]  control
-│   │   │       ├── [   0]  lock
-│   │   │       ├── [   0]  ok
-│   │   │       ├── [   6]  pid
-│   │   │       ├── [   4]  stat
-│   │   │       └── [  20]  status
-│   │   ├── [  65]  run
-│   │   └── [4.0K]  supervise
-│   │       ├── [   0]  control
-│   │       ├── [   0]  lock
-│   │       ├── [   0]  ok
-│   │       ├── [   0]  pid
-│   │       ├── [   5]  stat
-│   │       └── [  20]  status
-│   └── [4.0K]  tor
-│       ├── [   0]  down
-│       ├── [4.0K]  log
-│       │   ├── [  66]  run -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│       │   ├── [  66]  run.dpkg-new -> /data/data/com.termux/files/usr/share/termux-services/svlogger
-│       │   └── [4.0K]  supervise
-│       │       ├── [   0]  control
-│       │       ├── [   0]  lock
-│       │       ├── [   0]  ok
-│       │       ├── [   6]  pid
-│       │       ├── [   4]  stat
-│       │       └── [  20]  status
-│       ├── [  55]  run
-│       └── [4.0K]  supervise
-│           ├── [   0]  control
-│           ├── [   0]  lock
-│           ├── [   0]  ok
-│           ├── [   0]  pid
-│           ├── [   5]  stat
-│           └── [  20]  status
-└── [4.0K]  spool
-    └── [4.0K]  cron
-        └── [4.0K]  crontabs
-            └── [  44]  README.termux
-
-88 directories, 1152 files
+/bin/acpi -> toybox
+/bin/am
+/bin/app_process -> app_process32
+/bin/app_process32
+/bin/applypatch
+/bin/appops
+/bin/appwidget
+/bin/awk
+/bin/base64 -> toybox
+/bin/basename -> toybox
+/bin/bcc
+/bin/bl_notify_sys
+/bin/blockdev -> toybox
+/bin/bmgr
+/bin/bu
+/bin/bugreport
+/bin/bugreportz
+/bin/bunzip2 -> bzip2
+/bin/bzcat -> bzip2
+/bin/bzip2
+/bin/cal -> toybox
+/bin/cat -> toybox
+/bin/chcon -> toybox
+/bin/chgrp -> toybox
+/bin/chmod -> toybox
+/bin/chown -> toybox
+/bin/chroot -> toybox
+/bin/chrt -> toybox
+/bin/cksum -> toybox
+/bin/clear -> toybox
+/bin/cmd
+/bin/cmp -> toybox
+/bin/comm -> toybox
+/bin/content
+/bin/cp -> toybox
+/bin/cpio -> toybox
+/bin/crash_dump32
+/bin/curl
+/bin/cut -> toybox
+/bin/dalvikvm -> dalvikvm32
+/bin/dalvikvm32
+/bin/date -> toybox
+/bin/dd -> toolbox
+/bin/debuggerd
+/bin/dex2oat
+/bin/dexdiag
+/bin/dexdump
+/bin/dexlist
+/bin/df -> toybox
+/bin/diff -> toybox
+/bin/dirname -> toybox
+/bin/dmesg -> toybox
+/bin/dos2unix -> toybox
+/bin/dpm
+/bin/dropboxhelper
+/bin/du -> toybox
+/bin/dumpsys
+/bin/echo -> toybox
+/bin/egrep -> grep
+/bin/env -> toybox
+/bin/expand -> toybox
+/bin/expr -> toybox
+/bin/fallocate -> toybox
+/bin/false -> toybox
+/bin/fgrep -> grep
+/bin/file -> toybox
+/bin/find -> toybox
+/bin/flock -> toybox
+/bin/fmt -> toybox
+/bin/free -> toybox
+/bin/getenforce -> toybox
+/bin/getevent -> toolbox
+/bin/getfattr -> toolbox
+/bin/getprop -> toolbox
+/bin/grep
+/bin/groups -> toybox
+/bin/gunzip -> toybox
+/bin/gzip -> toybox
+/bin/head -> toybox
+/bin/hid
+/bin/host_manager_11ad
+/bin/hostname -> toybox
+/bin/hwclock -> toybox
+/bin/id -> toybox
+/bin/ifconfig -> toybox
+/bin/ime
+/bin/inotifyd -> toybox
+/bin/input
+/bin/insmod -> toybox
+/bin/ionice -> toybox
+/bin/iorenice -> toybox
+/bin/ip
+/bin/ip-wrapper-1.0 -> netutils-wrapper-1.0
+/bin/ip6tables
+/bin/ip6tables-restore -> ip6tables
+/bin/ip6tables-save -> ip6tables
+/bin/ip6tables-wrapper-1.0 -> netutils-wrapper-1.0
+/bin/ipInfo
+/bin/iptables
+/bin/iptables-restore -> iptables
+/bin/iptables-save -> iptables
+/bin/iptables-wrapper-1.0 -> netutils-wrapper-1.0
+/bin/iw
+/bin/keystore_cli_v2
+/bin/kill -> toybox
+/bin/killall -> toybox
+/bin/ld.mc
+/bin/linker
+/bin/linker_asan -> linker
+/bin/ln -> toybox
+/bin/load_policy -> toybox
+/bin/locksettings
+/bin/log -> toybox
+/bin/logcat
+/bin/logname -> toybox
+/bin/logwrapper
+/bin/losetup -> toybox
+/bin/ls -> toybox
+/bin/lshal
+/bin/lsmod -> toybox
+/bin/lsof -> toybox
+/bin/lspci -> toybox
+/bin/lsusb -> toybox
+/bin/md5sum -> toybox
+/bin/media
+/bin/microcom -> toybox
+/bin/mkdir -> toybox
+/bin/mkfifo -> toybox
+/bin/mkfs.exfat
+/bin/mkfs.ext2 -> mke2fs
+/bin/mkfs.ext3 -> mke2fs
+/bin/mkfs.ext4 -> mke2fs
+/bin/mknod -> toybox
+/bin/mkswap -> toybox
+/bin/mktemp -> toybox
+/bin/modinfo -> toybox
+/bin/modprobe -> toybox
+/bin/monkey
+/bin/more -> toybox
+/bin/motsettings
+/bin/mount -> toybox
+/bin/mountpoint -> toybox
+/bin/move_time_data.sh
+/bin/move_wifi_data.sh
+/bin/mv -> toybox
+/bin/n_smux
+/bin/ndc
+/bin/ndc-wrapper-1.0 -> netutils-wrapper-1.0
+/bin/netstat -> toybox
+/bin/newfs_msdos -> toolbox
+/bin/nice -> toybox
+/bin/nl -> toybox
+/bin/nohup -> toybox
+/bin/oatdump
+/bin/od -> toybox
+/bin/paste -> toybox
+/bin/patch -> toybox
+/bin/patchoat
+/bin/pgrep -> toybox
+/bin/pidof -> toybox
+/bin/ping
+/bin/ping6
+/bin/pkill -> toybox
+/bin/pm
+/bin/pmap -> toybox
+/bin/ppd
+/bin/printenv -> toybox
+/bin/printf -> toybox
+/bin/ps -> toybox
+/bin/pwd -> toybox
+/bin/readlink -> toybox
+/bin/realpath -> toybox
+/bin/renice -> toybox
+/bin/requestsync
+/bin/resize2fs
+/bin/restorecon -> toybox
+/bin/rm -> toybox
+/bin/rmdir -> toybox
+/bin/rmmod -> toybox
+/bin/rtspclient
+/bin/rtspserver
+/bin/run-as
+/bin/runcon -> toybox
+/bin/schedtest
+/bin/screencap
+/bin/screenrecord
+/bin/secdiscard
+/bin/secilc
+/bin/sed -> toybox
+/bin/sendevent -> toybox
+/bin/sendevent2 -> toolbox
+/bin/sensorservice
+/bin/seq -> toybox
+/bin/service
+/bin/setenforce -> toybox
+/bin/setfattr -> toolbox
+/bin/setprop -> toybox
+/bin/setsid -> toybox
+/bin/settings
+/bin/sh
+/bin/sha1sum -> toybox
+/bin/sha224sum -> toybox
+/bin/sha256sum -> toybox
+/bin/sha384sum -> toybox
+/bin/sha512sum -> toybox
+/bin/sleep -> toybox
+/bin/sm
+/bin/sort -> toybox
+/bin/split -> toybox
+/bin/start -> toybox
+/bin/stat -> toybox
+/bin/stop -> toybox
+/bin/strings -> toybox
+/bin/stty -> toybox
+/bin/svc
+/bin/swapoff -> toybox
+/bin/swapon -> toybox
+/bin/sync -> toybox
+/bin/sysctl -> toybox
+/bin/tac -> toybox
+/bin/tail -> toybox
+/bin/tar -> toybox
+/bin/taskset -> toybox
+/bin/tc
+/bin/tc-wrapper-1.0 -> netutils-wrapper-1.0
+/bin/tee -> toybox
+/bin/telecom
+/bin/time -> toybox
+/bin/timedexec
+/bin/timeout -> toybox
+/bin/tinycap
+/bin/tinypcminfo
+/bin/toolbox
+/bin/top -> toybox
+/bin/touch -> toybox
+/bin/toybox
+/bin/tr -> toybox
+/bin/true -> toybox
+/bin/truncate -> toybox
+/bin/tty -> toybox
+/bin/uiautomator
+/bin/ulimit -> toybox
+/bin/umount -> toybox
+/bin/uname -> toybox
+/bin/uniq -> toybox
+/bin/unix2dos -> toybox
+/bin/uptime -> toybox
+/bin/usleep -> toybox
+/bin/uudecode -> toybox
+/bin/uuencode -> toybox
+/bin/vmstat -> toybox
+/bin/vr
+/bin/wc -> toybox
+/bin/which -> toybox
+/bin/whoami -> toybox
+/bin/wigig_logcollector
+/bin/wigig_remoteserver
+/bin/wigig_wiburn
+/bin/wm
+/bin/xargs -> toybox
+/bin/xxd -> toybox
+/bin/yes -> toybox
+/bin/zcat -> toybox
