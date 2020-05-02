@@ -6,4 +6,3 @@
 #Git Sync	
 git pull && git add --all && git commit;
 git push && git status;
-pwd;
