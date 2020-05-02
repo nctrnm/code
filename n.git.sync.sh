@@ -5,4 +5,4 @@
 #!/bin/bash
 #Git Sync	
 git pull && git add --all && git commit;
-git push && git status;
+git push && git status;##
