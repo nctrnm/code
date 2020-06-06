@@ -5,5 +5,4 @@
 #!/bin/bash
 echo 'enter file' && read a 
 echo 'enter saved file name' && read b 
-convert -units PixelsPerInch a -resample 300 -resize 1500x1500 b
-$o b
+convert -units PixelsPerInch $a -resample 300 -resize 1500x1500 $b
