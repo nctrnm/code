@@ -8,7 +8,7 @@
 export PS1='cd: $PWD, $: '
 sleep 5
 date "+%D %T"|fmt -u -w 22 > /mnt/c/Users/mwmcgilvery/nmoto/.ntimelog && date "+%D %T"|fmt -u -w 22 > /mnt/c/Users/mwmcgilvery/nmoto/TIME.log
-alias shed='sudo vim ~/.bashrc'
+alias shed='sudo vim ~/.bashrc && sudo start'
 alias s.h='sox --help-effect'
 alias start='sudo -i bash'
 alias n.sig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
