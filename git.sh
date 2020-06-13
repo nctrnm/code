@@ -1,5 +1,5 @@
 #!/bin/bash
 $(ngt)
-git pull nmoto nmoto && git add --all
+git pull nmoto nctrnmCODE && git add --all
 git commit
-git push nmoto nmoto && git status
+git push nmoto nctrnmCODE  && git status
