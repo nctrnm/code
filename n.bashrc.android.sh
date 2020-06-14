@@ -4,9 +4,9 @@
 #!/bin/bash/
 #5.28.2020
 #Bash Initialization File
-stty rows $((14900/2))  && stty columns $((7100/4))
+stty rows $((14900/2))  && stty columns $((7100/3))
 export set USER='nctrnm'
-export set PS1='cd: $(pwd): '
+export set PS1='$(pwd): '
 alias github='termux-open https://github.com/nctrnm'
 alias kf='termux-open https://tunebat.com/Analyzer'
 alias wip='cd /sdcard/wip'
