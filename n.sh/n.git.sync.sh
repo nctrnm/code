@@ -1,47 +1,57 @@
 #Matthew McGilvery
-#License: GPL 3 or Later
-#link: nctrnm.com
-#3.9.20
+#Bash Inistialization Script
+#nctrnm.com
 #!/bin/bash/
-<<<<<<< HEAD
-#Git Sync	
-git pull && git add --all && git commit ;
-git push && git status
-=======
-#Bash Initialization File 
-stty rows 1280  && stty columns 720 
-export PS1='j:\j,u:\u,$: '
-sleep 5
-date "+%D %T"|fmt -u -w 22 > ~/.ntimelog && date "+%D %T"|fmt -u -w 22 > ~/nmoto/TIME.log
-alias s.h='sox --help-effect'
-alias n.sig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
-alias n.s='sox -SV -r44.1k -b16 -c1'
-alias p.y='python3'
-alias n.p='play'
+#5.28.2020
+#Bash Initialization File
+stty rows $((14900/2))  && stty columns $((7100/3))
+export set USER='nctrnm'
+export set PS1='$(pwd): '
+alias github='termux-open https://github.com/nctrnm'
+alias kf='termux-open https://tunebat.com/Analyzer'
+alias wip='cd /sdcard/wip'
+alias doc='cd /sdcard/wip/doc/'
+alias img='cd /sdcard/wip/img'
+alias sound='cd /sdcard/wip/sound'
+alias sxh='sox --help-effect'
+alias nsig='pgrep -u u0_a224' && alias x='kill -9 $(nsig|fmt -u)'
+alias sx='sox -SV -r44.1k -b16 -c1'
+alias copi='termux-clipboard-set' && alias pst='termux-clipboard-get'
+alias py='python3'
+alias pl='play'
+alias freespc='cd /sdcard/ && rm -rvf $(du -xt 500000|grep "cache"|fmt -u)'
+alias googlr='tmux lynx encrypted.google.com/'
+alias p='mpv'
+alias google='lynx https://google.com/search?q='
+alias cop='termux-clipboard-set'
 alias usr='echo $USER'
-alias n.h='~/nmoto && pwd'
-alias list='ls -l'
-alias n.ls='bash ~/nmoto/n.ls.sh'
+alias o='termux-open' && alias n.h='cd /sdcard/ && pwd'
+alias ls='exa' && alias list='exa -l'
+alias snd='termux-open --send'
 alias srch='pkg search'
-alias shcp='cp ~/.bashrc ~/nmoto/n.sh/n.bash.rc.win10.sh'
-alias s.git='git status' && alias p.git='git push'
-alias list='ls -bhtx' && alias apps='ls -b /bin'
-alias n.b='source ~/.bashrc'
-alias n.sh='vim ~/.bashrc ; cp ~/.bashrc ~/nmoto/n.bash.rc.win10.sh'
-alias d.dir='rm -r'
-alias n.rec='sox -r 44100 -b 16 ~/${RANDOM}.wav'
-alias n.gt='cd ~/nmoto && pwd && ls -h' && alias n.git='bash ~/nmoto/n.git.sync.sh'
-alias rm.cache='rm -r $(bash ~/nmoto/n.sh/n.cache.sh)'
-alias github='lynx https://github.com/mwmcgilvery'
+alias shcp='cp ~/.bashrc /sdcard/n.git/n.sh/n.git.sync.sh'
+alias sgit='git status' && alias p.git='git push'
+alias lsx='exa -bhtx' && alias apps='exa -bad /bin'
+alias start='source ~/.bashrc'
+alias shed='vim ~/.bashrc ; cp ~/.bashrc /sdcard/n.git/n.bashrc.android.sh'
+alias dd='rm -rf'
+alias rec='termux-microphone-record -l 0 -f /sdcard/rec.tmux/n.${RANDOM}.wav  -r 44100  -b 16'
+alias ngt='cd /sdcard/n.git && pwd && exa -h'
+alias ngit='git pull && git add --all && git commit && git push && git status'
+alias rm.cache='rm -r $(bash /sdcard/n.git/n.sh/n.cache.sh)'
+alias gthb='lynx https://github.com/mwmcgilvery'
 alias google='lynx https://www.google.com/search?q= ' 
-alias p.i='choco install'
-alias d.c='ccrypt -d'
-alias c.c='ccrypt -e'
-alias end='kill -9'
-alias n.t='vim'
+alias i='pkg install'
+alias u='pkg upgrade && npm update -g npm'
+alias d='ccrypt -d'
+alias c='ccrypt -e'
+alias yx='/bin/play'
+alias coned="cd  /data/data/com.termux/files/usr/etc/"
+alias ncac='bash /sdcard/n.git/n.sh/n.cache.sh'
+alias recq='termux-microphone-record -q'
+alias nt='vim'
 alias ggl="lynx https://google.com/search?q=-"
-alias p.git='git push'
-alias n.tab='tmux new -c ntm'
-alias f.m='nnn'
-cd ~/nmoto && bash ~/nmoto/n.git.sync.sh && cd ~ &&  pwd && ls -bh . && $shcp;
->>>>>>> 42ea2132aaede3f2042b8ed1ade8bdbdf605f90b
+alias pgit='git push'
+alias ntab='tmux new -c ntm'
+alias fm='nnn'
+cd /sdcard/ &&  pwd && exa -bh .
