@@ -4,9 +4,8 @@
 #License: GPL 3 or Later
 #link: nctrnm.com
 #!/bin/bash/
-cd /mnt/c/wip/
-cd /mnt/c/Users/wip/
-sudo ls /bin > /dev/null/2
+sudo -i bash;
+cd /mnt/c/
 export PS1='j:\j,$PWD: '
 alias home='cd /mnt/c/Users/mwmcgilvery'
 alias sx='sox -r 44100 -b 320000 -c 1'
@@ -46,5 +45,5 @@ alias p.git='git push'
 alias n.tab='tmux new -c ntm'
 alias f.m='nnn'
 alias n.h='cd /mnt/c/Users/mwmcgilvery && pwd && ls -a'
-cd /mnt/c/wip  && sudo -V
-pwd
+echo "username: $(echo $USERNAME), ip address: $(hostname -I |192*)." | fmt -ug 50
+echo "welcome to the Ubuntu Windows Linux Subsystem." | fmt -ug 50
