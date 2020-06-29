@@ -1,8 +1,8 @@
-Matthew McGilvery
-Git Sync Script
-nctrnm.com
-6.29.2020
-GPL3 or later
+#Matthew McGilvery
+#Git Sync Script
+#nctrnm.com
+#6.29.2020
+#GPL3 or later
 #!/bin/bash
 #change into git folder
 cd /storage/emulated/0/nctrnmCODE/
