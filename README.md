@@ -4,7 +4,11 @@
 <meta charset="UTF-8"> 
 <meta name="description" content="Matthew McGilvery's remote Git repository"> 
 <meta name="keywords" content="Bash, Android, Github, HTML, Shell, Termux, Nctrnm, Shell Scripting"> 
-<meta name="author" content="Matthew McGilvery">  <h2>About <u>mwmcgilvery</u></h2>
+<meta name="author" content="Matthew McGilvery">  
+<meta name="author2" content="Nctrnm">  
+ 
+  
+  <h2>About<em><strong> nctrnmCODE</em></strong></h2>
 <b>This repository is mainly composed of shell scripts, compressed files, and projects. 
 I maintain this repository from my <i>Motorola E6</i> Android non-rooted phone via Termux and using Git Bash on an Acer Laptop running Windows 10. I intend for this repository to be a display of my development in programming.</b> 
 
@@ -18,8 +22,6 @@ Find out more at <l>https://nctrnm.com</l>.
 "d"= removal of file(s)/directory(ies)
 "u"= update of file(s)/directory(ies)
 "."= repeat of last commit
-  <BR>
-Reach out to me for any matter.
 </b>
 </head>
 </html>
