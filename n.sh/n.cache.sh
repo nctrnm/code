@@ -3,5 +3,5 @@
 #nctrnm.com
 #!/bin/bas
 #Cache Removal
-du -t 5M|grep "cache"|fmt -u
+du -t 500|grep "cache"
 #rm()
