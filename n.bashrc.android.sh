@@ -5,7 +5,7 @@
 #5.28.2020
 #Bash Initialization File
 termux-chroot
-stty rows $((14900/100))  && stty columns $((7100/500))
+stty rows $((2800/900))  && stty columns $((7100/500))
 export set USER='nctrnm'
 export set PS1='$(pwd): '
 alias g='cd'
