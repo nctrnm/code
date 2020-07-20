@@ -1,0 +1,15 @@
+Matthew McGilvery
+Termux Reset Workflow
+nctrnm.com
+7.20.20
+GPL3
+----------------------------------
+1. uninstall termux
+2. reinstall termux
+3. move termux to phone from sdcard
+4. place .bashrc from last working copy
+5. optimize modified .bashrc
+6. install missing programs
+7. close excess processes
+8. document steps
+9. refine steps
