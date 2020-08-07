@@ -51,4 +51,4 @@ alias ggl="lynx https://google.com/search?q=-"
 alias pgit='git push'
 alias ntab='tmux new -c ntm'
 alias fm='nnn'
-cd ~ &&  pwd && ls -bh .
+cd ~ &&  pwd && ls -bh . && xdm
