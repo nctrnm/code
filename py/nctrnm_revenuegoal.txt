@@ -1,2 +1,0 @@
-where x is a desired amount of streams per month to reach a desired revenue of y per year at a streaming rate of .0075 dollars a stream over 12 months.
-Enter your desired amount of revenue per year: To earn $30000 a year from Spotify, you would need to yield 333333 streams per month, and 27777 listeners per month

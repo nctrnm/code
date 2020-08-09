@@ -1,1 +1,0 @@
-Enter your budget: budget: 165, needs: 82.5, wants: 33.0, savings: 55.0
