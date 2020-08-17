@@ -8,11 +8,8 @@ last > ~/nlinux1.log && export set USER='nctrnm'
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
 export set PS1='$(pwd): '
-
-alias chr='chromium-browser --no-sandbox --disable-extensions --disable-plugins https://encrypted.google.com/search?q='Nctrnm''
-alias usr='echo $USER'
-alias o='exec' && alias n.h='cd ~ && pwd'
-alias ls='ls' && alias list='ls -l'
+alias plsa='pulseaudio --system --start'
+$plsa
 alias srch='pkg search'
 alias shcp='cp ~/.bashrc ~/nctrnmCODE/sh/n_bashrc_linux.sh'
 alias sgit='git status' && alias p.git='git push'
