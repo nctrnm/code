@@ -11,6 +11,7 @@ pulseaudio --system --start
 export set PS1='$(pwd): '
 alias plsa='pulseaudio --system --start'
 alias start='source ~/.bashrc'
+alias internet='firefox'
 alias shed='vim ~/.bashrc ; cp ~/.bashrc ~/nctrnmCODE/n_bashrc_linux.sh'
 alias dd='rm -rf'
 alias rec='termux-microphone-record -l 0 -f ~rec.tmux/n.${RANDOM}.wav  -r 44100  -b 16'
