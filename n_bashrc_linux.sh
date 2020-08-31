@@ -32,3 +32,5 @@ alias pgit='git push'
 alias ntab='tmux new -c ntm'
 alias fm='nnn'
 cd ~ &&  pwd && ls -bh . && xdm && byobu
+reset
+
