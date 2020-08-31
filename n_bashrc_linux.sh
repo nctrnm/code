@@ -2,9 +2,9 @@
 #Bash Inistialization Script
 #nctrnm.com
 #!/bin/bash/
-#5.28.2020
+#8.30.2020
 #Bash Initialization File
-apt upgrade -y 
+apt upgrade -y && apt autoremove -y 
 last > ~/nlinux1.log && export set USER='nctrnm'
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
