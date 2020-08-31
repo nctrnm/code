@@ -14,7 +14,6 @@ alias start='source ~/.bashrc'
 alias internet='firefox'
 alias shed='vim ~/.bashrc ; cp ~/.bashrc ~/nctrnmCODE/n_bashrc_linux.sh'
 alias dd='rm -rf'
-alias rec='termux-microphone-record -l 0 -f ~rec.tmux/n.${RANDOM}.wav  -r 44100  -b 16'
 alias rm.cache='rm -r $(bash ~/nctrnmCODE/n.sh/n.cache.sh)'
 alias gthb='lynx https://github.com/mwmcgilvery'
 alias google='chromium-browser https://www.google.com/search?q= ' 
@@ -23,7 +22,7 @@ alias u='pkg upgrade && npm update -g npm'
 alias d='ccrypt -d'
 alias c='ccrypt -e'
 alias yx='/bin/play'
-alias coned="cd  /data/data/com.termux/files/usr/etc/"
+alias coned="cd  /data/data/com./files/usr/etc/"
 alias ncac='bash ~/nctrnmCODE/n.sh/n.cache.sh'
 alias nt='vim'
 alias ggl="lynx https://google.com/search?q=-"
