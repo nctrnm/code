@@ -4,6 +4,7 @@
 #!/bin/bash/
 #5.28.2020
 #Bash Initialization File
+apt upgrade -y 
 last > ~/nlinux1.log && export set USER='nctrnm'
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
