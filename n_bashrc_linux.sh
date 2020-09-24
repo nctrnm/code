@@ -8,7 +8,7 @@ apt upgrade -y && apt autoremove -y
 last > ~/nlinux1.log && export set USER='nctrnm'
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
-pulseaudio --system --start 
+pulseaudio -D 
 export set PS1='$(pwd): '
 alias plsa='pulseaudio --system --start'
 alias start='source ~/.bashrc'
@@ -21,7 +21,7 @@ alias google='chromium-browser https://www.google.com/search?q= '
 alias i='pkg install'
 alias nsftp='sftp -P 6789  test123@192.168.1.222'
 alias keyfinder='firefox tunebat.com/Analyzer'
-alias keyon='xinput float 12 13'
+alias keyon='xinput float 13'
 alias keyoff='xinput reattach 13 3 && xinput reattach 12 3'
 alias u='pkg upgrade && npm update -g npm'
 alias fq='kill -9 0'
