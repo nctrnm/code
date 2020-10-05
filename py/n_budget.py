@@ -10,9 +10,9 @@ b = input('Enter your budget: ')
 #n= needs expenditure
 n=int(b)/2
 #w= wants expenditure
-w=int(b)/3
+w=int(b)/6
 #s = savings expenditure
-s=int(b)/3.3
+s=int(b)/5
 #print out of aforementioned budget variables
 print('budget: ' + str(b) + ', needs: ' + str(n) + ', wants: ' + str(w) + ', savings: ' + str(s))
 
