@@ -8,7 +8,7 @@ apt upgrade -y && apt autoremove -y
 last > ~/nlinux1.log && export set USER='nctrnm'
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
-pulseaudio -D 
+pulseaudio -D && firefox
 export set PS1='$(pwd): '
 alias plsa='pulseaudio --system --start'
 alias start='source ~/.bashrc'
