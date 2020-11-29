@@ -5,7 +5,7 @@
 #CSV Merge
 #Sourced from https://stackoverflow.com/questions/24641948/merging-csv-files-appending-instead-of-merging/24643455
 #
-output='nctrnm_sm_nov2020.csv'                       # Edit output name
+output='.csv'                       # Edit output name
 i=0                                       # Reset a counter
 for filen in ./*.csv; do #edit this  
  if [ "$filen"  != "$output" ] ;      # Avoid recursion 
