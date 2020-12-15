@@ -10,7 +10,8 @@ cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into l
 git push
 pulseaudio -D && firefox
 export set PS1='$(pwd): '
-alias pulseaudio_restart='pulseaudio -k && pulseaudio -D'
+alias browse='bash openbrowser.sh'
+alias pulseaudio_restart='pulseaudio -k && pulseaudio -oD'
 alias plsa='pulseaudio --system --start'
 alias start='source ~/.bashrc'
 alias internet='firefox'
