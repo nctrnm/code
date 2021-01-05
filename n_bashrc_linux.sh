@@ -8,7 +8,7 @@ apt upgrade -y && apt autoremove -y
 last > ~/nlinux1.log && export set USER='nctrnm'
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
-pulseaudio -D && firefox
+pulseaudio -D && vivaldi
 export set PS1='$(pwd): '
 alias browse='bash /root/nctrnmCODE/sh/openbrowser.sh'
 alias phone='bash /root/sftp.sh'
@@ -23,7 +23,7 @@ alias gthb='lynx https://github.com/mwmcgilvery'
 alias google='chromium-browser https://www.google.com/search?q= ' 
 alias i='pkg install'
 alias nsftp='sftp -P 6789  test123@192.168.1.222'
-alias keyfinder='firefox tunebat.com/Analyzer'
+alias keyfinder='vivaldi tunebat.com/Analyzer'
 alias keyon='xinput disable 13 3'
 alias keyoff='xinput reattach 13 3 && xinput reattach 12 3'
 alias u='pkg upgrade && npm update -g npm'
