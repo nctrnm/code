@@ -10,6 +10,7 @@ cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into l
 git push
 pulseaudio -D && vivaldi
 export set PS1='$(pwd): '
+docky
 alias browse='bash /root/nctrnmCODE/sh/openbrowser.sh'
 alias phone='bash /root/sftp.sh'
 alias pulseaudio_restart='pulseaudio -k && pulseaudio -oD'
