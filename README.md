@@ -5,9 +5,9 @@
 <meta name="author" content="Matthew McGilvery">  
 <meta name="author2" content="Nctrnm"> 
 <meta name="title" content="Nctrnm Code Repository">
-<meta name="description" content="This is a code repository of scripts and programs that help Nctrnm manage my business and personal lives.">
+<meta name="description" content="This is a code repository of scripts and programs that help me manage my business and personal lives.">
 <meta name="keywords" content="nctrnm"
-<meta name="keywords" content="Bash, Android, Github, HTML, Shell, Termux, Nctrnm, Shell Scripting, free music archive, nctrnmfm, np, newmusic, michael jackson, lady gaga">
+<meta name="keywords" content="Bash, Android, Github, HTML, Shell, Termux, Nctrnm, Shell Scripting, free music archive, nctrnmfm, np, newmusic, four tet, aphex twin">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
@@ -17,7 +17,7 @@
 <body>
   <h2>About<em><strong> nctrnmCODE</em></strong></h2>
 <p>This repository is mainly composed of shell scripts, compressed files, and projects. 
-I maintain this repository from my <i>HP Desktop Computer running Linux</i>. I intend for this repository to be a display of my development in programming.</p> 
+I maintain this repository from my <i>Macbook</i>. I intend for this repository to be a display of my development in programming.</p> 
 <BR>
 <p>Unless otherwise stated, all nctrnm repository code is governed by a GNU General Public License v3.0 or later, while all other content is under All Rights Reserved licensing unless otherwise stated. 
 Find out more at <strong>https://nctrnm.com</strong>
