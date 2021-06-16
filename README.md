@@ -6,8 +6,8 @@
 <meta name="author2" content="Nctrnm"> 
 <meta name="title" content="Nctrnm Code Repository">
 <meta name="description" content="This is a code repository of scripts and programs that help me manage my business and personal lives.">
-<meta name="keywords" content="nctrnm"
-<meta name="keywords" content="Bash, Android, Github, HTML, Shell, Termux, Nctrnm, Shell Scripting, free music archive, nctrnmfm, np, newmusic, four tet, aphex twin">
+<meta name="keywords" content="nctrnm, nctrnmfm, nctrn, shlohmo, electronica, downtempo, idm music"
+<meta name="keywords" content="Bash, Android, Github, HTML, Shell, Termux, Nctrnm, Shell Scripting, free music archive, Nctrnmfm, np, newmusic, electronica 2021, four tet, aphex twin">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
