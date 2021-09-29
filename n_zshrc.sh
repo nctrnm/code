@@ -1,9 +1,9 @@
 #Matthew McGilvery
 #Bash/Zsh Inistialization Script
 #nctrnm.com
-#!/bin/bash/
+#!/bin/zsh/
 #9.28.2021
-#Bash/Zsh Initialization File
+#Zsh Initialization File
 brew update -y 
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
