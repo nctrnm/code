@@ -4,7 +4,7 @@
 #!/bin/zsh/
 #9.28.2021
 #Zsh Initialization File
-brew update -y 
+sudo brew update -y 
 cd ~/nctrnmCODE && git pull && git add --all  && git commit -m "u logging into linux desktop terminal"
 git push
 export  PS1=$PWD:
