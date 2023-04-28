@@ -1,3 +1,8 @@
+#Matthew McGilvery
+#4/28/2023
+#Interactive Chat with OpenAI's GPT-4 Model using Python
+
+
 import os
 
 # Import the `openai` module. This module provides functions for interacting with the OpenAI API.
