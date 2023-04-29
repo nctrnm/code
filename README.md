@@ -15,12 +15,12 @@
 <meta name="author" content="Matthew McGilvery DBA Nctrnm">
 
 <body>
-  <h2>About<em><strong> nctrnmCODE</em></strong></h2>
+  <h2>About<em><strong> code</em></strong></h2>
 <p>This repository is mainly composed of shell scripts, compressed files, and projects. 
 I maintain this repository from my <i>Macbook</i>. I intend for this repository to be a display of my development in programming.</p> 
 <BR>
 <p>Unless otherwise stated, all nctrnm repository code is governed by a GNU General Public License v3.0 or later, while all other content is under All Rights Reserved licensing unless otherwise stated. 
-Find out more at <strong>https://nctrnm.com</strong>
+Find out more at <strong>http://nctrnm.com</strong>
 
 </p>
 <BR>
