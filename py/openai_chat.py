@@ -24,7 +24,6 @@ while True:
       {"role": "user", "content": user_input}
     ]
   )
-  
 # Print the text of the chatbot response.
   print(completion)
   # Check if the user entered the word "quit".
