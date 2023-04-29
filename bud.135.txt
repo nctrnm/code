@@ -1,6 +1,0 @@
-Enter your budget: budget: 29, needs: 14.5, wants: 5.8, savings: 9.666666666666666
-
-Card: Pull 10 spending up to 4.50
-Cash: Add 10 to 12
-Rem: 4.50 pre 10  + 4 from ebt 
-no splitting
