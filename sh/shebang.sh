@@ -1,2 +1,2 @@
 #Author:Matthew McGilvery
-#!/bin/bash#License: LGPL3
+#!/bin/bash
